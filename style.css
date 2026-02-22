@@ -56,7 +56,9 @@
 
 /* Títulos secundários (h3, h4) com cor de destaque */
 h3, h4 {
-    color: var(--destaque);
+    color: var(--texto);
+    font-size: 1.2rem;
+    text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
 }
