@@ -474,6 +474,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .apoio-options {
@@ -505,16 +506,17 @@ nav {
     text-align: center;
 }
 
-.movimento{
+.coletivo-section{
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background:url('./indigenas.jpg') center/cover;
+    background:url('./nacaomembros.jpeg') center/cover;
     position: relative;
     width: 100%;
     height: 100svh;
     overflow: hidden;
+   
 }
 
 .movimento-title {
