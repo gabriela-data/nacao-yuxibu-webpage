@@ -495,6 +495,7 @@ nav {
     grid-template-columns: 1fr;
     gap: 15px;
     align-items: center;
+    
 }
 
 .apoio-title {
@@ -523,9 +524,6 @@ nav {
     font-weight: 800;
     line-height: 1.1;
 }   
-
-
-
 
 .kene-icon {
     width: 80px;
