@@ -141,7 +141,7 @@ header {
     position: fixed;
     background: #2d1e1a;
     z-index: 1000;
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 nav {
@@ -160,7 +160,7 @@ nav {
     list-style: none;
     gap: 25px;
     margin: 0;
-    padding: 25px 20px;
+    padding: 25px 25px;
     position: relative;
     align-items: right;
     transition: transform 0.4s ease-in-out, opacity 0.3s ease; /* Para o efeito de deslizar */
@@ -179,7 +179,7 @@ nav {
     justify-content: center;
     align-items: center;
     z-index: 1001;
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 .header-logo {
@@ -262,12 +262,6 @@ h2 {
         text-shadow: 0 2px 8px #2d1e1a;
     }
 
-
-
-
-
-
-
 .descricao-membro {
     font-style: italic;
     font-family: 'Arial', sans-serif;
@@ -337,20 +331,21 @@ h2 {
     display: block; /* Garante que apareça em Desktop e Mobile */
     font-size: 2rem;
     cursor: pointer;
-    color: var(--destaque);
+    color: var(--urucum);
     order: 3;
 }
 .btn-apoie:hover {
     transform: scale(1.05);
-    
+    background: #e62222 !important;
 }
-/* --- ESTILO DO BOTÃO APOIE (IGUAL À IMAGEM) --- */
+
+/* --- ESTILO DO BOTÃO APOIE --- */
 .btn-apoie {
-    background: #b31a00 !important; /* Vermelho escuro */
+    background: var(--urucum) !important;
     padding: 10px 25px !important;
     border-radius: 12px !important;
-    font-weight: 800 !important;
-    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+    font-size: 1.2rem !important;
     color: white !important;
     transition: transform 0.2s ease;
 }
@@ -575,6 +570,7 @@ h2 {
 }
 
 .cta-button {
+    font-size: 1.2rem;
     display: inline-block;
     margin-top: 2rem;
     padding: 15px 40px;
