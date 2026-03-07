@@ -96,7 +96,7 @@ h4 {
 
 /* Links dentro da sessão: laranja negrito, branco negrito ao hover */
 .software-livre-texto a {
-    color: var(--destaque);
+    color: var(--urucum);
     font-weight: 700;
     text-decoration: none;
     transition: color 0.15s ease, text-shadow 0.15s ease;
@@ -104,7 +104,7 @@ h4 {
 
 .software-livre-texto a:hover,
 .software-livre-texto a:focus {
-    color: var(--texto);
+    color: var(--fundo);
     font-weight: 700;
     text-decoration: none;
     outline: none;
@@ -1261,7 +1261,7 @@ h2 {
 }
 
 .footer-links a {
-    color: var(--destaque);
+    color: var(--urucum);
     margin: 0 10px;
     text-decoration: none;
 }
