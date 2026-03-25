@@ -1435,6 +1435,11 @@ footer {
 
 footer .container {
     padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .footer-top {
@@ -1467,6 +1472,10 @@ footer .container {
 
 .footer-brand {
     margin-bottom: 60px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+    text-align: center;
 }
 
 .footer-brand h4 {
@@ -1512,6 +1521,7 @@ footer .container {
 }
 
 .footer-bottom {
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
