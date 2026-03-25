@@ -1,4 +1,4 @@
-    :root {
+:root {
         --fundo: #1a1412;
         --texto: #f4ecd8;
         --destaque: #d35400;
@@ -376,7 +376,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background:url('./Rio5.jpg') center/cover;
+    background:url('./Fotos/rio5.jpg') center/cover;
     position: relative;
     width: 100%;
     height: 100vh;
@@ -701,7 +701,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background:url('./nacaomembros.jpeg') center/cover;
+    background:url('./Fotos/nacaomembros.jpeg') center/cover;
     position: relative;
     width: 100%;
     height: 100svh;
@@ -770,7 +770,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background:url('./artesanatos.jpeg') center/cover;
+    background:url('./Fotos/artesanatos.jpeg') center/cover;
     position: relative;
     width: 100%;
     height: 80svh;
@@ -1429,7 +1429,7 @@ summary {
 /* Footer */
 footer {
     background: var(--verde-floresta);
-    padding: 30px 0 30px;
+    padding: 40px 0 30px;
     border-top: 1px solid var(--destaque);
 }
 
@@ -1439,7 +1439,8 @@ footer .container {
 
 .footer-top {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    align-items: center;
     margin-bottom: 50px;
 }
 
@@ -1464,47 +1465,59 @@ footer .container {
     transform: scale(1.1);
 }
 
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    margin-bottom: 50px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid #333;
+.footer-brand {
+    margin-bottom: 60px;
 }
 
-.footer-column h4 {
+.footer-brand h4 {
     color: var(--texto);
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.footer-column ul {
-    list-style: none;
+.logos-colaboradores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 24px;
+    max-width: 600px;
+    margin: 0 auto; 
+}
+
+.logo-colaborador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0;
-    margin: 0;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+    flex-shrink: 0;
+    margin: 0 auto;
 }
 
-.footer-column ul li {
-    margin-bottom: 12px;
+.logo-colaborador:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.243);
 }
 
-.footer-column ul li a {
-    color: var(--texto);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-}
-
-.footer-column ul li a:hover {
-    color: var(--urucum);
+.logo-colaborador img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 50%;
 }
 
 .footer-bottom {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     text-align: left;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .legal {
@@ -1514,47 +1527,92 @@ footer .container {
     color: var(--texto);
 }
 
+/* Tablet (1024px e abaixo) */
 @media (max-width: 1024px) {
-    .footer-content {
+    .logos-colaboradores {
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        gap: 20px;
+        max-width: none;
     }
 }
 
+/* Tablet pequeno (768px e abaixo) */
 @media (max-width: 768px) {
     footer {
-        padding: 40px 0 20px;
+        padding: 30px 0 20px;
+    }
+
+    .footer-brand {
+        margin-bottom: 40px;
+    }
+
+    .footer-brand h4 {
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+    }
+
+    .logos-colaboradores {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .logo-colaborador {
+        width: 100px;
+        height: 100px;
+    }
+
+    .logo-colaborador img {
+        width: 75px;
+        height: 75px;
     }
 
     .footer-top {
         margin-bottom: 30px;
     }
+}
 
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        margin-bottom: 30px;
-        padding-bottom: 30px;
+/* Mobile (480px e abaixo) */
+@media (max-width: 480px) {
+    footer {
+        padding: 25px 0 15px;
     }
 
-    .footer-column h4 {
-        font-size: 0.9rem;
-        margin-bottom: 15px;
+    footer .container {
+        padding: 0 15px;
     }
 
-    .footer-column ul li {
-        margin-bottom: 10px;
+    .footer-top {
+        margin-bottom: 25px;
     }
 
-    .footer-column ul li a {
+    .footer-brand {
+        margin-bottom: 35px;
+    }
+
+    .footer-brand h4 {
         font-size: 0.85rem;
+        margin-bottom: 14px;
+    }
+
+    .logos-colaboradores {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .logo-colaborador {
+        width: 90px;
+        height: 90px;
+    }
+
+    .logo-colaborador img {
+        width: 65px;
+        height: 65px;
     }
 
     .legal {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 }
-
 
 /* --- AJUSTE CARROSSEL NETFLIX --- */
 .carousel-wrapper {
