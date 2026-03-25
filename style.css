@@ -376,7 +376,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background:url('./Fotos/rio5.jpg') center/cover;
+    background:url('./Fotos/Rio5.jpg') center/cover;
     position: relative;
     width: 100%;
     height: 100vh;
@@ -670,7 +670,7 @@ h2 {
     grid-template-columns: 1fr;
     gap: 15px;
     align-items: center;
-    width: 407.312px;
+    width: 400px;
 }
 
 .apoio-box h4 {
