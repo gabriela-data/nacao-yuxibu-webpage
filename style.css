@@ -1852,3 +1852,46 @@ footer .container {
         gap: 20px;
     }
 }
+
+/* Ajuste do carrossel da secao movimento2 */
+.cards-grid-movimento-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px 5px;
+    flex: 1;
+    scrollbar-width: none;
+}
+
+.cards-grid-movimento-grid .card-movimento-card {
+    flex: 0 0 calc(33.333% - 14px);
+    scroll-snap-align: start;
+}
+
+@media (max-width: 992px) {
+    .cards-grid-movimento-grid .card-movimento-card {
+        flex-basis: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards-grid-movimento-grid .card-movimento-card {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .movimento-carousel-wrapper .movimento-btn {
+        display: none;
+    }
+
+    .movimento-carousel-wrapper {
+        gap: 0;
+    }
+
+    .cards-grid-movimento-grid {
+        width: 100%;
+    }
+}
