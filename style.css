@@ -46,7 +46,7 @@ body {
 
 header {
     height: 72px; /* Altura fixa da barra escura */
-    width: 100%;
+    width: 100vw;
     top: 0;
     position: fixed;
     background: #2d1e1a;
@@ -1213,6 +1213,12 @@ h2 {
     .pilar-inner{
         bottom: 0px;
     }
+    .pilar-front,
+    .pilar-back, 
+    .pilar-inner{
+        padding: 15px;
+        width: 70%;
+        height: auto;
 }
 
 
@@ -1224,7 +1230,7 @@ h2 {
     flex-wrap: wrap;
     margin-top: 40px;
 }
-
+}
 @media (max-width: 768px) {
     .pilares-grid {
         gap: 15px;
