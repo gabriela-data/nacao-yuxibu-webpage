@@ -1847,7 +1847,7 @@ footer {
 }
 
 footer .container {
-    padding: 0 20px;
+    padding: 0px;
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
@@ -1934,11 +1934,12 @@ footer .container {
 }
 
 .footer-bottom {
+
     width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
     padding-top: 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
