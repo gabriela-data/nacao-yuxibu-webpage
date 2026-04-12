@@ -3001,7 +3001,7 @@ body {
 #plataforma2 .pilar-front {
     justify-content: center;
     align-items: center;
-    background: linear-gradient(180deg, #2d1e1a 0%, #1f1714 100%);
+    background: var(--texto);
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 16px 34px rgba(26, 20, 18, 0.14);
 }
@@ -3015,7 +3015,7 @@ body {
 }
 
 #plataforma2 .pilar-front h4 {
-    color: var(--texto);
+    color: var(--fundo);
 }
 
 #plataforma2 .pilar-back {
