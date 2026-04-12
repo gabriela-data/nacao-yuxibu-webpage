@@ -9,6 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardToggleButtons = Array.from(document.querySelectorAll('.card-toggle-btn'));
     const pillarCards = Array.from(document.querySelectorAll('#plataforma2 .pilar'));
     const pillarToggleButtons = Array.from(document.querySelectorAll('.pilar-toggle-btn'));
+    const teamMemberCards = Array.from(document.querySelectorAll('.equipe-photo-card'));
+    const teamMemberButtons = Array.from(document.querySelectorAll('.equipe-more-btn'));
+    const teamDetailCard = document.getElementById('equipeDetailCard');
+    const teamDetailImage = document.getElementById('equipeDetailImage');
+    const teamDetailLabel = document.getElementById('equipeDetailLabel');
+    const teamDetailName = document.getElementById('equipeDetailName');
+    const teamDetailRole = document.getElementById('equipeDetailRole');
+    const teamDetailText = document.getElementById('equipeDetailText');
     const ctaButton = document.querySelector('.cta-button');
 
     const setMenuState = function (isOpen) {
@@ -165,6 +173,56 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    if (teamMemberCards.length > 0 && teamMemberButtons.length > 0 && teamDetailCard && teamDetailImage && teamDetailLabel && teamDetailName && teamDetailRole && teamDetailText) {
+        const normalizeDescription = description => {
+            const cleaned = description.replace(/\s+/g, ' ').trim();
+
+            if (cleaned === '' || /^x+$/i.test(cleaned.replace(/\s+/g, ''))) {
+                return 'Perfil em atualização pela equipe.';
+            }
+
+            return cleaned;
+        };
+
+        const syncTeamSelection = memberId => {
+            teamMemberCards.forEach(card => {
+                card.classList.toggle('is-active', card.dataset.memberId === memberId);
+            });
+
+            teamMemberButtons.forEach(button => {
+                const card = button.closest('.equipe-photo-card');
+                const isActive = card ? card.dataset.memberId === memberId : false;
+                button.setAttribute('aria-pressed', String(isActive));
+            });
+        };
+
+        teamMemberButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.closest('.equipe-photo-card');
+
+                if (!card) {
+                    return;
+                }
+
+                syncTeamSelection(card.dataset.memberId || '');
+                teamDetailCard.classList.remove('is-empty');
+                teamDetailLabel.textContent = 'Equipe Nação Yuxibu';
+                teamDetailName.textContent = card.dataset.memberName || 'Integrante da equipe';
+                teamDetailRole.textContent = card.dataset.memberRole || 'Colaborador(a)';
+                teamDetailText.textContent = normalizeDescription(card.dataset.memberDescription || '');
+                teamDetailImage.src = card.dataset.memberImage || './Fotos/nacao yuxibu.png';
+                teamDetailImage.alt = card.dataset.memberAlt || card.dataset.memberName || 'Integrante da equipe';
+
+                if (window.innerWidth <= 768) {
+                    teamDetailCard.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'nearest'
+                    });
+                }
+            });
+        });
+    }
+
     const observerOptions = {
         threshold: 0.15
     };
@@ -178,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    const elementsToReveal = document.querySelectorAll('.manifesto-grid, .povo-section, .equipe-grid, .pilar, .eventos-box');
+    const elementsToReveal = document.querySelectorAll('.manifesto-grid, .povo-section, .equipe-showcase, #equipeDetailCard, .pilar, .eventos-box');
 
     elementsToReveal.forEach(element => {
         element.classList.add('reveal-hidden');
