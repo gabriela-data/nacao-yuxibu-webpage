@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.querySelector('.movimento-btn-next');
     const pagination = document.getElementById('movimentoPagination');
     const cards = Array.from(document.querySelectorAll('.card-movimento-card'));
+    const cardToggleButtons = Array.from(document.querySelectorAll('.card-toggle-btn'));
     const ctaButton = document.querySelector('.cta-button');
 
     const setMenuState = function (isOpen) {
@@ -88,6 +89,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         updatePagination();
+    }
+
+    if (cards.length > 0 && cardToggleButtons.length > 0) {
+        const syncCardButton = (card, shouldFlip) => {
+            const button = card.querySelector('.card-toggle-btn');
+
+            if (!button) {
+                return;
+            }
+
+            card.classList.toggle('is-flipped', shouldFlip);
+            button.textContent = shouldFlip ? 'Mostrar menos' : 'Saiba mais';
+            button.setAttribute('aria-expanded', String(shouldFlip));
+        };
+
+        cards.forEach(card => syncCardButton(card, false));
+
+        cardToggleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.closest('.card-movimento-card');
+
+                if (!card) {
+                    return;
+                }
+
+                const shouldFlip = !card.classList.contains('is-flipped');
+
+                cards.forEach(otherCard => {
+                    if (otherCard !== card) {
+                        syncCardButton(otherCard, false);
+                    }
+                });
+
+                syncCardButton(card, shouldFlip);
+            });
+        });
     }
 
     const observerOptions = {
