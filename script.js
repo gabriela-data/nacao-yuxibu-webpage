@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const pagination = document.getElementById('movimentoPagination');
     const cards = Array.from(document.querySelectorAll('.card-movimento-card'));
     const cardToggleButtons = Array.from(document.querySelectorAll('.card-toggle-btn'));
+    const pillarCards = Array.from(document.querySelectorAll('#plataforma2 .pilar'));
+    const pillarToggleButtons = Array.from(document.querySelectorAll('.pilar-toggle-btn'));
     const ctaButton = document.querySelector('.cta-button');
 
     const setMenuState = function (isOpen) {
@@ -123,6 +125,42 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 syncCardButton(card, shouldFlip);
+            });
+        });
+    }
+
+    if (pillarCards.length > 0 && pillarToggleButtons.length > 0) {
+        const syncPillarButton = (pillar, shouldFlip) => {
+            const button = pillar.querySelector('.pilar-toggle-btn');
+
+            if (!button) {
+                return;
+            }
+
+            pillar.classList.toggle('is-flipped', shouldFlip);
+            button.textContent = shouldFlip ? 'Mostrar menos' : 'Saiba mais';
+            button.setAttribute('aria-expanded', String(shouldFlip));
+        };
+
+        pillarCards.forEach(pillar => syncPillarButton(pillar, false));
+
+        pillarToggleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const pillar = button.closest('.pilar');
+
+                if (!pillar) {
+                    return;
+                }
+
+                const shouldFlip = !pillar.classList.contains('is-flipped');
+
+                pillarCards.forEach(otherPillar => {
+                    if (otherPillar !== pillar) {
+                        syncPillarButton(otherPillar, false);
+                    }
+                });
+
+                syncPillarButton(pillar, shouldFlip);
             });
         });
     }
