@@ -3742,7 +3742,7 @@ footer .container {
 }
 
 .equipe-showcase {
-    display: grid;
+    display: flexbox;
     gap: clamp(20px, 4vw, 30px);
     max-width: min(100%, 1080px);
     margin: 0 auto;
