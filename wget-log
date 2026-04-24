@@ -1,0 +1,11 @@
+--2026-04-13 18:38:58--  https://repo.fortinet.com/repo/6.4/ubuntu/DEB-GPG-KEY
+Resolvendo repo.fortinet.com (repo.fortinet.com)... 208.91.114.61
+Conectando-se a repo.fortinet.com (repo.fortinet.com)|208.91.114.61|:443... conectado.
+A requisição HTTP foi enviada, aguardando resposta... 200 OK
+Tamanho: 1020
+Salvando em: ‘STDOUT’
+
+-                                      0%[                                                                     ]       0  --.-KB/s               -                                      0%[                                                                     ]       0  --.-KB/s    em 0s      
+
+
+Não foi possível escrever em ‘-’ (Sucesso).
