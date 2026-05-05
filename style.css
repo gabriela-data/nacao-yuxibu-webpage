@@ -158,6 +158,49 @@ body {
   }
 }
 
+/* Ajustes para telas de tablet e menores */
+@media (max-width: 768px) {
+  .container-marca {
+    width: 100px;
+    height: 100px;
+  }
+  .logo-cabecalho {
+    height: 80px;
+  }
+  .navegacao {
+    padding: 0 28px 0 120px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-marca {
+    width: 80px;
+    height: 80px;
+  }
+  .logo-cabecalho {
+    height: 65px;
+  }
+  .navegacao {
+    padding: 0 20px 0 0; /* remove o espaço do logo, pois ele fica absoluto */
+    gap: 10px;
+  }
+  .botao-menu {
+    position: fixed;
+    top: 18px;
+    right: 20px;
+    z-index: 1002;
+    color: white;
+  }
+  .links-navegacao {
+    width: 100%; /* ocupa toda a tela no mobile */
+  }
+  .link-apoio {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
+
 /* ============================================================
    HERO
    ============================================================ */
@@ -227,6 +270,46 @@ body {
   transform: scale(1.05);
 }
 
+@media (max-width: 768px) {
+  .linha-hero-1 {
+    font-size: 2.8rem !important;
+  }
+  .linha-hero-2 {
+    font-size: 3.4rem !important;
+  }
+  .subtitulo-hero {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .linha-hero-1 {
+    font-size: 2.2rem !important;
+  }
+  .linha-hero-2 {
+    font-size: 2.6rem !important;
+  }
+  .subtitulo-hero {
+    font-size: 1.2rem !important;
+  }
+  .botao-chamada {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .linha-hero-1 {
+    font-size: 1.8rem !important;
+  }
+  .linha-hero-2 {
+    font-size: 2.2rem !important;
+  }
+  .subtitulo-hero {
+    font-size: 1rem !important;
+  }
+}
+
 /* ============================================================
    MANIFESTO
    ============================================================ */
@@ -263,6 +346,25 @@ body {
   text-align: justify;
 }
 
+@media (max-width: 768px) {
+  .titulo-manifesto {
+    font-size: 2rem;
+  }
+  .paragrafo-manifesto {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-manifesto {
+    font-size: 1.8rem;
+  }
+  .paragrafo-manifesto {
+    font-size: 1rem;
+  }
+}
+
 /* ============================================================
    POVO HUNI KUĪ (carrossel de vídeos)
    ============================================================ */
@@ -290,6 +392,21 @@ body {
   padding-bottom: 50px;
 }
 
+@media (max-width: 768px) {
+  .titulo-povo {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-povo {
+    font-size: 1.8rem;
+  }
+  .carrossel-povo {
+    padding-bottom: 30px;
+  }
+}
+
 /* ============================================================
    COLETIVO (capa)
    ============================================================ */
@@ -309,6 +426,18 @@ body {
   color: var(--cor-texto-claro);
   text-shadow: 0 3px 8px var(--cor-marrom-medio);
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .titulo-movimento {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-movimento {
+    font-size: 2rem;
+  }
 }
 
 /* ============================================================
@@ -454,6 +583,30 @@ body {
   transform: scale(1.2);
 }
 
+@media (max-width: 768px) {
+  .paragrafo-movimento {
+    font-size: 1.1rem;
+  }
+  .card-movimento {
+    flex: 0 0 85%; /* quase um card por vez */
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .paragrafo-movimento {
+    font-size: 1rem;
+  }
+  .card-movimento {
+    flex: 0 0 92%;
+  }
+  .botao-movimento {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+}
+
 /* ============================================================
    PLATAFORMA (capa e pilares)
    ============================================================ */
@@ -552,6 +705,47 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+  .titulo-plataforma {
+    font-size: 3rem;
+  }
+  .paragrafo-plataforma {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grade-pilares {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .titulo-plataforma {
+    font-size: 2.4rem;
+  }
+  .paragrafo-plataforma {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grade-pilares {
+    grid-template-columns: 1fr;
+  }
+  .titulo-plataforma {
+    font-size: 1.8rem;
+  }
+  .paragrafo-plataforma {
+    font-size: 1rem;
+  }
+  .pilar-interno {
+    height: 300px;
+  }
+  .imagem-pilar {
+    width: 90px;
+    height: 90px;
+  }
+}
+
 /* ============================================================
    SOFTWARE LIVRE
    ============================================================ */
@@ -600,6 +794,30 @@ a::before {
   font-weight: 700;
   font-size: 20px;
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .titulo-software-livre,
+  .titulo-pesquisa {
+    font-size: 2rem;
+  }
+  .texto-software-livre {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-software-livre,
+  .titulo-pesquisa {
+    font-size: 1.6rem;
+  }
+  .texto-software-livre {
+    font-size: 1rem;
+  }
+  a {
+    font-size: 16px;
+  }
 }
 
 /* ============================================================
@@ -703,19 +921,29 @@ a::before {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .equipe-title {
+    font-size: 2rem;
+  }
+  .descricao-equipe {
+    font-size: 1.1rem;
+  }
+  .equipe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
   .equipe-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-
   .membro-foto {
     width: 110px;
     height: 110px;
   }
-
   .equipe-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -738,17 +966,16 @@ a::before {
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  /* Faz a pincelada "subir" um pouco para cobrir a linha divisória */
   transform: translateY(-100%);
 }
 
 .divisor-pincelada img {
   width: 100%;
-    height: 12%;
-    display: block;
+  height: 12%;
+  display: block;
 }
 
-.container-caminhe {
+.container-apoio {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
@@ -770,18 +997,13 @@ a::before {
   flex-wrap: wrap;
 }
 
-.caixa-caminhe {
-  flex: 1 1 250px;
-  text-align: center;
-}
-
 .caixa-apoio {
   background: var(--cor-urucum);
   border: 1px solid var(--cor-texto-claro);
-  padding: 0px 10px;
+  padding: 20px 10px;
   text-align: center;
   max-width: 300px;
-  grid-template-columns: 412.609px;
+  /* removido grid-template-columns indevido */
 }
 
 .imagem-apoio {
@@ -792,6 +1014,27 @@ a::before {
   margin: 0 auto 10px;
 }
 
+@media (max-width: 768px) {
+  .titulo-apoio {
+    font-size: 2.2rem;
+  }
+  .opcoes-apoio {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-apoio {
+    font-size: 1.8rem;
+  }
+  .opcoes-apoio {
+    gap: 20px;
+  }
+  .caixa-apoio {
+    max-width: 100%;
+    padding: 15px;
+  }
+}
 
 /* ============================================================
    RODAPÉ
@@ -843,6 +1086,13 @@ a::before {
 .texto-legal {
   font-size: 0.85rem;
   opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+  .logo-colaborador {
+    width: 90px;
+    height: 90px;
+  }
 }
 
 /* ============================================================

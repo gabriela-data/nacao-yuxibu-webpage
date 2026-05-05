@@ -136,94 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ------------------------------------------------------------
-  // 5. Equipe – Carrossel + Detalhe
-  // ------------------------------------------------------------
-  function configurarSecaoEquipe() {
-    const container = document.getElementById('listaMembrosEquipe');
-    const cardDetalhe = document.getElementById('cardDetalheEquipe');
-    const imgDetalhe = document.getElementById('imagemDetalheEquipe');
-    const categoriaDetalhe = document.getElementById('categoriaDetalheEquipe');
-    const nomeDetalhe = document.getElementById('nomeDetalheEquipe');
-    const cargoDetalhe = document.getElementById('cargoDetalheEquipe');
-    const textoDetalhe = document.getElementById('textoDetalheEquipe');
-
-    // Base de dados dos membros (facilmente editável)
-    const membros = [
-      { nome: 'Allan Thales', cargo: 'Analista de TI', descricao: 'Perfil em atualização pela equipe.', foto: './Membros/Allan.jpeg' },
-      { nome: 'Aurélio Heckert', cargo: 'Programador', descricao: 'Perfil em atualização pela equipe.', foto: './Membros/Aurelio.jpeg' },
-      { nome: 'Caio Almeida', cargo: 'Engenheiro de software', descricao: 'Perfil em atualização pela equipe.', foto: './Membros/Caio.jpeg' },
-      { nome: 'Débora Abdalla', cargo: 'Coordenação Geral', descricao: 'Professora Doutora Titular do Departamento de Computação Interdisciplinar da UFBA.', foto: './Membros/Debora.jpeg' },
-      { nome: 'Diego Zabot', cargo: 'Pesquisador IHC', descricao: 'Professor Doutor - UFBA', foto: './Membros/Diego.jpeg' },
-      { nome: 'Emily Mendes', cargo: 'Psicóloga', descricao: 'Psicóloga (CRP 03/29752). Atua no cuidado ético.', foto: './Membros/Emily.jpg' },
-      { nome: 'Gabriela Almeida', cargo: 'Bolsista de extensão', descricao: 'Pesquisadora do grupo Onda Digital.', foto: './Membros/Gabriela.jpeg' },
-      { nome: 'Ise Prazeres', cargo: 'Designer gráfico', descricao: 'Designer e profissional de marketing.', foto: './Membros/IsePrazeres.jpeg' },
-      { nome: 'Leonardo César', cargo: 'Desenvolvedor', descricao: 'Desenvolvedor da Plataforma Livre Nação Yuxibu.', foto: './Membros/Cesar.png' },
-      { nome: 'Pedro Tupinambá', cargo: 'Bolsista de extensão', descricao: 'Pesquisador do Onda Digital.', foto: './Membros/Pedro.jpeg' },
-      { nome: 'Solon', cargo: 'Indigenista', descricao: 'Coordenador da comunicação.', foto: './Membros/Solon.PNG' },
-      { nome: 'Thiago Magalhães', cargo: 'Advogado', descricao: 'OAB/BA 40748. Pesquisador da plataforma.', foto: './Membros/Thiago.jpeg' },
-      { nome: 'Túlio Augustos', cargo: 'Bolsista de extensão', descricao: 'Analista de sistema e pesquisador em Codesign.', foto: './Membros/Tulio.jpeg' },
-      { nome: 'Valeria Rosa', cargo: 'Pesquisadora IHC', descricao: 'Professora Doutora da UESB.', foto: './Membros/valeria.jpeg' }
-    ];
-
-    // Renderiza slides dinamicamente
-    if (container) {
-      container.innerHTML = membros.map(membro => `
-        <div class="swiper-slide slide-equipe">
-          <article class="card-foto-equipe" data-nome="${membro.nome}" data-cargo="${membro.cargo}" data-descricao="${membro.descricao}" data-foto="${membro.foto}">
-            <img src="${membro.foto}" alt="${membro.nome}" loading="lazy">
-            <button class="botao-mais-equipe" type="button" aria-label="Saiba mais sobre ${membro.nome}">+</button>
-          </article>
-        </div>
-      `).join('');
-    }
-
-    // Swiper da equipe
-    if (document.querySelector('.carrossel-equipe')) {
-      new Swiper('.carrossel-equipe', {
-        slidesPerView: 1.9,
-        spaceBetween: 12,
-        speed: 900,
-        loop: true,
-        grabCursor: true,
-        autoplay: { delay: 2600, disableOnInteraction: false, pauseOnMouseEnter: true },
-        pagination: { el: '.paginacao-equipe', clickable: true },
-        breakpoints: {
-          360: { slidesPerView: 2.2, spaceBetween: 12 },
-          480: { slidesPerView: 2.8, spaceBetween: 14 },
-          768: { slidesPerView: 4, spaceBetween: 16 },
-          1024: { slidesPerView: 5, spaceBetween: 18 },
-          1280: { slidesPerView: 6, spaceBetween: 18 }
-        }
-      });
-    }
-
-    // Evento dos botões "+"
-    document.querySelectorAll('.botao-mais-equipe').forEach(botao => {
-      botao.addEventListener('click', () => {
-        const card = botao.closest('.card-foto-equipe');
-        if (!card || !cardDetalhe) return;
-
-        // Destaca o card ativo
-        document.querySelectorAll('.card-foto-equipe').forEach(c => c.classList.remove('ativo'));
-        card.classList.add('ativo');
-
-        cardDetalhe.classList.remove('vazio');
-        categoriaDetalhe.textContent = 'Equipe Nação Yuxibu';
-        nomeDetalhe.textContent = card.dataset.nome || 'Integrante';
-        cargoDetalhe.textContent = card.dataset.cargo || 'Colaborador(a)';
-        textoDetalhe.textContent = card.dataset.descricao || 'Perfil em atualização.';
-        imgDetalhe.src = card.dataset.foto || './Fotos/nacao-yuxibu.png';
-        imgDetalhe.alt = card.dataset.nome || 'Integrante';
-
-        if (window.innerWidth <= 768) {
-          cardDetalhe.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-      });
-    });
-  }
-
-  // ------------------------------------------------------------
-  // 6. Animação de revelação ao rolar a página
+  // 5. Animação de revelação ao rolar a página
   // ------------------------------------------------------------
   function configurarAnimacoesRevelacao() {
     const elementos = document.querySelectorAll('.revelar');
@@ -242,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ------------------------------------------------------------
-  // 7. Efeito parallax no hero
+  // 6. Efeito parallax no hero
   // ------------------------------------------------------------
   function configurarParallaxHero() {
     const hero = document.querySelector('.secao-hero');
@@ -260,7 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
     configurarCarrosselMovimento();
     configurarFlipCardsMovimento();
     configurarFlipPilares();
-    configurarSecaoEquipe();
     configurarAnimacoesRevelacao();
     configurarParallaxHero();
 
