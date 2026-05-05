@@ -1,6 +1,5 @@
 /* ============================================================
-   PLATAFORMA LIVRE NAÇÃO YUXIBU – ESTILOS GLOBAIS
-   Tema: terroso, tons de floresta, urucum e destaques laranja
+   PLATAFORMA LIVRE NAÇÃO YUXIBU 
    ============================================================ */
 
 :root {
@@ -34,7 +33,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--cor-texto-claro);
   color: var(--cor-fundo-escuro);
-  padding-top: 72px; /* altura do cabeçalho fixo */
+  padding-top: 72px;
   overflow-x: hidden;
 }
 
@@ -58,14 +57,14 @@ body {
   align-items: center;
   justify-content: flex-end;
   height: 100%;
-  padding: 0 28px 0 160px;  /* espaço para logo */
+  padding: 0 28px 0 160px;
   gap: 40px;
 }
 
 .container-marca {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 90%;
   transform: translateY(-50%);
   width: 140px;
   height: 140px;
@@ -156,6 +155,48 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .container-marca {
+    width: 100px;
+    height: 100px;
+  }
+  .logo-cabecalho {
+    height: 80px;
+  }
+  .navegacao {
+    padding: 0 28px 0 120px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-marca {
+    width: 80px;
+    height: 80px;
+  }
+  .logo-cabecalho {
+    height: 65px;
+  }
+  .navegacao {
+    padding: 0 20px 0 0;
+    gap: 10px;
+  }
+  .botao-menu {
+    position: fixed;
+    top: 18px;
+    right: 20px;
+    z-index: 1002;
+    color: white;
+  }
+  .links-navegacao {
+    width: 100%;
+  }
+  .link-apoio {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
+
 /* ============================================================
    HERO
    ============================================================ */
@@ -225,6 +266,46 @@ body {
   transform: scale(1.05);
 }
 
+@media (max-width: 768px) {
+  .linha-hero-1 {
+    font-size: 2.8rem !important;
+  }
+  .linha-hero-2 {
+    font-size: 3.4rem !important;
+  }
+  .subtitulo-hero {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .linha-hero-1 {
+    font-size: 2.2rem !important;
+  }
+  .linha-hero-2 {
+    font-size: 2.6rem !important;
+  }
+  .subtitulo-hero {
+    font-size: 1.2rem !important;
+  }
+  .botao-chamada {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .linha-hero-1 {
+    font-size: 1.8rem !important;
+  }
+  .linha-hero-2 {
+    font-size: 2.2rem !important;
+  }
+  .subtitulo-hero {
+    font-size: 1rem !important;
+  }
+}
+
 /* ============================================================
    MANIFESTO
    ============================================================ */
@@ -250,6 +331,7 @@ body {
   color: var(--cor-texto-claro);
   margin-bottom: 30px;
   font-weight: 800;
+  text-transform: uppercase;
 }
 
 .paragrafo-manifesto {
@@ -258,6 +340,25 @@ body {
   color: var(--cor-texto-claro);
   margin-bottom: 1.2rem;
   text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .titulo-manifesto {
+    font-size: 2rem;
+  }
+  .paragrafo-manifesto {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-manifesto {
+    font-size: 1.8rem;
+  }
+  .paragrafo-manifesto {
+    font-size: 1rem;
+  }
 }
 
 /* ============================================================
@@ -287,6 +388,21 @@ body {
   padding-bottom: 50px;
 }
 
+@media (max-width: 768px) {
+  .titulo-povo {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-povo {
+    font-size: 1.8rem;
+  }
+  .carrossel-povo {
+    padding-bottom: 30px;
+  }
+}
+
 /* ============================================================
    COLETIVO (capa)
    ============================================================ */
@@ -306,6 +422,18 @@ body {
   color: var(--cor-texto-claro);
   text-shadow: 0 3px 8px var(--cor-marrom-medio);
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .titulo-movimento {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-movimento {
+    font-size: 2rem;
+  }
 }
 
 /* ============================================================
@@ -340,7 +468,9 @@ body {
   scrollbar-width: none;
 }
 
-.grade-cards-movimento::-webkit-scrollbar { display: none; }
+.grade-cards-movimento::-webkit-scrollbar {
+  display: none;
+}
 
 .card-movimento {
   flex: 0 0 calc(33.333% - 14px);
@@ -397,8 +527,14 @@ body {
   overflow-y: auto;
 }
 
-.card-verso h3 { margin-bottom: 12px; }
-.card-verso p { font-size: 0.95rem; line-height: 1.55; }
+.card-verso h3 {
+  margin-bottom: 12px;
+}
+
+.card-verso p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
 
 .botao-alternar-card {
   width: 100%;
@@ -443,6 +579,95 @@ body {
   transform: scale(1.2);
 }
 
+/* ==============================
+   CARDS DO MOVIMENTO (flip) – AJUSTE MOBILE ≤ 768px
+   ============================== */
+@media (max-width: 768px) {
+  .paragrafo-movimento {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+  }
+
+  .envoltorio-carrossel-movimento {
+    position: relative;
+  }
+
+  .grade-cards-movimento {
+    width: 100%;
+    padding: 0;                    /* sem padding lateral extra */
+    gap: 0;                       /* remove espaçamento entre cards */
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0;
+  }
+
+  .card-movimento {
+    flex: 0 0 100%;               /* um card por vez */
+    min-height: auto;
+    scroll-snap-align: center;    /* centraliza o card no snap */
+    padding: 0 4px;               /* pequeno respiro para sombra não cortar */
+  }
+
+  /* Ajusta altura das faces para telas pequenas */
+  .card-interno {
+    min-height: 380px;            /* altura mínima para manter proporção */
+  }
+
+  .card-verso {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding: 20px 14px;
+  }
+
+  /* Botões de navegação (setas) */
+  .botao-movimento {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(211, 84, 0, 0.9); /* laranja com mais opacidade */
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s, background 0.2s;
+  }
+
+  .botao-movimento:active {
+    transform: translateY(-50%) scale(0.9);
+    background: rgba(211, 84, 0, 1);
+  }
+
+  .botao-movimento-anterior {
+    left: 8px;
+  }
+
+  .botao-movimento-proximo {
+    right: 8px;
+  }
+
+  /* Paginação (bolinhas) */
+  .paginacao-movimento {
+    margin-top: 16px;
+    gap: 8px;
+  }
+
+  .bolinha {
+    width: 10px;
+    height: 10px;
+  }
+
+  .bolinha.ativa {
+    transform: scale(1.3);
+  }
+}
+
 /* ============================================================
    PLATAFORMA (capa e pilares)
    ============================================================ */
@@ -461,6 +686,7 @@ body {
   font-size: 4.2rem;
   color: var(--cor-texto-claro);
   text-shadow: 0 3px 8px var(--cor-marrom-medio);
+  text-transform: uppercase;
 }
 
 .secao-pilares {
@@ -509,7 +735,7 @@ body {
 
 .pilar-frente {
   background: var(--cor-texto-claro);
-  border: 1px solid rgba(0,0,0,0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .pilar-verso {
@@ -540,6 +766,47 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+  .titulo-plataforma {
+    font-size: 3rem;
+  }
+  .paragrafo-plataforma {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grade-pilares {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .titulo-plataforma {
+    font-size: 2.4rem;
+  }
+  .paragrafo-plataforma {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grade-pilares {
+    grid-template-columns: 1fr;
+  }
+  .titulo-plataforma {
+    font-size: 1.8rem;
+  }
+  .paragrafo-plataforma {
+    font-size: 1rem;
+  }
+  .pilar-interno {
+    height: 300px;
+  }
+  .imagem-pilar {
+    width: 90px;
+    height: 90px;
+  }
+}
+
 /* ============================================================
    SOFTWARE LIVRE
    ============================================================ */
@@ -555,6 +822,7 @@ body {
   color: var(--cor-fundo-escuro);
   margin-bottom: 30px;
   font-weight: 800;
+  text-transform: uppercase;
 }
 
 .texto-software-livre {
@@ -565,7 +833,7 @@ body {
 }
 
 .sumario {
-  color: var(--cor-destaque);
+  color: var(--cor-urucum);
   cursor: pointer;
   font-weight: bold;
 }
@@ -573,6 +841,44 @@ body {
 .referencia {
   font-size: 0.9rem;
   margin-top: 10px;
+}
+
+a {
+  color: var(--cor-urucum);
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a::before {
+  color: var(--cor-fundo-escuro);
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .titulo-software-livre,
+  .titulo-pesquisa {
+    font-size: 2rem;
+  }
+  .texto-software-livre {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-software-livre,
+  .titulo-pesquisa {
+    font-size: 1.6rem;
+  }
+  .texto-software-livre {
+    font-size: 1rem;
+  }
+  a {
+    font-size: 16px;
+  }
 }
 
 /* ============================================================
@@ -676,19 +982,29 @@ body {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .equipe-title {
+    font-size: 2rem;
+  }
+  .descricao-equipe {
+    font-size: 1.1rem;
+  }
+  .equipe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
   .equipe-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-
   .membro-foto {
     width: 110px;
     height: 110px;
   }
-
   .equipe-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -706,19 +1022,21 @@ body {
 
 .divisor-pincelada {
   position: absolute;
-  top: -1px;
+  top: 0px;
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  transform: translateY(-100%);
 }
+
 .divisor-pincelada img {
   width: 100%;
-  height: auto;
+  height: 12%;
   display: block;
 }
 
-.container-caminhe {
+.container-apoio {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
@@ -734,24 +1052,18 @@ body {
 }
 
 .opcoes-apoio {
-display: flex;
+  display: flex;
   justify-content: center;
   gap: 60px;
   flex-wrap: wrap;
 }
 
-.caixa-caminhe {
-  flex: 1 1 250px;
-  
-  text-align: center;
-}
 .caixa-apoio {
   background: var(--cor-urucum);
   border: 1px solid var(--cor-texto-claro);
-  padding: 10px;
+  padding: 20px 10px;
   text-align: center;
   max-width: 300px;
-  grid-template-columns: 412.609px;
 }
 
 .imagem-apoio {
@@ -760,6 +1072,29 @@ display: flex;
   border-radius: 50%;
   background-size: cover;
   margin: 0 auto 10px;
+  color: var(--cor-texto-claro);
+}
+
+@media (max-width: 768px) {
+  .titulo-apoio {
+    font-size: 2.2rem;
+  }
+  .opcoes-apoio {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-apoio {
+    font-size: 1.8rem;
+  }
+  .opcoes-apoio {
+    gap: 20px;
+  }
+  .caixa-apoio {
+    max-width: 100%;
+    padding: 15px;
+  }
 }
 
 /* ============================================================
@@ -768,7 +1103,7 @@ display: flex;
 
 .rodape {
   background: var(--cor-verde-floresta);
-  padding: 40px 0;
+  padding:  20px;
   color: var(--cor-texto-claro);
   text-align: center;
 }
@@ -777,7 +1112,7 @@ display: flex;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 20px;
+  margin: 50px 0px 10px;
 }
 
 .logos-colaboradores {
@@ -806,12 +1141,19 @@ display: flex;
 .base-rodape {
   margin-top: 30px;
   padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .texto-legal {
   font-size: 0.85rem;
   opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+  .logo-colaborador {
+    width: 90px;
+    height: 90px;
+  }
 }
 
 /* ============================================================
@@ -834,9 +1176,23 @@ display: flex;
    ============================================================ */
 
 @media (max-width: 768px) {
-  .linha-hero-1 { font-size: 2.2rem !important; }
-  .linha-hero-2 { font-size: 2.8rem !important; }
-  .subtitulo-hero { font-size: 1.1rem !important; }
-  .grade-pilares { grid-template-columns: 1fr; }
-  .opcoes-apoio { gap: 30px; }
+  .linha-hero-1 {
+    font-size: 2.2rem !important;
+  }
+
+  .linha-hero-2 {
+    font-size: 2.8rem !important;
+  }
+
+  .subtitulo-hero {
+    font-size: 1.1rem !important;
+  }
+
+  .grade-pilares {
+    grid-template-columns: 1fr;
+  }
+
+  .opcoes-apoio {
+    gap: 30px;
+  }
 }
