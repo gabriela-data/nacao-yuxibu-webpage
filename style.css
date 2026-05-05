@@ -1,6 +1,5 @@
 /* ============================================================
-   PLATAFORMA LIVRE NAÇÃO YUXIBU – ESTILOS GLOBAIS
-   Tema: terroso, tons de floresta, urucum e destaques laranja
+   PLATAFORMA LIVRE NAÇÃO YUXIBU 
    ============================================================ */
 
 :root {
@@ -65,7 +64,7 @@ body {
 .container-marca {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 90%;
   transform: translateY(-50%);
   width: 140px;
   height: 140px;
