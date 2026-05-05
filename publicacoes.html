@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicações • Nação Yuxibu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="./Fotos/nacao yuxibu.png">
+    <style>
+        /* Estilos adicionais específicos da página de publicações */
+
+        :root {
+            --cor-fundo-escuro: #1a1412;
+            --cor-texto-claro: #f4ecd8;
+            --cor-destaque: #d35400;
+            --cor-urucum: #af1404;
+            --cor-marrom-medio: #2d1e1a;
+            --cor-verde-floresta: #2d3c1a;
+            --cor-fundo-card: #251d1a;
+            --cor-fundo-secundario: #2a211d;
+            --sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.15);
+            --transicao-padrao: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .secao-publicacoes {
+            background: #f7f0e4;
+            padding: 80px 0 100px;
+            min-height: 100vh;
+        }
+
+        .secao-publicacoes .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 5vw;
+        }
+
+        .cabecalho-pagina {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .titulo-pagina {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #1a1412;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .subtitulo-pagina {
+            font-size: 1.3rem;
+            color: #2d1e1a;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .lista-publicacoes {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .publicacao-item {
+            background: #fffef9;
+            border-radius: 20px;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+            padding: 32px 28px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 6px solid var(--cor-urucum);
+            /* AJUSTE: impede que conteúdos muito longos estourem o layout */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .publicacao-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+        }
+
+        .evento-nome {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--cor-urucum);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .publicacao-titulo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a1412;
+            margin-bottom: 10px;
+            line-height: 1.3;
+            /* AJUSTE: evita estouro de título longo */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        .publicacao-autores {
+            font-size: 1rem;
+            color: #2d1e1a;
+            margin-bottom: 14px;
+            font-weight: 600;
+        }
+
+        .publicacao-resumo {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #3e3a36;
+            text-align: justify;
+        }
+
+        .publicacao-link {
+            display: inline-block;
+            margin-top: 14px;
+            color: #af1404;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .publicacao-link:hover {
+            border-bottom-color: #af1404;
+        }
+
+        /* RESPONSIVIDADE – TABLET */
+        @media (max-width: 768px) {
+            .secao-publicacoes {
+                padding: 60px 0 80px;
+            }
+
+            .cabecalho-pagina {
+                margin-bottom: 40px;
+            }
+
+            .titulo-pagina {
+                font-size: 2.2rem;
+            }
+
+            .subtitulo-pagina {
+                font-size: 1.1rem;
+            }
+
+            .publicacao-item {
+                padding: 24px 18px;
+            }
+
+            .publicacao-titulo {
+                font-size: 1.3rem;
+            }
+
+            .publicacao-resumo {
+                font-size: 1rem;
+            }
+
+            .publicacao-link {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* RESPONSIVIDADE – SMARTPHONE */
+        @media (max-width: 480px) {
+            .secao-publicacoes {
+                padding: 50px 0 60px;
+            }
+
+            .titulo-pagina {
+                font-size: 1.8rem;
+            }
+
+            .subtitulo-pagina {
+                font-size: 1rem;
+            }
+
+            .publicacao-item {
+                padding: 20px 14px;
+                border-left-width: 4px;
+                /* AJUSTE: borda mais fina em telas pequenas */
+            }
+
+            .publicacao-titulo {
+                font-size: 1.15rem;
+            }
+
+            .publicacao-autores {
+                font-size: 0.9rem;
+            }
+
+            .publicacao-resumo {
+                font-size: 0.95rem;
+                text-align: left;
+                /* mais legível em telas estreitas */
+            }
+
+            .publicacao-link {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* AJUSTE EXTRA PARA TELAS MUITO PEQUENAS (ex.: iPhone SE) */
+        @media (max-width: 360px) {
+            .titulo-pagina {
+                font-size: 1.5rem;
+            }
+
+            .subtitulo-pagina {
+                font-size: 0.9rem;
+            }
+
+            .publicacao-item {
+                padding: 16px 10px;
+                border-left-width: 3px;
+            }
+
+            .publicacao-titulo {
+                font-size: 1rem;
+            }
+
+            .publicacao-autores {
+                font-size: 0.8rem;
+            }
+
+            .publicacao-resumo {
+                font-size: 0.85rem;
+            }
+
+            .publicacao-link {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="navegacao">
+            <div class="container-marca">
+                <img src="./Fotos/nacao yuxibu.png" alt="Logo Nação Yuxibu" class="logo-cabecalho">
+            </div>
+            <button class="botao-menu" type="button" aria-label="Abrir menu">☰</button>
+            <ul class="links-navegacao">
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#manifesto">Manifesto</a></li>
+                <li><a href="index.html#povo">Povo Huni Kuī</a></li>
+                <li><a href="index.html#movimento">O Coletivo</a></li>
+                <li><a href="index.html#plataforma">A Plataforma</a></li>
+                <li><a href="index.html#sobre">Equipe</a></li>
+                <li><a href="publicacoes.html" class="ativo">Publicações</a></li>
+                <li><a href="index.html#apoiar" class="link-apoio">APOIE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="secao-publicacoes">
+            <div class="container">
+                <div class="cabecalho-pagina">
+                    <h1 class="titulo-pagina">Publicações</h1>
+                    <p class="subtitulo-pagina">
+                        Produções acadêmicas resultantes do projeto Plataforma Livre Nação Yuxibu, apresentadas em
+                        congressos, simpósios e eventos científicos.
+                    </p>
+                </div>
+
+                <div class="lista-publicacoes">
+
+                    <!-- Publicação 1 -->
+                    <article class="publicacao-item">
+                        <span class="evento-nome">Nome do evento</span>
+                        <h3 class="publicacao-titulo">Título da publicação</h3>
+                        <p class="publicacao-autores">Autores</p>
+                        <p class="publicacao-resumo">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, quisquam voluptatum commodi facilis mollitia ipsa ullam tenetur excepturi optio illum, autem qui? Necessitatibus pariatur quidem harum. Ea fugit nam nisi.
+                        </p>
+                        <a href="#" class="publicacao-link">Anais do evento (em breve) →</a>
+                    </article>
+
+                    <!-- Publicação 2 -->
+                    <article class="publicacao-item">
+                        <span class="evento-nome">Nome do evento</span>
+                        <h3 class="publicacao-titulo">Título da publicação</h3>
+                        <p class="publicacao-autores">Autores</p>
+                        <p class="publicacao-resumo">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, quisquam voluptatum commodi facilis mollitia ipsa ullam tenetur excepturi optio illum, autem qui? Necessitatibus pariatur quidem harum. Ea fugit nam nisi.
+                        </p>
+                        <a href="#" class="publicacao-link">Anais do evento (em breve) →</a>
+                    </article>
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="marca-rodape">
+                <h4>Realização</h4>
+                <div class="logos-colaboradores">
+                    <div class="logo-colaborador"><img src="./icones-site/onda-digital.png" alt="Onda Digital"></div>
+                    <div class="logo-colaborador"><img src="./icones-site/nacao-yuxibu-logo.png" alt="Nação Yuxibu">
+                    </div>
+                    <div class="logo-colaborador"><img src="./icones-site/SPILab.png" alt="SPILab"></div>
+                </div>
+            </div>
+            <div class="marca-rodape">
+                <h4>Apoio</h4>
+                <div class="logos-colaboradores">
+                    <div class="logo-colaborador"><img src="./icones-site/ufba-logo.png" alt="UFBA"></div>
+                    <div class="logo-colaborador"><img src="./icones-site/proext-logo.png" alt="Proext"></div>
+                </div>
+            </div>
+            <div class="base-rodape">
+                <p class="texto-legal">© 2026 Nação Yuxibu</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Menu hambúrguer (mesmo comportamento do script.js original)
+            const botaoMenu = document.querySelector('.botao-menu');
+            const linksNavegacao = document.querySelector('.links-navegacao');
+
+            if (botaoMenu && linksNavegacao) {
+                const alternarMenu = (abrir) => {
+                    linksNavegacao.classList.toggle('ativo', abrir);
+                    botaoMenu.textContent = abrir ? '✕' : '☰';
+                    botaoMenu.setAttribute('aria-expanded', String(abrir));
+                    botaoMenu.setAttribute('aria-label', abrir ? 'Fechar menu' : 'Abrir menu');
+                };
+
+                alternarMenu(false);
+
+                botaoMenu.addEventListener('click', () => {
+                    const estaAberto = !linksNavegacao.classList.contains('ativo');
+                    alternarMenu(estaAberto);
+                });
+
+                linksNavegacao.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => alternarMenu(false));
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

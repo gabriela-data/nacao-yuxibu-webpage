@@ -1072,6 +1072,7 @@ a::before {
   border-radius: 50%;
   background-size: cover;
   margin: 0 auto 10px;
+  color: var(--cor-texto-claro);
 }
 
 @media (max-width: 768px) {
@@ -1102,7 +1103,7 @@ a::before {
 
 .rodape {
   background: var(--cor-verde-floresta);
-  padding: 40px 0;
+  padding:  20px;
   color: var(--cor-texto-claro);
   text-align: center;
 }
@@ -1111,7 +1112,7 @@ a::before {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 20px;
+  margin: 50px 0px 10px;
 }
 
 .logos-colaboradores {
