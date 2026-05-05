@@ -1022,7 +1022,7 @@ a::before {
 
 .divisor-pincelada {
   position: absolute;
-  top: -1px;
+  top: 0px;
   left: 0;
   width: 100%;
   overflow: hidden;
