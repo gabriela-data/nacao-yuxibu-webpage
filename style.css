@@ -443,234 +443,172 @@ body {
 }
 
 /* ============================================================
-   CARDS DO MOVIMENTO (flip)
+   CARDS DO MOVIMENTO (ícone à esquerda, empilhados)
    ============================================================ */
 
 .secao-cards-movimento {
   background: var(--cor-verde-floresta);
-  padding: 60px 0;
+  padding: 40px 0 60px;
 }
 
-.paragrafo-movimento {
-  font-size: 1.4rem;
-  color: var(--cor-texto-claro);
+/* Imagem dos pilares centralizada */
+.pilares-nacao-yuxibu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 40px;
 }
 
-.envoltorio-carrossel-movimento {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.pilares-nacao-yuxibu img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
+/* Parágrafo introdutório */
+.paragrafo-movimento {
+  font-size: 2rem;
+  color: var(--cor-texto-claro);
+  margin-bottom: 40px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* Grade: empilha os cards verticalmente */
 .grade-cards-movimento {
   display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  gap: 20px;
-  padding: 20px 0;
-  flex: 1;
-  scrollbar-width: none;
+  flex-direction: column;
+  gap: 28px;
 }
 
-.grade-cards-movimento::-webkit-scrollbar {
-  display: none;
-}
-
+/* Card individual */
 .card-movimento {
-  flex: 0 0 calc(33.333% - 14px);
-  scroll-snap-align: start;
-  min-height: 420px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.card-interno {
-  position: relative;
-  flex: 1;
-  transition: transform 0.8s ease;
-  transform-style: preserve-3d;
-}
-
-.card-movimento.virado .card-interno {
-  transform: rotateY(180deg);
-}
-
-.card-frente,
-.card-verso {
-  position: absolute;
-  inset: 0;
-  backface-visibility: hidden;
   border-radius: 20px;
-  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-movimento:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
+}
+
+/* Ícone à esquerda */
+.card-icone {
+  flex-shrink: 0;
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icone img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Conteúdo textual (título + caixa de texto) */
+.card-conteudo {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: #1a2e1a;
-  color: white;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
 }
 
-.card-frente .imagem-card {
-  flex: 1;
-  background-size: cover;
-  background-position: center;
-}
-
-.card-frente h3 {
-  padding: 20px;
-  text-align: center;
-  background: #0d1a0d;
-  font-size: 1.1rem;
-}
-
-.card-verso {
-  transform: rotateY(180deg);
-  background: #0d1a0d;
-  padding: 24px;
-  text-align: center;
-  overflow-y: auto;
-}
-
-.card-verso h3 {
-  margin-bottom: 12px;
-}
-
-.card-verso p {
-  font-size: 0.95rem;
-  line-height: 1.55;
-}
-
-.botao-alternar-card {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 999px;
-  background: var(--cor-destaque);
-  color: var(--cor-texto-claro);
+/* Título – acima da caixa de texto e fora dela visualmente */
+.card-titulo {
+  font-size: 1.4rem;
   font-weight: 700;
-  cursor: pointer;
+  color: #fff;
+  margin-bottom: 12px;
+  text-align: left;
 }
 
-.botao-movimento {
-  background: var(--cor-destaque);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  font-size: 1.5rem;
+/* Caixa de texto descritiva (com fundo levemente destacado, opcional) */
+.card-texto {
+  background: rgba(255, 255, 255, 0.08);  /* fundo sutil para destacar */
+  padding: 16px;
+  border-radius: 12px;
+  color: var(--cor-texto-claro);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
-.paginacao-movimento {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.bolinha {
-  width: 12px;
-  height: 12px;
-  background: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  border: none;
-}
-
-.bolinha.ativa {
-  background: var(--cor-destaque);
-  transform: scale(1.2);
+.card-texto p + p {
+  margin-top: 10px;
 }
 
 /* ==============================
-   CARDS DO MOVIMENTO (flip) – AJUSTE MOBILE ≤ 768px
+   RESPONSIVIDADE
    ============================== */
+
+/* Tablets e telas médias: mantém layout lado a lado, mas reduz ícone */
 @media (max-width: 768px) {
+  .card-icone {
+    width: 120px;
+    height: 120px;
+    margin-right: 16px;
+  }
+
+  .card-titulo {
+    font-size: 1.3rem;
+  }
+
+  .card-texto {
+    font-size: 0.9rem;
+    padding: 14px;
+  }
+
   .paragrafo-movimento {
-    font-size: 1.1rem;
-    margin-bottom: 24px;
+    font-size: 1.2rem;
   }
+}
 
-  .envoltorio-carrossel-movimento {
-    position: relative;
-  }
-
-  .grade-cards-movimento {
-    width: 100%;
-    padding: 0;                    /* sem padding lateral extra */
-    gap: 0;                       /* remove espaçamento entre cards */
-    scroll-snap-type: x mandatory;
-    scroll-padding: 0;
-  }
-
+/* Celulares: empilha ícone e texto verticalmente */
+@media (max-width: 600px) {
   .card-movimento {
-    flex: 0 0 100%;               /* um card por vez */
-    min-height: auto;
-    scroll-snap-align: center;    /* centraliza o card no snap */
-    padding: 0 4px;               /* pequeno respiro para sombra não cortar */
-  }
-
-  /* Ajusta altura das faces para telas pequenas */
-  .card-interno {
-    min-height: 380px;            /* altura mínima para manter proporção */
-  }
-
-  .card-verso {
-    max-height: 60vh;
-    overflow-y: auto;
-    padding: 20px 14px;
-  }
-
-  /* Botões de navegação (setas) */
-  .botao-movimento {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    background: rgba(211, 84, 0, 0.9); /* laranja com mais opacidade */
-    border: none;
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    font-size: 1.7rem;
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: white;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    transition: transform 0.2s, background 0.2s;
+    text-align: center;
+    padding: 20px 15px;
   }
 
-  .botao-movimento:active {
-    transform: translateY(-50%) scale(0.9);
-    background: rgba(211, 84, 0, 1);
+  .card-icone {
+    width: 120px;
+    height: 120px;
+    margin-right: 0;
+    margin-bottom: 15px;
   }
 
-  .botao-movimento-anterior {
-    left: 8px;
+  .card-titulo {
+    text-align: center;
+    font-size: 1.25rem;
   }
 
-  .botao-movimento-proximo {
-    right: 8px;
+  .card-texto {
+    text-align: center;
+    padding: 12px;
+  }
+}
+
+/* Telas muito pequenas (ex: 400px ou menos) */
+@media (max-width: 400px) {
+  .card-icone {
+    width: 100px;
+    height: 100px;
   }
 
-  /* Paginação (bolinhas) */
-  .paginacao-movimento {
-    margin-top: 16px;
-    gap: 8px;
+  .card-titulo {
+    font-size: 1.1rem;
   }
 
-  .bolinha {
-    width: 10px;
-    height: 10px;
-  }
-
-  .bolinha.ativa {
-    transform: scale(1.3);
+  .card-texto {
+    font-size: 0.85rem;
   }
 }
 
