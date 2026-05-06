@@ -1044,7 +1044,7 @@ a::before {
 }
 
 .container-apoio {
-  max-width: 800px;
+  max-width: 80vw;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -1061,7 +1061,7 @@ a::before {
 .opcoes-apoio {
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 100px;
   flex-wrap: wrap;
 }
 
@@ -1070,7 +1070,7 @@ a::before {
   border: 1px solid var(--cor-texto-claro);
   padding: 20px 10px;
   text-align: center;
-  max-width: 300px;
+  max-width: 400px;
 }
 
 .imagem-apoio {
@@ -1079,7 +1079,7 @@ a::before {
   border-radius: 50%;
   background-size: cover;
   margin: 0 auto 10px;
-  color: var(--cor-texto-claro);
+  filter: invert(1)
 }
 
 @media (max-width: 768px) {
