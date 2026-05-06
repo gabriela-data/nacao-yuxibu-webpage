@@ -155,13 +155,16 @@ body {
   }
 }
 
+
 @media (max-width: 768px) {
   .container-marca {
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
+    transform: translateY(-50%);
   }
   .logo-cabecalho {
-    height: 80px;
+    height: 100px;
+    object-fit: contain;
   }
   .navegacao {
     padding: 0 28px 0 120px;
@@ -171,11 +174,13 @@ body {
 
 @media (max-width: 480px) {
   .container-marca {
-    width: 80px;
-    height: 80px;
+    width: 130px;
+    height: 130px;
+    transform: translateY(-50%);
   }
   .logo-cabecalho {
-    height: 65px;
+    height: 100px;
+    object-fit: contain;
   }
   .navegacao {
     padding: 0 20px 0 0;
