@@ -375,6 +375,7 @@ body {
   font-size: 2.6rem;
   margin-bottom: 30px;
   font-weight: 800;
+  text-transform: uppercase;
 }
 
 .player-video {
@@ -900,6 +901,7 @@ a::before {
   color: var(--cor-fundo-escuro);
   font-weight: 800;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .descricao-equipe {
