@@ -543,6 +543,69 @@ body {
   margin-top: 10px;
 }
 
+
+/* ============================================================
+   REDES SOCIAIS (texto + ícones lado a lado)
+   ============================================================ */
+.redes-sociais-coletivo {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.linha-redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--cor-texto-claro);
+}
+
+.chamada-redes {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.linha-redes a {
+  display: inline-flex;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.linha-redes a:hover {
+  transform: scale(1.15);
+  opacity: 0.9;
+}
+
+.linha-redes img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+  vertical-align: middle;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .chamada-redes {
+    font-size: 1rem;
+  }
+  .linha-redes img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 400px) {
+  .linha-redes {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+}
+
 /* ==============================
    RESPONSIVIDADE
    ============================== */
