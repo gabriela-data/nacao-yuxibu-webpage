@@ -34,80 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ------------------------------------------------------------
-  // 2. Carrossel de cards do movimento (scroll horizontal)
-  // ------------------------------------------------------------
-  function configurarCarrosselMovimento() {
-    const grade = document.getElementById('gradeMovimento');
-    const botaoAnterior = document.querySelector('.botao-movimento-anterior');
-    const botaoProximo = document.querySelector('.botao-movimento-proximo');
-    const paginacao = document.getElementById('paginacaoMovimento');
-    const cards = Array.from(document.querySelectorAll('.card-movimento'));
-
-    if (!grade || !botaoAnterior || !botaoProximo || !paginacao || cards.length === 0) return;
-
-    const obterPasso = () => {
-      if (cards.length < 2) return cards[0].offsetWidth;
-      return cards[1].offsetLeft - cards[0].offsetLeft;
-    };
-
-    // Cria bolinhas de paginação
-    cards.forEach((card, indice) => {
-      const bolinha = document.createElement('button');
-      bolinha.type = 'button';
-      bolinha.classList.add('bolinha');
-      bolinha.setAttribute('aria-label', `Ir para o card ${indice + 1}`);
-      bolinha.addEventListener('click', () => {
-        grade.scrollTo({ left: card.offsetLeft - grade.offsetLeft, behavior: 'smooth' });
-      });
-      paginacao.appendChild(bolinha);
-    });
-
-    const atualizarPaginacao = () => {
-      const passo = obterPasso();
-      const indice = Math.round(grade.scrollLeft / passo);
-      paginacao.querySelectorAll('.bolinha').forEach((bolinha, i) => {
-        bolinha.classList.toggle('ativa', i === indice);
-      });
-    };
-
-    if (paginacao.firstElementChild) paginacao.firstElementChild.classList.add('ativa');
-    grade.addEventListener('scroll', atualizarPaginacao);
-
-    botaoProximo.addEventListener('click', () => grade.scrollBy({ left: obterPasso(), behavior: 'smooth' }));
-    botaoAnterior.addEventListener('click', () => grade.scrollBy({ left: -obterPasso(), behavior: 'smooth' }));
-  }
-
-  // ------------------------------------------------------------
-  // 3. Cards com efeito flip (movimento)
-  // ------------------------------------------------------------
-  function configurarFlipCardsMovimento() {
-    const cards = document.querySelectorAll('.card-movimento');
-    if (cards.length === 0) return;
-
-    const sincronizarBotao = (card, deveVirar) => {
-      const botao = card.querySelector('.botao-alternar-card');
-      if (!botao) return;
-      card.classList.toggle('virado', deveVirar);
-      botao.textContent = deveVirar ? 'Mostrar menos' : 'Saiba mais';
-      botao.setAttribute('aria-expanded', String(deveVirar));
-    };
-
-    cards.forEach(card => sincronizarBotao(card, false));
-
-    document.querySelectorAll('.botao-alternar-card').forEach(botao => {
-      botao.addEventListener('click', () => {
-        const card = botao.closest('.card-movimento');
-        if (!card) return;
-        const deveVirar = !card.classList.contains('virado');
-
-        cards.forEach(outro => { if (outro !== card) sincronizarBotao(outro, false); });
-        sincronizarBotao(card, deveVirar);
-      });
-    });
-  }
-
-  // ------------------------------------------------------------
-  // 4. Pilares da plataforma (flip individual)
+  // 2. Pilares da plataforma (flip individual)
   // ------------------------------------------------------------
   function configurarFlipPilares() {
     const pilares = document.querySelectorAll('.pilar');
@@ -136,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ------------------------------------------------------------
-  // 5. Animação de revelação ao rolar a página
+  // 3. Animação de revelação ao rolar a página
   // ------------------------------------------------------------
   function configurarAnimacoesRevelacao() {
     const elementos = document.querySelectorAll('.revelar');
@@ -155,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ------------------------------------------------------------
-  // 6. Efeito parallax no hero
+  // 4. Efeito parallax no hero
   // ------------------------------------------------------------
   function configurarParallaxHero() {
     const hero = document.querySelector('.secao-hero');
@@ -170,13 +97,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // ------------------------------------------------------------
   function iniciar() {
     configurarMenuNavegacao();
-    configurarCarrosselMovimento();
-    configurarFlipCardsMovimento();
     configurarFlipPilares();
     configurarAnimacoesRevelacao();
     configurarParallaxHero();
 
-    // Swiper do povo (simples, sem lógica complexa)
+    // Swiper do povo (carrossel de vídeos)
     if (document.querySelector('.carrossel-povo')) {
       new Swiper('.carrossel-povo', {
         slidesPerView: 1,
