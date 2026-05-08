@@ -1,6 +1,6 @@
-# Plataforma Livre Nação Yuxibu
+<img src="./Fotos/nacao%20yuxibu.png" alt="Logo Nação Yuxibu" width="200">
 
-![Logo Nação Yuxibu](./Fotos/nacao%20yuxibu.png)
+## [**Plataforma Livre Nação Yuxibu**](https://gabriela-data.github.io/nacao-yuxibu-webpage/)
 
 **Verdade em unidade: do coração da floresta para o mundo!**
 
