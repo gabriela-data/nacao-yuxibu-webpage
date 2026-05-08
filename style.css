@@ -531,7 +531,7 @@ body {
 
 /* Caixa de texto descritiva (com fundo levemente destacado, opcional) */
 .card-texto {
-  background: rgba(255, 255, 255, 0.08);  /* fundo sutil para destacar */
+  background: rgba(255, 255, 255, 0.08);
   padding: 16px;
   border-radius: 12px;
   color: var(--cor-texto-claro);
@@ -543,6 +543,95 @@ body {
   margin-top: 10px;
 }
 
+/* ==============================
+   RESPONSIVIDADE – CARDS DO MOVIMENTO
+   ============================== */
+
+/* Tablets (até 768px) */
+@media (max-width: 768px) {
+  .paragrafo-movimento {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+  }
+
+  .pilares-nacao-yuxibu {
+    margin-bottom: 30px;
+  }
+
+  .card-icone {
+    width: 120px;
+    height: 120px;
+    margin-right: 16px;
+  }
+
+  .card-titulo {
+    font-size: 1.25rem;
+  }
+
+  .card-texto {
+    font-size: 0.9rem;
+    padding: 14px;
+  }
+}
+
+/* Celulares (até 600px) – empilha verticalmente */
+@media (max-width: 600px) {
+  .card-movimento {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 15px;
+  }
+
+  .card-icone {
+    width: 100px;
+    height: 100px;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .card-titulo {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .card-texto {
+    text-align: center;
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  .paragrafo-movimento {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+}
+
+/* Telas muito pequenas (até 400px) */
+@media (max-width: 400px) {
+  .card-icone {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 12px;
+  }
+
+  .card-titulo {
+    font-size: 1.1rem;
+  }
+
+  .card-texto {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+
+  .paragrafo-movimento {
+    font-size: 1.1rem;
+  }
+
+  .pilares-nacao-yuxibu {
+    margin-bottom: 25px;
+  }
+}
 /* ============================================================
    REDES SOCIAIS (texto + ícones lado a lado)
    ============================================================ */
