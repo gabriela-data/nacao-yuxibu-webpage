@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoie – Nação Yuxibu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="./Fotos/nacao yuxibu.png">
+    <style>
+        /* ============================================================
+       ESTILOS ESPECÍFICOS DA PÁGINA APOIE
+       ============================================================ */
+
+        .pagina-apoie {
+            min-height: 100vh;
+            background: linear-gradient(180deg, #f7f0e4, #efe3d0);
+            padding: 120px 0 80px;
+        }
+
+        .cabecalho-pagina {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .cabecalho-pagina h1 {
+            font-size: 2.8rem;
+            color: var(--cor-fundo-escuro);
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .cabecalho-pagina p, li {
+            font-size: 1.3rem;
+            color: var(--cor-marrom-medio);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .container-formulario {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #fffef9;
+            border-radius: 22px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+        }
+
+        .container-formulario h2 {
+            font-size: 1.8rem;
+            color: var(--cor-fundo-escuro);
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .container-formulario .subtitulo-form {
+            font-size: 1rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-apoio {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .campo-form {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .campo-form label {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--cor-fundo-escuro);
+        }
+
+        .campo-form input,
+        .campo-form select,
+        .campo-form textarea {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            padding: 14px 16px;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            background: #fafafa;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            outline: none;
+        }
+
+        .campo-form input:focus,
+        .campo-form select:focus,
+        .campo-form textarea:focus {
+            border-color: var(--cor-destaque);
+            box-shadow: 0 0 0 3px rgba(211, 84, 0, 0.1);
+        }
+
+        .campo-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .botao-enviar {
+            background: var(--cor-destaque);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
+        .botao-enviar:hover {
+            background: #e67e22;
+            transform: scale(1.02);
+        }
+
+        .botao-enviar:active {
+            transform: scale(0.98);
+        }
+
+        .mensagem-sucesso {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 16px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .info-adicional {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .info-adicional a {
+            color: var(--cor-destaque);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .pagina-apoie {
+                padding: 100px 0 60px;
+            }
+
+            .cabecalho-pagina h1 {
+                font-size: 2.2rem;
+            }
+
+            .cabecalho-pagina p {
+                font-size: 1.1rem;
+            }
+
+            .container-formulario {
+                padding: 28px 20px;
+            }
+
+            .container-formulario h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cabecalho-pagina h1 {
+                font-size: 1.8rem;
+            }
+
+            .cabecalho-pagina p {
+                font-size: 1rem;
+            }
+
+            .container-formulario {
+                padding: 24px 16px;
+            }
+
+            .container-formulario h2 {
+                font-size: 1.3rem;
+            }
+
+            .botao-enviar {
+                font-size: 1rem;
+                padding: 14px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="navegacao">
+            <div class="container-marca">
+                <a href="index.html"><img src="./Fotos/nacao yuxibu.png" alt="Logo Nação Yuxibu"
+                        class="logo-cabecalho"></a>
+            </div>
+            <button class="botao-menu" type="button" aria-label="Abrir menu">☰</button>
+            <ul class="links-navegacao">
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#manifesto">Manifesto</a></li>
+                <li><a href="index.html#povo">Povo Huni Kuī</a></li>
+                <li><a href="index.html#movimento">O Coletivo</a></li>
+                <li><a href="index.html#plataforma">A Plataforma</a></li>
+                <li><a href="index.html#sobre">Equipe</a></li>
+                <li><a href="publicacoes.html">Publicações</a></li>
+                <li><a href="apoie.html" class="link-apoio">APOIE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pagina-apoie">
+            <div class="container">
+                <div class="cabecalho-pagina">
+                    <h1>Apoie a Nação Yuxibu</h1>
+                    <p>
+                        O projeto avançou em áreas importantes, especialmente no que diz respeito à definição de uma
+                        base técnica sólida.
+                    </p>
+                    <p>
+                        No atual momento precisamos expandir parcerias para:
+                        <li>
+                            alavancar o desenvolvimento do software por meio de uma equipe de programadores que possam
+                            trabalhar em conjunto com os bolsistas de extensão da UFBA.
+                        </li>
+                        <li>
+                            realizar viagem de imersão em pelo menos 1 aldeia Huni Kuin para continuidade da pesquisa em
+                        design semioparticipativo. Já temos o convite para realizar esse trabalho na aldeia São Vicente,
+                        que está localizada às margens do Rio Humaitá, na Terra Indígena (TI) do Rio Humaitá, no
+                        município de Tarauacá, no estado do Acre.
+
+                        </li>
+
+                        
+
+                        
+                    </p>
+                </div>
+
+                <div class="container-formulario">
+                    <h2>Quero Apoiar</h2>
+                    <p class="subtitulo-form">Preencha o formulário abaixo e entraremos em contato.</p>
+
+                    <form class="form-apoio" action="https://formspree.io/f/SEU-ID-FORMSPREE" method="POST"
+                        id="formApoio">
+                        <div class="campo-form">
+                            <label for="nome">Nome completo *</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="cidade">Cidade/Estado</label>
+                            <input type="text" id="cidade" name="cidade" placeholder="Ex.: Salvador – BA">
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="tipo-apoio">Tipo de apoio *</label>
+                            <select id="tipo-apoio" name="tipo-apoio" required>
+                                <option value="" disabled selected>Selecione uma opção</option>
+                                <option value="financeiro">Apoio financeiro</option>
+                                <option value="divulgacao">Divulgação</option>
+                                <option value="voluntariado">Voluntariado</option>
+                                <option value="parceria">Parceria institucional</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem"
+                                placeholder="Conte-nos como gostaria de apoiar..."></textarea>
+                        </div>
+
+                        <button type="submit" class="botao-enviar">Enviar</button>
+                    </form>
+
+                    <div class="mensagem-sucesso" id="mensagemSucesso">
+                        ✅ Mensagem enviada com sucesso! Entraremos em contato em breve.
+                    </div>
+                </div>
+
+                <div class="info-adicional">
+                    <p>
+                        Também estamos no Instagram:
+                        <a href="https://www.instagram.com/nacao_yuxibu" target="_blank"
+                            rel="noopener noreferrer">@nacao_yuxibu</a>
+                    </p>
+                    <p style="margin-top: 8px;">
+                        Ou fale diretamente conosco pelo
+                        <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noopener noreferrer">WhatsApp</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="marca-rodape">
+                <h4>Realização</h4>
+                <div class="logos-colaboradores">
+                    <div class="logo-colaborador"><img src="./icones-site/onda-digital.png" alt="Onda Digital"></div>
+                    <div class="logo-colaborador"><img src="./icones-site/nacao-yuxibu-logo.png" alt="Nação Yuxibu">
+                    </div>
+                    <div class="logo-colaborador"><img src="./icones-site/SPILab.png" alt="SPILab"></div>
+                </div>
+            </div>
+
+            <div class="marca-rodape">
+                <h4>Apoio</h4>
+                <div class="logos-colaboradores">
+                    <div class="logo-colaborador"><img src="./icones-site/ufba-logo.png" alt="UFBA"></div>
+                    <div class="logo-colaborador"><img src="./icones-site/proext-logo.png" alt="Proext"></div>
+                </div>
+            </div>
+            <div class="base-rodape">
+                <p class="texto-legal">© 2026 Nação Yuxibu</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu hambúrguer
+        document.addEventListener('DOMContentLoaded', () => {
+            const botaoMenu = document.querySelector('.botao-menu');
+            const linksNavegacao = document.querySelector('.links-navegacao');
+
+            if (botaoMenu && linksNavegacao) {
+                const alternarMenu = (abrir) => {
+                    linksNavegacao.classList.toggle('ativo', abrir);
+                    botaoMenu.textContent = abrir ? '✕' : '☰';
+                    botaoMenu.setAttribute('aria-expanded', String(abrir));
+                    botaoMenu.setAttribute('aria-label', abrir ? 'Fechar menu' : 'Abrir menu');
+                };
+
+                alternarMenu(false);
+
+                botaoMenu.addEventListener('click', () => {
+                    const estaAberto = !linksNavegacao.classList.contains('ativo');
+                    alternarMenu(estaAberto);
+                });
+
+                linksNavegacao.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => alternarMenu(false));
+                });
+            }
+
+            // Mensagem de sucesso após envio do formulário
+            const form = document.getElementById('formApoio');
+            const mensagemSucesso = document.getElementById('mensagemSucesso');
+
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    // O Formspree redireciona ou mostra mensagem própria,
+                    // mas podemos exibir a mensagem de sucesso após 1 segundo
+                    setTimeout(() => {
+                        mensagemSucesso.style.display = 'block';
+                        form.reset();
+                    }, 1000);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
