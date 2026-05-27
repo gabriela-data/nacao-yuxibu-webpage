@@ -13,46 +13,230 @@
         /* ============================================================
        ESTILOS ESPECÍFICOS DA PÁGINA APOIE
        ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* ---------- SEÇÃO PRINCIPAL ---------- */
         .pagina-apoie {
-            min-height: 100vh;
-            background: linear-gradient(180deg, #f7f0e4, #efe3d0);
-            padding: 120px 0 80px;
+            position: relative;
+            width: 100%;
+            min-height: calc(100vh - 72px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5rem 0 3rem;
+            background-image: url(./Fotos/APOIE.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        /* Overlay escuro para melhor contraste das caixas */
+        .pagina-apoie::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Container interno com padding responsivo */
+        .container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
         }
 
         .cabecalho-pagina {
-            text-align: center;
-            margin-bottom: 50px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: minmax(320px, 1fr) minmax(360px, 1.2fr);
+            gap: 2rem;
+            align-items: start;
         }
 
-        .cabecalho-pagina h1 {
-            font-size: 2.8rem;
-            color: var(--cor-fundo-escuro);
+        /* ---------- BOX BRANCO (TÍTULO À ESQUERDA) ---------- */
+        .box-titulo {
+            background-color: #ffffff;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.25);
+            max-width: 520px;
+            width: 100%;
+            transition: transform 0.2s ease;
+        }
+
+        .box-titulo h1 {
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
             font-weight: 800;
-            text-transform: uppercase;
-            margin-bottom: 15px;
+            color: #1e2f2c;
+            line-height: 1.2;
+            margin: 0;
+            letter-spacing: -0.01em;
         }
 
-        .cabecalho-pagina p,
-        li {
-            font-size: 1.3rem;
-            color: var(--cor-marrom-medio);
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.7;
+        /* ---------- BOX VERDE ESCURO (TEXTO À DIREITA) ---------- */
+        .box-texto-verde {
+            background-color: #03150f;
+            color: #fef9e6;
+            padding: 2rem 2rem;
+            max-width: 560px;
+            width: 100%;
+            box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.35);
+        }
+
+        .box-texto-verde p {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+            line-height: 1.75;
+            color: #f0f2e9;
+        }
+
+        /* Estilização da lista */
+        .box-texto-verde ul {
+            margin: 0.5rem 0 1rem 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .box-texto-verde li {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+            position: relative;
+            list-style: none;
+        }
+
+        .box-texto-verde li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #b6e6a2;
+            font-weight: 600;
+        }
+
+        .box-texto-verde .detalhe-viagem {
+            margin-top: 0.5rem;
+            margin-left: 0.25rem;
+        }
+
+        .box-texto-verde .detalhe-viagem p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: #e2f0da;
+        }
+
+        /* Responsividade */
+        @media (max-width: 960px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+            }
+
+            .box-titulo,
+            .box-texto-verde {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 960px) {
+            .container {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .cabecalho-pagina {
+                grid-template-columns: 1fr;
+            }
+
+            .box-titulo,
+            .box-texto-verde {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 2rem 1.2rem;
+            }
+
+            .box-titulo,
+            .box-texto-verde {
+                padding: 1.6rem 1.4rem;
+                border-radius: 22px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1.5rem 1rem;
+            }
+
+            .box-titulo,
+            .box-texto-verde {
+                padding: 1.4rem 1.2rem;
+            }
+
+            .container-formulario {
+                padding: 26px 18px;
+            }
+
+            .container-formulario h2 {
+                font-size: 1.7rem;
+            }
+
+            .campo-form input,
+            .campo-form select,
+            .campo-form textarea {
+                padding: 12px 14px;
+                font-size: 0.95rem;
+            }
+
+            .botao-enviar {
+                width: 100%;
+                padding: 14px 18px;
+            }
+        }
+
+
+        /* ---------- SEÇÃO DO FORMULÁRIO (QUERO APOIAR) ---------- */
+
+        .secao-formulario {
+            background: #f7efe1;
+            padding: 4rem 1.5rem 3.5rem;
         }
 
         .container-formulario {
-            max-width: 700px;
+            max-width: 760px;
             margin: 0 auto;
             background: #fffef9;
-            border-radius: 22px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-            padding: 40px;
+            border-radius: 28px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+            padding: 44px 42px;
         }
 
         .container-formulario h2 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: var(--cor-fundo-escuro);
             font-weight: 700;
             margin-bottom: 10px;
@@ -122,7 +306,9 @@
             cursor: pointer;
             transition: background 0.3s ease, transform 0.3s ease;
             letter-spacing: 1px;
-            margin-top: 10px;
+            margin: 10px auto 0;
+            display: inline-flex;
+            justify-content: center;
         }
 
         .botao-enviar:hover {
@@ -157,6 +343,113 @@
             color: var(--cor-destaque);
             font-weight: 600;
             font-size: 0.95rem;
+        }
+
+
+        /* ============================================================
+                                                                    RODAPÉ
+            ============================================================ */
+
+        .rodape {
+            background: var(--cor-verde-floresta);
+            padding: 20px;
+            color: var(--cor-texto-claro);
+            text-align: center;
+        }
+
+        .rodape .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .rodape .marca-rodape {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .rodape .marca-rodape h4 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin: 0;
+            color: #f4ecd8;
+        }
+
+        .rodape .logos-colaboradores {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .rodape .logo-colaborador {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .logo-colaborador img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .rodape .base-rodape {
+            width: 100%;
+            max-width: 620px;
+            margin-top: 0;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .rodape .texto-legal {
+            font-size: 0.9rem;
+            opacity: 0.78;
+            margin: 0;
+        }
+
+        @media (max-width: 640px) {
+            .rodape {
+                padding: 32px 16px 24px;
+            }
+
+            .rodape .logos-colaboradores {
+                gap: 16px;
+            }
+
+            .rodape .logo-colaborador {
+                width: 96px;
+                height: 96px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .rodape {
+                padding: 26px 14px 20px;
+            }
+
+            .rodape .logo-colaborador {
+                width: 80px;
+                height: 80px;
+            }
+
+            .rodape .base-rodape {
+                max-width: 100%;
+                padding-top: 18px;
+            }
         }
 
         /* Responsividade */
@@ -232,100 +525,111 @@
         <section class="pagina-apoie">
             <div class="container">
                 <div class="cabecalho-pagina">
-                    <h1>Apoie a Nação Yuxibu</h1>
-                    <p>
-                        O projeto avançou em áreas importantes, especialmente no que diz respeito à definição de uma
-                        base técnica sólida.
-                    </p>
-                    <p>
-                        No atual momento precisamos expandir parcerias para:
-                        <li>
-                            alavancar o desenvolvimento do software por meio de uma equipe de programadores que possam
-                            trabalhar em conjunto com os bolsistas de extensão da UFBA.
-                        </li>
-                        <li>
-                            <p>
-                                realizar viagem de imersão em pelo menos 1 aldeia Huni Kuin para continuidade da
-                                pesquisa em
-                                design semioparticipativo.
-                            </p>
-                            <p>
-                                Já temos o convite para realizar esse trabalho na aldeia São Vicente,
-                                que está localizada às margens do Rio Humaitá, na Terra Indígena (TI) do Rio Humaitá, no
-                                município de Tarauacá, no estado do Acre.
-                            </p>
-
-
-                        </li>
-
-
-
-
-                    </p>
-                </div>
-
-                <div class="container-formulario">
-                    <h2>Quero Apoiar</h2>
-                    <p class="subtitulo-form">Preencha o formulário abaixo e entraremos em contato.</p>
-
-                    <form class="form-apoio" action="https://formspree.io/f/SEU-ID-FORMSPREE" method="POST"
-                        id="formApoio">
-                        <div class="campo-form">
-                            <label for="nome">Nome completo *</label>
-                            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-                        </div>
-
-                        <div class="campo-form">
-                            <label for="email">E-mail *</label>
-                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-                        </div>
-
-                        <div class="campo-form">
-                            <label for="cidade">Cidade/Estado</label>
-                            <input type="text" id="cidade" name="cidade" placeholder="Ex.: Salvador – BA">
-                        </div>
-
-                        <div class="campo-form">
-                            <label for="tipo-apoio">Tipo de apoio *</label>
-                            <select id="tipo-apoio" name="tipo-apoio" required>
-                                <option value="" disabled selected>Selecione uma opção</option>
-                                <option value="financeiro">Apoio financeiro</option>
-                                <option value="divulgacao">Divulgação</option>
-                                <option value="voluntariado">Voluntariado</option>
-                                <option value="parceria">Parceria institucional</option>
-                                <option value="outro">Outro</option>
-                            </select>
-                        </div>
-
-                        <div class="campo-form">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem"
-                                placeholder="Conte-nos como gostaria de apoiar..."></textarea>
-                        </div>
-
-                        <button type="submit" class="botao-enviar">Enviar</button>
-                    </form>
-
-                    <div class="mensagem-sucesso" id="mensagemSucesso">
-                        ✅ Mensagem enviada com sucesso! Entraremos em contato em breve.
+                    <!-- Lado esquerdo: apenas o h1 dentro do box branco -->
+                    <div class="box-titulo">
+                        <h1>Apoie a Plataforma Livre Nação Yuxibu</h1>
                     </div>
-                </div>
+                    <!-- Lado direito: box verde escuro  -->
+                    <div class="box-texto-verde">
+                        <p>
+                            O projeto avançou em áreas importantes, especialmente, no que diz respeito à definição de
+                            uma
+                            base técnica sólida.
+                        </p>
+                        <p>
+                            No atual momento, precisamos expandir parcerias para:
+                        </p>
+                        <ul>
+                            <li>
+                                alavancar o desenvolvimento do software por meio de uma equipe de programadores que
+                                possam
+                                trabalhar em conjunto com os bolsistas de extensão da UFBA.
+                            </li>
+                            <li>
+                                <p>
+                                    realizar viagem de imersão em pelo menos 1 aldeia Huni Kuin para continuidade da
+                                    pesquisa em
+                                    design semioparticipativo.
+                                </p>
+                                <div>
+                                    <p>
+                                        Já temos o convite para realizar esse trabalho na aldeia São Vicente,
+                                        que está localizada às margens do Rio Humaitá, na Terra Indígena (TI) do Rio
+                                        Humaitá, no
+                                        município de Tarauacá, no estado do Acre.
+                                    </p>
+                                </div>
 
-                <div class="info-adicional">
-                    <p>
-                        Também estamos no Instagram:
-                        <a href="https://www.instagram.com/nacaoyuxibu" target="_blank"
-                            rel="noopener noreferrer">@nacaoyuxibu</a>
-                    </p>
-                    <p style="margin-top: 8px;">
-                        Ou fale diretamente conosco pelo
-                        <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noopener noreferrer">WhatsApp</a>.
-                    </p>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
+        </section>
+        <!-- SEÇÃO DO FORMULÁRIO -->
+        <section class="secao-formulario">
+            <div class="container-formulario">
+                <h2>Quero Apoiar</h2>
+                <p class="subtitulo-form">Preencha o formulário abaixo e entraremos em contato.</p>
+
+                <form class="form-apoio" action="https://formspree.io/f/SEU-ID-FORMSPREE" method="POST" id="formApoio">
+                    <div class="campo-form">
+                        <label for="nome">Nome completo *</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="cidade">Cidade/Estado</label>
+                        <input type="text" id="cidade" name="cidade" placeholder="Ex.: Salvador – BA">
+                    </div>
+
+                   <!-- <div class="campo-form">
+                        <label for="tipo-apoio">Tipo de apoio *</label>
+                        <select id="tipo-apoio" name="tipo-apoio" required>
+                            <option value="" disabled selected>Selecione uma opção</option>
+                            <option value="financeiro">Apoio financeiro</option>
+                            <option value="divulgacao">Divulgação</option>
+                            <option value="voluntariado">Voluntariado</option>
+                            <option value="parceria">Parceria institucional</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div> -->
+
+                    <div class="campo-form">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem"
+                            placeholder="Conte-nos como gostaria de apoiar..."></textarea>
+                    </div>
+
+                    <button type="submit" class="botao-enviar">Enviar</button>
+                </form>
+
+                <div class="mensagem-sucesso" id="mensagemSucesso">
+                    Mensagem enviada com sucesso! Entraremos em contato em breve.
+                </div>
+            </div>
+
+            <div class="info-adicional">
+                <p>
+                    Também estamos no Instagram:
+                    <a href="https://www.instagram.com/nacaoyuxibu" target="_blank"
+                        rel="noopener noreferrer">@nacaoyuxibu</a>
+                </p>
+                <p style="margin-top: 8px;">
+                    Ou fale diretamente conosco pelo
+                    <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noopener noreferrer">WhatsApp</a>.
+                </p>
+            </div>
             </div>
         </section>
     </main>
 
+    <!-- SEÇÃO do Rodapé -->
     <footer class="rodape">
         <div class="container">
             <div class="marca-rodape">
