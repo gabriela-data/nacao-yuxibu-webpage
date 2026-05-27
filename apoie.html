@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apoie – Nação Yuxibu</title>
-    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="./Fotos/nacao yuxibu.png">
@@ -13,16 +14,19 @@
         /* ============================================================
        ESTILOS ESPECÍFICOS DA PÁGINA APOIE
        ============================================================ */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --cor-fundo-escuro: #1a1412;
+            --cor-texto-claro: #f4ecd8;
+            --cor-destaque: #d35400;
+            --cor-urucum: #af1404;
+            --cor-marrom-medio: #2d1e1a;
+            --cor-verde-floresta: #2d3c1a;
+            --cor-fundo-card: #251d1a;
+            --cor-fundo-secundario: #2a211d;
+            --sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.15);
+            --transicao-padrao: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        html {
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-        }
 
         /* ---------- SEÇÃO PRINCIPAL ---------- */
         .pagina-apoie {
@@ -452,6 +456,24 @@
             }
         }
 
+        .contato-rodape {
+            font-size: 1rem;
+            margin: 20px 0;
+            color: #f4ecd8;
+            text-align: center;
+        }
+
+        .contato-rodape a {
+            color: #f4ecd8;
+            text-decoration: none;
+            opacity: 0.95;
+        }
+
+        .contato-rodape a:hover {
+            color: var(--cor-destaque);
+            opacity: 1;
+        }
+
         /* Responsividade */
         @media (max-width: 768px) {
             .pagina-apoie {
@@ -588,7 +610,7 @@
                         <input type="text" id="cidade" name="cidade" placeholder="Ex.: Salvador – BA">
                     </div>
 
-                   <!-- <div class="campo-form">
+                    <!-- <div class="campo-form">
                         <label for="tipo-apoio">Tipo de apoio *</label>
                         <select id="tipo-apoio" name="tipo-apoio" required>
                             <option value="" disabled selected>Selecione uma opção</option>
@@ -641,7 +663,6 @@
                     <div class="logo-colaborador"><img src="./icones-site/SPILab.png" alt="SPILab"></div>
                 </div>
             </div>
-
             <div class="marca-rodape">
                 <h4>Apoio</h4>
                 <div class="logos-colaboradores">
@@ -649,6 +670,10 @@
                     <div class="logo-colaborador"><img src="./icones-site/proext-logo.png" alt="Proext"></div>
                 </div>
             </div>
+            <div class="contato-rodape">
+                <p ><a href="mailto:nacaoyuxibu@ufba.br">Email: nacaoyuxibu@ufba.br</a></p>
+            </div>
+            
             <div class="base-rodape">
                 <p class="texto-legal">© 2026 Nação Yuxibu</p>
             </div>
