@@ -751,9 +751,12 @@ body {
   padding: 60px 0;
 }
 
-.paragrafo-plataforma {
+.paragrafo-plataforma, .paragrafo-coletivo {
   font-size: 1.4rem;
   margin-bottom: 40px;
+}
+.paragrafo-coletivo{
+  color: var(--cor-texto-claro);
 }
 
 .grade-pilares {
@@ -828,7 +831,7 @@ body {
     font-size: 3rem;
   }
 
-  .paragrafo-plataforma {
+  .paragrafo-plataforma, .paragrafo-coletivo {
     font-size: 1.2rem;
   }
 }
@@ -843,7 +846,7 @@ body {
     font-size: 2.4rem;
   }
 
-  .paragrafo-plataforma {
+  .paragrafo-plataforma, .paragrafo-coletivo {
     font-size: 1.1rem;
   }
 }
@@ -857,7 +860,7 @@ body {
     font-size: 1.8rem;
   }
 
-  .paragrafo-plataforma {
+  .paragrafo-plataforma, .paragrafo-coletivo {
     font-size: 1rem;
   }
 
