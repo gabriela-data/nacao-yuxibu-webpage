@@ -751,11 +751,13 @@ body {
   padding: 60px 0;
 }
 
-.paragrafo-plataforma, .paragrafo-coletivo {
+.paragrafo-plataforma,
+.paragrafo-coletivo {
   font-size: 1.4rem;
   margin-bottom: 40px;
 }
-.paragrafo-coletivo{
+
+.paragrafo-coletivo {
   color: var(--cor-texto-claro);
 }
 
@@ -831,7 +833,8 @@ body {
     font-size: 3rem;
   }
 
-  .paragrafo-plataforma, .paragrafo-coletivo {
+  .paragrafo-plataforma,
+  .paragrafo-coletivo {
     font-size: 1.2rem;
   }
 }
@@ -846,7 +849,8 @@ body {
     font-size: 2.4rem;
   }
 
-  .paragrafo-plataforma, .paragrafo-coletivo {
+  .paragrafo-plataforma,
+  .paragrafo-coletivo {
     font-size: 1.1rem;
   }
 }
@@ -860,7 +864,8 @@ body {
     font-size: 1.8rem;
   }
 
-  .paragrafo-plataforma, .paragrafo-coletivo {
+  .paragrafo-plataforma,
+  .paragrafo-coletivo {
     font-size: 1rem;
   }
 
@@ -1126,6 +1131,20 @@ a::before {
   color: var(--cor-texto-claro);
   margin: 0 0 50px 0;
   text-transform: uppercase;
+}
+
+
+.opcoes-apoio a {
+  display: flex;
+  /* faz o link ocupar todo o espaço do card */
+  color: inherit;
+  /* herda a cor clara da seção, ignorando a cor global do link */
+  text-decoration: none;
+  /* remove sublinhado (garantia extra) */
+  font-weight: normal;
+  /* opcional, para não forçar negrito nos textos internos */
+  font-size: inherit;
+  gap: 100px;
 }
 
 .opcoes-apoio {
