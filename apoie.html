@@ -698,7 +698,7 @@
         </section>
         <!-- SEÇÃO DO FORMULÁRIO -->
         <section class="secao-formulario">
-            <div class="container-formulario">
+            <div class="container-formulario" id="containerFormulario">
                 <h2>Quero Apoiar</h2>
                 <p class="subtitulo-form">Preencha o formulário abaixo e entraremos em contato.</p>
 
@@ -741,12 +741,8 @@
                             placeholder="Conte-nos como gostaria de apoiar..."></textarea>
                     </div>
 
-                    <button type="submit" class="botao-enviar">Enviar</button>
+                    <button type="submit" class="botao-enviar" id="botaoEnviar">Enviar</button>
                 </form>
-
-                <div class="mensagem-sucesso" id="mensagemSucesso">
-                    Mensagem enviada com sucesso! Entraremos em contato em breve.
-                </div>
             </div>
 
             <div class="info-adicional">
@@ -759,7 +755,6 @@
                     Ou fale diretamente conosco pelo
                     <a href="https://tl.me/55XXXXXXXXXXX" target="_blank" rel="noopener noreferrer">Telegram</a>.
                 </p>-->
-            </div>
             </div>
             <!-- Box de agradecimento (aparece no lugar do formulário após sucesso) -->
             <div class="box-agradecimento" id="boxAgradecimento" style="display: none;">
@@ -818,50 +813,45 @@
     </footer>
 
     <script>
-        (function () {
+        document.addEventListener('DOMContentLoaded', () => {
+            /* ============ ELEMENTOS DO DOM ============ */
             const form = document.getElementById('formApoio');
             const botaoEnviar = document.getElementById('botaoEnviar');
             const containerFormulario = document.getElementById('containerFormulario');
             const boxAgradecimento = document.getElementById('boxAgradecimento');
-            const tituloForm = containerFormulario.querySelector('h2');
-            const subtituloForm = containerFormulario.querySelector('.subtitulo-form');
-            const formElement = document.querySelector('.form-apoio');
-            const statusSucesso = document.getElementById('status-sucesso');
             const statusErro = document.getElementById('status-erro');
             const listaErros = document.getElementById('lista-erros');
             const botaoVoltar = document.getElementById('botao-voltar');
-            const mensagemSucesso = document.getElementById('mensagemSucesso'); // fallback não utilizado
 
-            function mostrarSecao(secao) {
-                // Oculta o formulário e as telas de status
-                tituloForm.style.display = 'none';
-                subtituloForm.style.display = 'none';
-                formElement.style.display = 'none';
-                statusSucesso.classList.remove('visivel');
-                statusErro.classList.remove('visivel');
+            const botaoMenu = document.querySelector('.botao-menu');
+            const linksNavegacao = document.querySelector('.links-navegacao');
 
-                if (secao === 'formulario') {
-                    tituloForm.style.display = '';
-                    subtituloForm.style.display = '';
-                    formElement.style.display = '';
-                } else if (secao === 'sucesso') {
-                    statusSucesso.classList.add('visivel');
-                } else if (secao === 'erro') {
-                    statusErro.classList.add('visivel');
-                }
+            /* ============ MENU HAMBÚRGUER ============ */
+            if (botaoMenu && linksNavegacao) {
+                const alternarMenu = (abrir) => {
+                    linksNavegacao.classList.toggle('ativo', abrir);
+                    botaoMenu.textContent = abrir ? '✕' : '☰';
+                    botaoMenu.setAttribute('aria-expanded', String(abrir));
+                    botaoMenu.setAttribute('aria-label', abrir ? 'Fechar menu' : 'Abrir menu');
+                };
+
+                // Inicia fechado
+                alternarMenu(false);
+
+                botaoMenu.addEventListener('click', () => {
+                    const estaAberto = !linksNavegacao.classList.contains('ativo');
+                    alternarMenu(estaAberto);
+                });
+
+                // Fecha o menu ao clicar em qualquer link
+                linksNavegacao.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => alternarMenu(false));
+                });
             }
 
-            // Botão "Voltar" restaura o formulário
-            botaoVoltar.addEventListener('click', function () {
-                containerFormulario.style.display = '';
-                boxAgradecimento.style.display = 'none';
-                statusErro.style.display = 'none';
-                listaErros.innerHTML = '';
-            });
-
-            // Envio via fetch
-            form.addEventListener('submit', async function (event) {
-                event.preventDefault();
+            /* ============ ENVIO DO FORMULÁRIO (fetch) ============ */
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault(); // impede o redirecionamento do Formspree
 
                 botaoEnviar.textContent = 'Enviando...';
                 botaoEnviar.disabled = true;
@@ -870,24 +860,22 @@
                     const response = await fetch(form.action, {
                         method: 'POST',
                         body: new FormData(form),
-                        headers: {
-                            'Accept': 'application/json'
-                        }
+                        headers: { 'Accept': 'application/json' }
                     });
 
                     const data = await response.json();
 
                     if (response.ok) {
-                        // Sucesso: esconde formulário e mostra caixa de agradecimento
-                        document.getElementById('containerFormulario').style.display = 'none';
-                        document.getElementById('boxAgradecimento').style.display = 'block';
-                        document.getElementById('status-erro').style.display = 'none'; // garante que erro suma
+                        // Sucesso: esconde o formulário e mostra a caixa de agradecimento
+                        containerFormulario.style.display = 'none';
+                        boxAgradecimento.style.display = 'block';
+                        statusErro.style.display = 'none';
                         form.reset();
                     } else {
-                        // Erro de validação do Formspree
+                        // Erro de validação retornado pelo Formspree
                         const erros = data.errors || [{ message: 'Erro desconhecido. Tente novamente mais tarde.' }];
                         listaErros.innerHTML = '';
-                        erros.forEach(function (erro) {
+                        erros.forEach(erro => {
                             const li = document.createElement('li');
                             let texto = erro.message;
                             if (erro.field) {
@@ -896,63 +884,30 @@
                             li.textContent = texto;
                             listaErros.appendChild(li);
                         });
-                        mostrarSecao('erro');
+                        containerFormulario.style.display = '';
+                        boxAgradecimento.style.display = 'none';
+                        statusErro.style.display = 'block';
                     }
                 } catch (error) {
-                    // Erro de rede ou servidor inacessível
-                    listaErros.innerHTML = '';
-                    const li = document.createElement('li');
-                    li.textContent = 'Falha na comunicação. Verifique sua conexão e tente novamente.';
-                    listaErros.appendChild(li);
-                    mostrarSecao('erro');
+                    // Falha de rede
+                    listaErros.innerHTML = '<li>Falha na comunicação. Verifique sua conexão e tente novamente.</li>';
+                    containerFormulario.style.display = '';
+                    boxAgradecimento.style.display = 'none';
+                    statusErro.style.display = 'block';
                 } finally {
                     botaoEnviar.textContent = 'Enviar';
                     botaoEnviar.disabled = false;
                 }
             });
 
-            // Menu hambúrguer
-            document.addEventListener('DOMContentLoaded', () => {
-                const botaoMenu = document.querySelector('.botao-menu');
-                const linksNavegacao = document.querySelector('.links-navegacao');
-
-                if (botaoMenu && linksNavegacao) {
-                    const alternarMenu = (abrir) => {
-                        linksNavegacao.classList.toggle('ativo', abrir);
-                        botaoMenu.textContent = abrir ? '✕' : '☰';
-                        botaoMenu.setAttribute('aria-expanded', String(abrir));
-                        botaoMenu.setAttribute('aria-label', abrir ? 'Fechar menu' : 'Abrir menu');
-                    };
-
-                    alternarMenu(false);
-
-                    botaoMenu.addEventListener('click', () => {
-                        const estaAberto = !linksNavegacao.classList.contains('ativo');
-                        alternarMenu(estaAberto);
-                    });
-
-                    linksNavegacao.querySelectorAll('a').forEach(link => {
-                        link.addEventListener('click', () => alternarMenu(false));
-                    });
-                }
-
-                // Mensagem de sucesso após envio do formulário
-                const form = document.getElementById('formApoio');
-                const mensagemSucesso = document.getElementById('mensagemSucesso');
-
-                if (form) {
-                    form.addEventListener('submit', (e) => {
-                        // O Formspree redireciona ou mostra mensagem própria,
-                        // mas podemos exibir a mensagem de sucesso após 1 segundo
-                        setTimeout(() => {
-                            mensagemSucesso.style.display = 'block';
-                            form.reset();
-                        }, 1000);
-                    });
-                }
+            /* ============ BOTÃO "VOLTAR E CORRIGIR" ============ */
+            botaoVoltar.addEventListener('click', () => {
+                containerFormulario.style.display = '';
+                boxAgradecimento.style.display = 'none';
+                statusErro.style.display = 'none';
+                listaErros.innerHTML = '';
             });
-        }
-        )();
+        });
     </script>
 </body>
 
