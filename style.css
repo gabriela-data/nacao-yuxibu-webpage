@@ -52,7 +52,45 @@ body {
   padding-bottom: constant(safe-area-inset-bottom);
   padding-bottom: env(safe-area-inset-bottom);
 }
+/* Transições suaves para o logo */
+.cabecalho .container-marca,
+.cabecalho .logo-cabecalho {
+    transition: width 0.35s ease, height 0.35s ease, top 0.35s ease;
+}
 
+/* Estado reduzido e elevado quando a página é rolada */
+.cabecalho.scrolled .container-marca {
+    width: 100px;
+    height: 100px;
+    top: 80%;      /* sobe mais (antes 90%) */
+}
+
+.cabecalho.scrolled .logo-cabecalho {
+    height: 85px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .cabecalho.scrolled .container-marca {
+        width: 70px;
+        height: 70px;
+        top: 50%;
+    }
+    .cabecalho.scrolled .logo-cabecalho {
+        height: 75px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho.scrolled .container-marca {
+        width: 50px;
+        height: 50px;
+        top: 55%;
+    }
+    .cabecalho.scrolled .logo-cabecalho {
+        height: 60px;
+    }
+}
 .cabecalho {
   position: fixed;
   top: 0;
@@ -109,7 +147,7 @@ body {
 }
 
 .links-navegacao a:hover {
-  color: var(--cor-destaque);
+  color: var(--cor-urucum);
 }
 
 .link-apoio {
@@ -120,7 +158,7 @@ body {
 }
 
 .link-apoio:hover {
-  background: #e62222;
+  background: var(--cor-texto-claro);
   transform: scale(1.05);
 }
 

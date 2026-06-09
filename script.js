@@ -91,6 +91,18 @@ document.addEventListener('DOMContentLoaded', () => {
       hero.style.backgroundPositionY = `${window.scrollY * 0.5}px`;
     });
   }
+  function diminuirCabecalho() {
+    const cabecalho = document.querySelector('.cabecalho');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        cabecalho.classList.add('scrolled');
+      } else {
+        cabecalho.classList.remove('scrolled');
+      }
+    });
+  }
+
 
   // ------------------------------------------------------------
   // Inicialização de todos os módulos
@@ -100,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     configurarFlipPilares();
     configurarAnimacoesRevelacao();
     configurarParallaxHero();
+    diminuirCabecalho();
 
     // Swiper do povo (carrossel de vídeos)
     if (document.querySelector('.carrossel-povo')) {
