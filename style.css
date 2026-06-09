@@ -443,34 +443,36 @@ body {
    ============================================================ */
 
 .secao-coletivo {
-    position: relative;
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; /* importante para o pseudo-elemento */
-    /* background-color: rgba(240, 40, 40, 0.25);  fallback */
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* importante para o pseudo-elemento */
+  /* background-color: rgba(240, 40, 40, 0.25);  fallback */
 }
+
 .secao-coletivo::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('./Fotos/Rio5.webp') center/cover no-repeat;
-    /* background-color: #2d1e1a;
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./Fotos/Rio5.webp') center/cover no-repeat;
+  /* background-color: #2d1e1a;
     z-index: -1;
     /* Hack para iOS: garante que o fixed funcione dentro da seção */
-    will-change: transform;
-    transform: translateZ(0);
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 
 @media (min-width: 768px) {
-    .secao-coletivo::before {
-        background-image: url('./Fotos/Rio5.webp');
-    }
+  .secao-coletivo::before {
+    background-image: url('./Fotos/Rio5.webp');
+  }
 }
 
 .titulo-movimento {
@@ -501,27 +503,118 @@ body {
   padding: 40px 0 60px;
 }
 
-/* Imagem dos pilares centralizada */
-.pilares-nacao-yuxibu {
+/* ============================================================
+   CONTAINER DO COLETIVO (texto + imagem)
+   ============================================================ */
+.container-coletivo {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
+  justify-content: center;
+  gap: 0px;
+  flex-wrap: wrap;
+  /* garante empilhamento em mobile */
+}
+
+/* Coluna de texto */
+.texto-coletivo {
+  flex: 1 1 55%;
+  min-width: 280px;
+}
+
+/* Parágrafos do coletivo – refinamento */
+.texto-coletivo .paragrafo-coletivo {
+  font-size: 1.35rem;
+  line-height: 1.75;
+  color: var(--cor-texto-claro);
+  margin-bottom: 28px;
+  text-align: left;
+  /* melhor leitura que justificado */
+}
+
+/* Imagem dos pilares */
+.pilares-nacao-yuxibu {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
 }
 
 .pilares-nacao-yuxibu img {
+  width: 100%;
+  /* ocupa todo o espaço disponível do contêiner */
   max-width: 100%;
   height: auto;
-  display: block;
+  border-radius: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Parágrafo introdutório */
-.paragrafo-movimento {
-  font-size: 2rem;
-  color: var(--cor-texto-claro);
-  margin-bottom: 40px;
-  line-height: 1.7;
-  text-align: center;
+.pilares-nacao-yuxibu img:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+@media (max-width: 768px) {
+  .container-coletivo {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    /* centraliza ambos no mobile */
+  }
+
+  .texto-coletivo {
+    flex: unset;
+    width: 100%;
+  }
+
+  .pilares-nacao-yuxibu {
+    max-width: 100%;
+    flex: unset;
+    width: 100%;
+  }
+
+  .pilares-nacao-yuxibu img {
+    max-width: 80%;
+    margin: 0 auto;   /* centralização extra */
+    width: auto;      /* permite que a altura se ajuste proporcionalmente */
+  }
+
+  .texto-coletivo .paragrafo-coletivo {
+    font-size: 1.15rem;
+    text-align: center;
+    /* centraliza no mobile para harmonia */
+  }
+}
+
+@media (max-width: 480px) {
+  .texto-coletivo .paragrafo-coletivo {
+    font-size: 1rem;
+  }
+
+  .pilares-nacao-yuxibu img {
+    max-width: 100%;
+  }
+}
+
+/* ============================================================
+   ANIMAÇÃO DE REVELAÇÃO (reaproveitando classes existentes)
+   ============================================================ */
+/* Certifique-se de que os elementos tenham a classe 'revelar' no HTML, se quiser usar o JS existente.
+   Caso contrário, adicione via JavaScript ou diretamente no HTML:
+   <div class="container container-coletivo revelar">
+*/
+
+/* Se preferir que a imagem apareça com um pequeno atraso, use: */
+.pilares-nacao-yuxibu {
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.pilares-nacao-yuxibu.revelado {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Grade: empilha os cards verticalmente */
@@ -750,66 +843,67 @@ body {
    COLETIVO (parallax funcional)
    ============================================================ */
 .secao-coletivo {
-    position: relative;
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; /* importante para o pseudo-elemento */
-    /* background-color: rgba(240, 40, 40, 0.25); /* fallback */
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* importante para o pseudo-elemento */
+  /* background-color: rgba(240, 40, 40, 0.25); /* fallback */
 }
 
 .secao-coletivo::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('./Fotos/Imagem-Fundo-Sessão-mobile.webp') center/cover no-repeat;
-    /* background-color: #2d1e1a;
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./Fotos/Imagem-Fundo-Sessão-mobile.webp') center/cover no-repeat;
+  /* background-color: #2d1e1a;
     z-index: -1;
     /* Hack para iOS: garante que o fixed funcione dentro da seção */
-    will-change: transform;
-    transform: translateZ(0);
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 @media (min-width: 768px) {
-    .secao-coletivo::before {
-        background-image: url('./Fotos/Imagem-Fundo-Sessão-desktop.webp');
-    }
+  .secao-coletivo::before {
+    background-image: url('./Fotos/Imagem-Fundo-Sessão-desktop.webp');
+  }
 }
 
 /* ============================================================
    PLATAFORMA CAPA (parallax funcional)
    ============================================================ */
 .secao-plataforma-capa {
-    position: relative;
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .secao-plataforma-capa::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('./Fotos/Imagem-Fundo-Sessão.jpg') center/cover no-repeat;
-    
-    z-index: -1;
-    will-change: transform;
-    transform: translateZ(0);
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./Fotos/Imagem-Fundo-Sessão.jpg') center/cover no-repeat;
+
+  z-index: -1;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 @media (min-width: 768px) {
-    .secao-plataforma-capa::before {
-        background-image: url('./Fotos/Imagem-Fundo-Sessão.jpg');
-    }
+  .secao-plataforma-capa::before {
+    background-image: url('./Fotos/Imagem-Fundo-Sessão.jpg');
+  }
 }
 
 .titulo-plataforma {
