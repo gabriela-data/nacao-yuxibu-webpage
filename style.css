@@ -229,7 +229,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('./Fotos/Rio5.png') center/cover;
+  background: url('./Fotos/Rio5.webp') center/cover;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
@@ -443,13 +443,34 @@ body {
    ============================================================ */
 
 .secao-coletivo {
-  background: url('./Fotos/Imagem-Fundo-Sessão.jpg') center/cover fixed;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-blend-mode: lighten;
-  background-color: rgba(240, 40, 40, 0.25);
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* importante para o pseudo-elemento */
+    background-color: rgba(240, 40, 40, 0.25); /* fallback */
+}
+.secao-coletivo::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./Fotos/Rio5.webp') center/cover no-repeat;
+    background-color: #2d1e1a;
+    z-index: -1;
+    /* Hack para iOS: garante que o fixed funcione dentro da seção */
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+
+@media (min-width: 768px) {
+    .secao-coletivo::before {
+        background-image: url('./Fotos/Rio5.webp');
+    }
 }
 
 .titulo-movimento {
@@ -726,17 +747,70 @@ body {
 }
 
 /* ============================================================
-   PLATAFORMA (capa e pilares)
+   COLETIVO (parallax funcional)
    ============================================================ */
+.secao-coletivo {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* importante para o pseudo-elemento */
+    background-color: rgba(240, 40, 40, 0.25); /* fallback */
+}
 
+.secao-coletivo::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./Fotos/Imagem-Fundo-Sessão-mobile.webp') center/cover no-repeat;
+    background-color: #2d1e1a;
+    z-index: -1;
+    /* Hack para iOS: garante que o fixed funcione dentro da seção */
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+@media (min-width: 768px) {
+    .secao-coletivo::before {
+        background-image: url('./Fotos/Imagem-Fundo-Sessão-desktop.webp');
+    }
+}
+
+/* ============================================================
+   PLATAFORMA CAPA (parallax funcional)
+   ============================================================ */
 .secao-plataforma-capa {
-  background: url('./Fotos/Imagem-Fundo-Sessão.jpg') center/cover fixed;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-blend-mode: lighten;
-  background-color: rgba(240, 40, 40, 0.2);
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgba(240, 40, 40, 0.2);
+}
+
+.secao-plataforma-capa::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./Fotos/Imagem-Fundo-Sessão.jpg') center/cover no-repeat;
+    background-color: #2d1e1a;
+    z-index: -1;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+@media (min-width: 768px) {
+    .secao-plataforma-capa::before {
+        background-image: url('./Fotos/Imagem-Fundo-Sessão.jpg');
+    }
 }
 
 .titulo-plataforma {

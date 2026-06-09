@@ -37,7 +37,7 @@
             align-items: center;
             justify-content: center;
             padding: 5rem 0 3rem;
-            background-image: url(./Fotos/APOIE.jpg);
+            background-image: url(./Fotos/APOIE.webp);
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -533,17 +533,37 @@
         }
 
 
-        /* ---------- BOX DE AGRADECIMENTO (SUCESSO) ---------- */
+        /* ---------- OVERLAY DE AGRADECIMENTO (SUCESSO) ---------- */
+        .overlay-agradecimento {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.65);
+            /* fundo escuro semi‑transparente */
+            display: flex;
+            /* será alterado para flex quando visível */
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            display: none;
+            /* oculto por padrão */
+        }
+
+        .overlay-agradecimento.visivel {
+            display: flex;
+        }
+
         .box-agradecimento {
             background-color: #ffffff;
             padding: 3rem 2.5rem;
             border-radius: 24px;
-            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.35);
             text-align: center;
             max-width: 600px;
-            width: 100%;
-            margin: 0 auto;
-            transition: transform 0.2s ease;
+            width: 90%;
+            margin: 1rem;
         }
 
         .box-agradecimento .icone-check {
@@ -553,7 +573,7 @@
         }
 
         .box-agradecimento h1 {
-            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
             font-weight: 800;
             color: #1e2f2c;
             line-height: 1.3;
@@ -561,10 +581,10 @@
         }
 
         .box-agradecimento p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #333;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
         }
 
         .box-agradecimento .destaque-email {
@@ -575,6 +595,7 @@
             font-size: 0.95rem;
             color: #444;
             margin: 1.5rem 0;
+            text-align: left;
         }
 
         .box-agradecimento .destaque-email strong {
@@ -667,7 +688,7 @@
                             base técnica sólida.
                         </p>
                         <p>
-                            No atual momento, precisamos expandir parcerias para:
+                            No atual momento, precisamos expandir parcerias a fim de:
                         </p>
                         <ul>
                             <li>
@@ -677,7 +698,7 @@
                             </li>
                             <li>
                                 <p>
-                                    realizar viagem de imersão em pelo menos 1 aldeia Huni Kuin para continuidade da
+                                    realizar viagem de imersão em pelo menos uma aldeia Huni Kuin para continuidade da
                                     pesquisa em
                                     design semioparticipativo.
                                 </p>
@@ -757,23 +778,26 @@
                 </p>-->
             </div>
             <!-- Box de agradecimento (aparece no lugar do formulário após sucesso) -->
-            <div class="box-agradecimento" id="boxAgradecimento" style="display: none;">
-                <h1>Mensagem enviada com sucesso!</h1>
-                <p>
-                    Agradecemos seu interesse em apoiar a <strong>Plataforma Livre Nação Yuxibu</strong>.
-                </p>
-                <div class="destaque-email">
-                    Fique atento(a) à sua <strong>caixa de entrada</strong> e à pasta de <strong>spam / lixo
-                        eletrônico</strong>.<br>
-                    Nossa equipe responderá em breve através do e-mail informado.
-                </div>
-                <p style="font-size: 0.95rem; color: #555;">
-                    Enquanto isso, siga nosso Instagram para acompanhar o projeto:
-                </p>
-                <div class="botoes-pos-envio">
-                    <a href="index.html" class="botao-voltar-inicio">↩ Voltar ao início</a>
-                    <a href="https://www.instagram.com/nacaoyuxibu" target="_blank" rel="noopener noreferrer"
-                        class="botao-instagram">@nacaoyuxibu</a>
+            <!-- Overlay de agradecimento (aparece sobre toda a página após envio bem-sucedido) -->
+            <div class="overlay-agradecimento" id="overlayAgradecimento">
+                <div class="box-agradecimento">
+                    <h1>Mensagem enviada com sucesso!</h1>
+                    <p>
+                        Agradecemos o interesse em apoiar a <strong>Plataforma Livre Nação Yuxibu</strong>.
+                    </p>
+                    <div class="destaque-email">
+                        Fique atento(a) à sua <strong>caixa de entrada</strong> e à pasta de <strong>spam/lixo
+                            eletrônico</strong>.<br>
+                        Em breve, nossa equipe responderá através do e-mail informado.
+                    </div>
+                    <p style="font-size: 0.90rem; color: #555;">
+                        Enquanto isso, conheça mais sobre o Coletivo Nação Yuxibu através do Instagram:
+                    </p>
+                    <div class="botoes-pos-envio">
+                        <a href="index.html" class="botao-voltar-inicio">↩ Voltar ao início</a>
+                        <a href="https://www.instagram.com/nacaoyuxibu" target="_blank" rel="noopener noreferrer"
+                            class="botao-instagram">@nacaoyuxibu</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -818,6 +842,7 @@
             const form = document.getElementById('formApoio');
             const botaoEnviar = document.getElementById('botaoEnviar');
             const containerFormulario = document.getElementById('containerFormulario');
+            const overlayAgradecimento = document.getElementById('overlayAgradecimento');
             const boxAgradecimento = document.getElementById('boxAgradecimento');
             const statusErro = document.getElementById('status-erro');
             const listaErros = document.getElementById('lista-erros');
@@ -868,7 +893,7 @@
                     if (response.ok) {
                         // Sucesso: esconde o formulário e mostra a caixa de agradecimento
                         containerFormulario.style.display = 'none';
-                        boxAgradecimento.style.display = 'block';
+                        overlayAgradecimento.classList.add('visivel');
                         statusErro.style.display = 'none';
                         form.reset();
                     } else {
@@ -906,6 +931,12 @@
                 boxAgradecimento.style.display = 'none';
                 statusErro.style.display = 'none';
                 listaErros.innerHTML = '';
+            });
+            // Fechar overlay clicando fora da caixa (opcional)
+            overlayAgradecimento.addEventListener('click', (e) => {
+                if (e.target === overlayAgradecimento) {
+                    overlayAgradecimento.classList.remove('visivel');
+                }
             });
         });
     </script>
