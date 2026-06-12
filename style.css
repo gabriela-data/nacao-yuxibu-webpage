@@ -498,9 +498,10 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
   background: url('./Fotos/Rio5.webp') center/cover no-repeat;
   /* background-color: #2d1e1a;
-    z-index: -1;
+    
     /* Hack para iOS: garante que o fixed funcione dentro da seção */
   will-change: transform;
   transform: translateZ(0);
