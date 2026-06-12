@@ -71,6 +71,48 @@
             gap: 2rem;
         }
 
+        .cabecalho .container-marca,
+        .cabecalho .logo-cabecalho {
+            transition: width 0.35s ease, height 0.35s ease, top 0.35s ease;
+        }
+
+        /* Estado reduzido e elevado quando a página é rolada */
+        .cabecalho.scrolled .container-marca {
+            width: 100px;
+            height: 100px;
+            top: 80%;
+            /* sobe mais (antes 90%) */
+        }
+
+        .cabecalho.scrolled .logo-cabecalho {
+            height: 85px;
+        }
+
+        /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            .cabecalho.scrolled .container-marca {
+                width: 70px;
+                height: 70px;
+                top: 50%;
+            }
+
+            .cabecalho.scrolled .logo-cabecalho {
+                height: 75px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cabecalho.scrolled .container-marca {
+                width: 50px;
+                height: 50px;
+                top: 55%;
+            }
+
+            .cabecalho.scrolled .logo-cabecalho {
+                height: 60px;
+            }
+        }
+
         .cabecalho-pagina {
             width: 100%;
             display: grid;
@@ -838,6 +880,27 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+             // ============ FUNÇÃO PARA DIMINUIR CABEÇALHO AO SCROLL 
+            function diminuirCabecalho() {
+                const cabecalho = document.querySelector('.cabecalho');
+                
+                if (!cabecalho) {
+                    console.warn('Elemento .cabecalho não encontrado');
+                    return;
+                }
+                
+                // Adiciona evento de scroll
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        cabecalho.classList.add('scrolled');
+                    } else {
+                        cabecalho.classList.remove('scrolled');
+                    }
+                });
+            }
+            
+            // Chama a função
+            diminuirCabecalho();
             /* ============ ELEMENTOS DO DOM ============ */
             const form = document.getElementById('formApoio');
             const botaoEnviar = document.getElementById('botaoEnviar');

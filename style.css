@@ -487,10 +487,9 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  /* importante para o pseudo-elemento */
-  /* background-color: rgba(240, 40, 40, 0.25);  fallback */
 }
 
+/* Hack para iOS: garante que o fixed funcione dentro da seção */
 .secao-coletivo::before {
   content: '';
   position: fixed;
@@ -500,9 +499,6 @@ body {
   height: 100%;
   z-index: -1;
   background: url('./Fotos/Rio5.webp') center/cover no-repeat;
-  /* background-color: #2d1e1a;
-    
-    /* Hack para iOS: garante que o fixed funcione dentro da seção */
   will-change: transform;
   transform: translateZ(0);
 }
