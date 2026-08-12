@@ -15,7 +15,7 @@
       "meta.title": "Plataforma Livre da Nação Yuxibu",
       "site.title": "Plataforma Livre da Nação Yuxibu",
       "section1.title": "SEÇÃO 1 — INÍCIO",
-      "section1.heading": "Plataforma Livre da Nação Yuxibu",
+      "section1.heading": "<span class='linha-hero-1'>Plataforma Livre</span><span class='linha-hero-2'>Nação Yuxibu</span>",
       "section1.lead": "Verdade na unidade: do coração da floresta para o mundo!",
       "section1.cta": "Apoie o desenvolvimento da plataforma",
       "section2.title": "SEÇÃO 2 — MANIFESTO",
@@ -84,7 +84,7 @@
       "meta.title": "Yuxibu Nation Free Platform",
       "site.title": "Yuxibu Nation Free Platform",
       "section1.title": "SECTION 1 — HOME",
-      "section1.heading": "Yuxibu Nation Free Platform",
+      "section1.heading": "<span class='linha-hero-1'>Yuxibu Nation</span><span class='linha-hero-2'>Free Platform</span>",
       "section1.lead": "Truth in unity: from the heart of the forest to the world!",
       "section1.cta": "Support the development of the platform",
       "section2.title": "SECTION 2 — MANIFESTO",
@@ -153,7 +153,7 @@
       "meta.title": "Plataforma Libre de la Nación Yuxibu",
       "site.title": "Plataforma Libre de la Nación Yuxibu",
       "section1.title": "SECCIÓN 1 — INICIO",
-      "section1.heading": "Plataforma Libre de la Nación Yuxibu",
+      "section1.heading": "<span class='linha-hero-1'>Plataforma Libre</span><span class='linha-hero-2'>Nación Yuxibu</span>",
       "section1.lead": "Verdad en la unidad: ¡del corazón del bosque al mundo!",
       "section1.cta": "Apoya el desarrollo de la plataforma"
     }
