@@ -28,6 +28,14 @@
         <li><a href="#sobre">Equipe</a></li>
         <li><a href="publicacoes.html">Publicações</a></li>
         <li><a href="apoie.html" class="link-apoio">APOIE</a></li>
+        <li class="item-idioma">
+          <div class="idioma-selector">
+            <button class="idioma-botao" id="idiomaAtual" aria-label="Selecionar idioma">
+              <span class="bandeira">🇧🇷</span> PT
+            </button>
+            <ul class="idioma-lista" id="listaIdiomas"></ul>
+          </div>
+        </li>
       </ul>
     </nav>
   </header>
@@ -37,14 +45,14 @@
     <section id="hero" class="secao-hero">
       <div class="fundo-hero"></div>
       <div class="conteudo-hero">
-        <h1 class="titulo-hero">
+        <h1 data-i18n="section1.heading" class="titulo-hero">
           <span class="linha-hero-1">Plataforma Livre</span>
           <span class="linha-hero-2">Nação Yuxibu</span>
         </h1>
-        <p class="subtitulo-hero">
+        <p data-i18n="section1.lead" class="subtitulo-hero">
           Verdade em unidade: do coração da floresta para o mundo!
         </p>
-        <a href="./apoie.html" class="botao-chamada">Apoie a Construção da plataforma</a>
+        <a href="./apoie.html" data-i18n="section1.cta" class="botao-chamada">Apoie a Construção da plataforma</a>
       </div>
     </section>
 
@@ -53,16 +61,13 @@
       <div class="container">
         <div class="grade-manifesto">
           <div class="texto-manifesto">
-            <h2 class="titulo-manifesto">Manifesto</h2>
-            <p class="paragrafo-manifesto">O ciberespaço também é território!</p>
-            <p class="paragrafo-manifesto">
-              Defendemos que os povos originários ocupem e transformem o ambiente virtual a partir de seus próprios
-              conhecimentos, fortalecendo suas tradições, modos de vida e luta por direitos.
+            <h2 data-i18n="section2.title" class="titulo-manifesto">Manifesto</h2>
+            <p data-i18n="section2.p1" class="paragrafo-manifesto">O ciberespaço também é território!</p>
+            <p data-i18n="section2.p2" class="paragrafo-manifesto">
+              Defendemos que os povos originários ocupem e transformem o ambiente virtual a partir de seus próprios conhecimentos, fortalecendo suas tradições, modos de vida e luta por direitos.
             </p>
-            <p class="paragrafo-manifesto">
-              A Plataforma Livre Nação Yuxibu, ao ser desenvolvida como <em>Software Livre</em>, afirma o protagonismo
-              indígena e mostra como é possível o uso inclusivo das tecnologias digitais, nas quais a autonomia, a
-              identidade e o saber ancestral se fazem presentes.
+            <p data-i18n="section2.p3" class="paragrafo-manifesto">
+              A Plataforma Livre Nação Yuxibu, ao ser desenvolvida como <em>Software Livre</em>, afirma o protagonismo indígena e mostra como é possível o uso inclusivo das tecnologias digitais, nas quais a autonomia, a identidade e o saber ancestral se fazem presentes.
             </p>
           </div>
         </div>
@@ -102,7 +107,7 @@
     <!-- Coletivo (capa) -->
     <section id="movimento" class="secao-coletivo">
       <div class="container">
-        <h2 class="titulo-movimento">O Coletivo Nação Yuxibu</h2>
+        <h2 data-i18n="section3.title" class="titulo-movimento">O Coletivo Nação Yuxibu</h2>
       </div>
     </section>
 
@@ -111,14 +116,15 @@
       <div class="container">
         <div class="container container-coletivo">
           <div class="texto-coletivo">
-            <p class="paragrafo-coletivo">
-              Foi pelo Coletivo Nação Yuxibu que iniciamos o projeto de pesquisa e extensão Plataforma Livre Nação
-              Yuxibu.
+            <p data-i18n="section3.p1" class="paragrafo-coletivo">
+              O coletivo Nação Yuxibu é um grupo de pessoas que apoia o protagonismo indígena, integrando saberes ancestrais, cuidado ético e articulação cultural, educacional e tecnológica. Promove acolhimento digno, vivências e ações comprometidas com as tradições e os valores do povo Huni Kuī.
             </p>
-            <p class="paragrafo-coletivo">
-              O Coletivo Nação Yuxibu atua a partir do protagonismo indígena, embasado em 5 pilares ilustrados na imagem a seguir. Integra saberes ancestrais, cuidado ético e articulação cultural, educacional e tecnológica. Promove acolhimento digno, vivências e ações comprometidas com as tradições e os valores do povo Huni Kuī.
+            <p data-i18n="section3.p2" class="paragrafo-coletivo">
+              Foi pelo Coletivo Nação Yuxibu que iniciamos o <b>projeto de extensão Plataforma Livre Nação Yuxibu</b>.
             </p>
-            
+            <p data-i18n="section3.p3" class="paragrafo-coletivo">
+              O Coletivo Nação Yuxibu atua embasado em 5 pilares ilustrados na imagem a seguir:
+            </p>
           </div>
           <div class="pilares-nacao-yuxibu">
             <img src="./Fotos/PILARES-NAÇÃO-YUXIBU-06.png" alt="Pilares da Nação Yuxibu" loading="lazy">
@@ -132,9 +138,9 @@
               <img src="./Fotos/icones/acolhimento-indigena.png" alt="Ícone Acolhimento Indígena" loading="lazy">
             </div>
             <div class="card-conteudo">
-              <h3 class="card-titulo">Acolhimento Indígena</h3>
+              <h3 data-i18n="pillar.support.title" class="card-titulo">Acolhimento Indígena</h3>
               <div class="card-texto">
-                <p>O acolhimento indígena garante condições adequadas, seguras e respeitosas para a presença dos povos
+                <p data-i18n="pillar.support.p">O acolhimento indígena garante condições adequadas, seguras e respeitosas para a presença dos povos
                   originários na troca intercultural, preservando a autonomia e os modos tradicionais de condução nas
                   suas atividades. Todo o processo é orientado com responsabilidade e ética.</p>
               </div>
@@ -147,9 +153,9 @@
               <img src="./Fotos/icones/cerimônias-tradicionais.png" alt="Ícone Cerimônias Tradicionais" loading="lazy">
             </div>
             <div class="card-conteudo">
-              <h3 class="card-titulo">Cerimônias Tradicionais</h3>
+              <h3 data-i18n="pillar.ceremonies.title" class="card-titulo">Cerimônias Tradicionais</h3>
               <div class="card-texto">
-                <p>As cerimônias conduzidas pelo povo Huni Kui são rituais ancestrais de aprendizado e reconexão com os
+                <p data-i18n="pillar.ceremonies.p">As cerimônias conduzidas pelo povo Huni Kui são rituais ancestrais de aprendizado e reconexão com os
                   saberes originários e o sagrado. Cada cerimônia acontece a partir da tradição viva e da
                   responsabilidade e compromisso com o cuidado coletivo.</p>
               </div>
@@ -162,9 +168,9 @@
               <img src="./Fotos/icones/vivência-integrativa.png" alt="Ícone Vivência Integrativa" loading="lazy">
             </div>
             <div class="card-conteudo">
-              <h3 class="card-titulo">Vivência Integrativa</h3>
+              <h3 data-i18n="pillar.integrative.title" class="card-titulo">Vivência Integrativa</h3>
               <div class="card-texto">
-                <p>As vivências integrativas são experiências cuidadosamente conduzidas que preparam e organizam o campo
+                <p data-i18n="pillar.integrative.p">As vivências integrativas são experiências cuidadosamente conduzidas que preparam e organizam o campo
                   físico, emocional e relacional dos participantes, anterior às cerimônias.</p>
                 <p>Por meio de práticas corporais, sensoriais e de consciência, facilitam o enraizamento, a abertura
                   perceptiva e a integração profunda da experiência que será vivida na cerimônia tradicional Huni Kui.
@@ -179,9 +185,9 @@
               <img src="./Fotos/icones/cuidado-e-ética.png" alt="Ícone Cuidado e Ética" loading="lazy">
             </div>
             <div class="card-conteudo">
-              <h3 class="card-titulo">Cuidado e Ética</h3>
+              <h3 data-i18n="pillar.care.title" class="card-titulo">Cuidado e Ética</h3>
               <div class="card-texto">
-                <p>O cuidado com os participantes é orientado por princípios éticos e prevenção de riscos, respeitando o
+                <p data-i18n="pillar.care.p">O cuidado com os participantes é orientado por princípios éticos e prevenção de riscos, respeitando o
                   bem-estar físico e emocional.</p>
                 <p>Antes das cerimônias, são realizadas anamneses e entrevistas com escuta atenta e responsável,
                   conduzidas por profissionais qualificados, garantindo sigilo das informações, compreensão dos limites
@@ -196,9 +202,9 @@
               <img src="./Fotos/icones/articulação-cultural.png" alt="Ícone Articulação Cultural" loading="lazy">
             </div>
             <div class="card-conteudo">
-              <h3 class="card-titulo">Articulação Cultural</h3>
+              <h3 data-i18n="pillar.cultural.title" class="card-titulo">Articulação Cultural</h3>
               <div class="card-texto">
-                <p>A articulação cultural promove o intercâmbio entre os saberes tradicionais indígenas, as instituições
+                <p data-i18n="pillar.cultural.p">A articulação cultural promove o intercâmbio entre os saberes tradicionais indígenas, as instituições
                   educacionais e a sociedade civil, a fim de promover a produção artística e difusão dos conhecimentos
                   dos povos originários através da construção de redes, projetos de pesquisa e extensão, apresentações,
                   exposições, aulas e vivências que visem proporcionar uma troca de estudos e experiências.</p>
@@ -211,7 +217,7 @@
       <!--  REDES SOCIAIS -->
       <div class="redes-sociais-coletivo">
         <div class="linha-redes">
-          <p class="chamada-redes">Siga a <strong>Nação Yuxibu</strong> no Instagram:</p>
+          <p data-i18n="section3.follow" class="chamada-redes">Siga a <strong>Nação Yuxibu</strong> no Instagram:</p>
           <a href="https://www.instagram.com/nacaoyuxibu" target="_blank" rel="noopener noreferrer"
             aria-label="Instagram">
             <img src="./icones-site/icone instagram.png" alt="Instagram" loading="lazy">
@@ -235,9 +241,24 @@
     <!-- Pilares da Plataforma -->
     <section id="plataforma-pilares" class="secao-pilares">
       <div class="container">
-        <p class="paragrafo-plataforma">
+        <p data-i18n="section4.p1" class="paragrafo-plataforma">
           A Plataforma Livre Nação Yuxibu consiste no desenvolvimento de uma plataforma online, na modalidade software
-          livre, cujo propósito é apoiar indígenas da etnia Huni KuĪ no compartilhamento da cosmovisão de seu povo.
+          livre, cujo propósito é apoiar, por meio de tecnologias digitais, indígenas da etnia Huni Kuĩ, no movimento de
+          compartilhamento da cosmovisão de seu povo em relação a forma de viver humana e dos direitos da natureza.
+        </p>
+        <p data-i18n="section4.p2" class="paragrafo-plataforma">
+          Em respeito aos direitos constitucionais dos povos indígenas, garantidos no Capítulo VIII Art. 231 da
+          constituição de 1988, a plataforma se concentra em uma Etnia para que possa expressar a cosmovisão de cada
+          povo, sua organização social, costumes, línguas, crenças e tradições.
+        </p>
+        <p data-i18n="section4.article231" class="paragrafo-plataforma">
+          Art. 231. São reconhecidos aos índios sua organização social, costumes, línguas,
+          crenças e tradições, e os direitos originários sobre as terras que tradicionalmente ocupam, competindo à União
+          demarcá-las, proteger e fazer respeitar todos os seus bens.
+        </p>
+        <p data-i18n="section4.p3" class="paragrafo-plataforma">
+          As funcionalidades da Plataforma Livre Nação Yuxibu são categorizadas em quatro áreas essenciais: cultural,
+          socioambiental, educacional e financeira.
         </p>
         <div class="grade-pilares">
           <!-- Pilar 1 -->
@@ -245,11 +266,11 @@
             <div class="pilar-interno">
               <div class="pilar-frente">
                 <div class="imagem-pilar" style="background-image: url('./Fotos/CULTURAL.png');"></div>
-                <h4>Cultural</h4>
+                <h4 data-i18n="section4.cultural.title">Cultural</h4>
               </div>
               <div class="pilar-verso">
-                <h4>Cultural</h4>
-                <p>Divulgação do cronograma de atividades culturais planejadas e a construção de um acervo para
+                <h4 data-i18n="section4.cultural.title">Cultural</h4>
+                <p data-i18n="section4.cultural.p">Divulgação do cronograma de atividades culturais planejadas e a construção de um acervo para
                   documentar práticas e atividades realizadas.</p>
               </div>
             </div>
@@ -260,11 +281,11 @@
             <div class="pilar-interno">
               <div class="pilar-frente">
                 <div class="imagem-pilar" style="background-image: url('./Fotos/SOCIOAMBIENTAL.png');"></div>
-                <h4>Socioambiental</h4>
+                <h4 data-i18n="section4.socio.title">Socioambiental</h4>
               </div>
               <div class="pilar-verso">
-                <h4>Socioambiental</h4>
-                <p>Interação entre os membros para trocas de serviços e experiências, fortalecendo relações
+                <h4 data-i18n="section4.socio.title">Socioambiental</h4>
+                <p data-i18n="section4.socio.p">Interação entre os membros para trocas de serviços e experiências, fortalecendo relações
                   interculturais que criem novas formas de relações sociais e com a natureza.</p>
               </div>
             </div>
@@ -275,11 +296,11 @@
             <div class="pilar-interno">
               <div class="pilar-frente">
                 <div class="imagem-pilar" style="background-image: url('./Fotos/EDUCACIONAL.png');"></div>
-                <h4>Educacional</h4>
+                <h4 data-i18n="section4.educational.title">Educacional</h4>
               </div>
               <div class="pilar-verso">
-                <h4>Educacional</h4>
-                <p>Espaço para a realização de aulas ministradas pelos próprios indígenas, bem como para fornecer
+                <h4 data-i18n="section4.educational.title">Educacional</h4>
+                <p data-i18n="section4.educational.p">Espaço para a realização de aulas ministradas pelos próprios indígenas, bem como para fornecer
                   treinamentos aos colaboradores.</p>
               </div>
             </div>
@@ -290,11 +311,11 @@
             <div class="pilar-interno">
               <div class="pilar-frente">
                 <div class="imagem-pilar" style="background-image: url('./Fotos/FINANCEIRO.png');"></div>
-                <h4>Financeira</h4>
+                <h4 data-i18n="section4.financial.title">Financeira</h4>
               </div>
               <div class="pilar-verso">
-                <h4>Financeira</h4>
-                <p>Espaço livre e seguro para os indígenas venderem sua arte, artesanato e objetos diversos
+                <h4 data-i18n="section4.financial.title">Financeira</h4>
+                <p data-i18n="section4.financial.p">Espaço livre e seguro para os indígenas venderem sua arte, artesanato e objetos diversos
                   (marketplace), além de viabilizar doações, em consonância aos princípios de economia criativa e
                   sustentável.</p>
               </div>
@@ -308,19 +329,19 @@
     <!-- Software Livre e Pesquisa -->
     <section id="software-livre" class="secao-software-livre">
       <div class="container">
-        <h2 class="titulo-software-livre">Por que Software Livre?</h2>
-        <p class="texto-software-livre">O software livre oferece uma oportunidade poderosa para que as comunidades
+        <h2 data-i18n="section4.whyfree.title" class="titulo-software-livre">Por que Software Livre?</h2>
+        <p data-i18n="section4.whyfree.p1" class="texto-software-livre">O software livre oferece uma oportunidade poderosa para que as comunidades
           indígenas e outros grupos subalternizados personalizem a tecnologia de acordo com suas realidades culturais e
           sociais. Além disso, o uso do software livre pode fortalecer redes colaborativas, já que seu desenvolvimento
           frequentemente se baseia no compartilhamento de conhecimento e na cooperação entre diferentes povos e
           culturas.</p>
-        <p class="texto-software-livre">
+        <p data-i18n="section4.whyfree.p2" class="texto-software-livre">
           Dessa forma, ele se apresenta como uma alternativa viável para enfrentar as desigualdades impostas pelo
           chamado colonialismo digital, abrindo caminhos para uma tecnologia verdadeiramente inclusiva e participativa.
         </p>
         <details>
           <summary class="texto-software-livre sumario">Saiba mais</summary>
-          <p class="texto-software-livre">O acesso à educação, à informação e à disseminação do conhecimento estão
+          <p data-i18n="section4.whyfree.p3" class="texto-software-livre">O acesso à educação, à informação e à disseminação do conhecimento estão
             fundamentalmente relacionados aos movimentos de tecnologias abertas. Dentre esses movimentos, o movimento de
             Software Livre é o que mais se destaca. Considera-se que a adoção de softwares livres em prol do
             desenvolvimento humano com igualdade e equidade, é uma alternativa ao acesso democrático às tecnologias,
@@ -336,17 +357,17 @@
           </p>
           <p class="referencia">Referência: STALLMAN, R. (2002). Free Software, Free Society: Selected Essays of Richard
             M. Stallman. Boston: GNU Press.</p>
-            <br>
-            <br>
-            <br>
+          <br>
+          <br>
+          <br>
         </details>
       </div>
       <div class="container">
-        <h2 class="titulo-pesquisa">Projeto de Pesquisa e Extensão</h2>
-        <p class="texto-software-livre">Desenvolvemos pesquisa no processo de adoção de um modelo de design
+        <h2 data-i18n="section4.research.title" class="titulo-pesquisa">Projeto de Pesquisa e Extensão</h2>
+        <p data-i18n="section4.research.p" class="texto-software-livre">Desenvolvemos pesquisa no processo de adoção de um modelo de design
           semioparticipativo para garantir que a Plataforma Livre Nação Yuxibu não só atenda às necessidades específicas
           dos usuários, mas também respeite suas práticas culturais e promova um ambiente colaborativo.</p>
-        <p class="texto-software-livre">
+        <p data-i18n="section4.research.p2" class="texto-software-livre">
           A construção de uma interface que segue a metodologia de design semioparticipativo vai para além do processo
           de “fazer para”, em direção ao processo de “fazer com”.
         </p><!--
@@ -354,7 +375,7 @@
           O projeto conta com apoio dos Editais da <a href="">UFBA PAEx 2025</a> e <a href="">Pibiex 2025</a>, com
           financiamento de 3 bolsas de extensão universitária.
         </p> -->
-        <p class="texto-software-livre">
+        <p data-i18n="section4.research.p3"class="texto-software-livre">
           O projeto conta com o Programa de Apoio a Ações de Extensão - Edital PAEx 2025 UFBA e do Programa
           Institucional
           de Bolsas de Iniciação à Extensão Universitária – Editais Pibiex 2024 e 2025 UFBA</a>, com
@@ -362,19 +383,19 @@
         </p>
         <details>
           <summary class="texto-software-livre sumario">Saiba mais</summary>
-          <p class="texto-software-livre">A plataforma está sendo concebida de forma a servir de base para que outros
+          <p data-i18n="section4.research.p4" class="texto-software-livre">A plataforma está sendo concebida de forma a servir de base para que outros
             povos tradicionais possam utilizar do modelo desenvolvido com o mesmo propósito de difusão de suas
             cosmovisões.</p>
-          <p class="texto-software-livre">
+          <p data-i18n="section4.research.p5"class="texto-software-livre">
             Também, serão desenvolvidas capacitações no uso da tecnologia digital, fortalecendo o caráter extensionista
             do projeto.
           </p>
-          <p class="texto-software-livre">
+          <p data-i18n="section4.research.p6"class="texto-software-livre">
             Outro diferencial desta plataforma é ser um local seguro para acesso ao conhecimento, saberes e produtos dos
             povos Huni Kuin, por ser uma rede formada e gerida por indígenas e colaboradores que darão credibilidade ao
             que estará sendo publicado e difundido no ambiente digital.
           </p>
-          <p class="texto-software-livre">
+          <p data-i18n="section4.research.p7"class="texto-software-livre">
             Esse projeto está sendo desenvolvido por uma equipe de pesquisadores, estudantes e voluntários integrantes
             do Grupo de Pesquisa e Extensão em Informática, Educação e Sociedade – Onda Digital, do Departamento de
             Computação Interdisciplinar do Instituto de Computação da UFBA, como atividade de pesquisa e extensão do
@@ -389,9 +410,9 @@
     <section id="sobre" class="equipe-section">
       <div class="container">
         <div class="sobre-header">
-          <h2 class="equipe-title">Nossa Equipe</h2>
-          <p class="descricao-equipe">
-            A Plataforma Livre Nação Yuxibu nasce da articulação entre povos indígenas, Universidade e sociedade civil.
+          <h2 data-i18n="section5.title" class="equipe-title">Nossa Equipe</h2>
+          <p data-i18n="section5.p" class="descricao-equipe">
+            Esse projeto está sendo desenvolvido por uma equipe de pesquisadores, estudantes e voluntários integrantes do Grupo de Pesquisa e Extensão em Informática, Educação e Sociedade – Onda Digital, do Departamento de Computação Interdisciplinar do Instituto de Computação da UFBA, como atividade de pesquisa e extensão do Núcleo de Desenvolvimento de Software Livre (NuSoL) em cooperação com o SPIDeLab - Semio-Participatory Interaction Design Research Laboratory da UFBA.
           </p>
         </div>
 
@@ -403,7 +424,7 @@
             </div>
             <h3>Allan Thales</h3>
             <span class="cargo">Analista de TI</span>
-            <p>Analista de Infraestrutura, desenvolvedor de software livre e voluntário da Plataforma Livre Nação
+            <p data-i18n="team.allan.role">Analista de Infraestrutura, desenvolvedor de software livre e voluntário da Plataforma Livre Nação
               Yuxibu.</p>
           </div>
 
@@ -414,7 +435,7 @@
             </div>
             <h3>Aurélio Heckert</h3>
             <span class="cargo">Programador</span>
-            <p>Engenheiro de software, especialista em frontend, desenvolvedor de software livre e voluntário da
+            <p data-i18n="team.aurelio.role">Engenheiro de software, especialista em frontend, desenvolvedor de software livre e voluntário da
               Plataforma Livre Nação Yuxibu.</p>
           </div>
 
@@ -425,7 +446,7 @@
             </div>
             <h3>Caio Almeida</h3>
             <span class="cargo">Engenheiro de software</span>
-            <p>Bacharel e mestre em Ciência da Computação pela Universidade Federal da Bahia. Engenheiro de software e
+            <p data-i18n="team.caio.role">Bacharel e mestre em Ciência da Computação pela Universidade Federal da Bahia. Engenheiro de software e
               voluntário da Plataforma Livre Nação Yuxibu.</p>
           </div>
 
@@ -436,7 +457,7 @@
             </div>
             <h3>Débora Abdalla</h3>
             <span class="cargo">Coordenação Geral</span>
-            <p>
+            <p data-i18n="team.debora.role">
               Professora Doutora Titular do Departamento de Computação Interdisciplinar
               da UFBA e coordenadora do projeto Plataforma Livre Nação Yuxibu.
             </p>
@@ -449,7 +470,7 @@
             </div>
             <h3>Diego Zabot</h3>
             <span class="cargo">Pesquisador IHC</span>
-            <p>Professor Assistente do Departamento de Computação Interdisciplinar da UFBA, pesquisador em Interação
+            <p data-i18n="team.diego.role">Professor Assistente do Departamento de Computação Interdisciplinar da UFBA, pesquisador em Interação
               Humano-Computador, com ênfase em design participativo e tecnologias educacionais.</p>
           </div>
 
@@ -460,7 +481,7 @@
             </div>
             <h3>Gabriela Almeida</h3>
             <span class="cargo">Bolsista de extensão</span>
-            <p>
+            <p data-i18n="team.gabriela.role">
               Pesquisadora do grupo de desenvolvimento da Plataforma Livre Nação Yuxibu do Onda Digital.
             </p>
           </div>
@@ -472,21 +493,11 @@
             </div>
             <h3>Ise Prazeres</h3>
             <span class="cargo">Designer gráfico</span>
-            <p>
+            <p data-i18n="team.ise.role">
               Designer e profissional de marketing com 15 anos de caminhada criativa. Ao longo de sua trajetória vem
               desenvolvendo projetos gráficos que unem estratégia, sensibilidade e estética.
             </p>
           </div>
-
-          <!-- Card Leonardo César 
-          <div class="membro-card">
-            <div class="membro-foto">
-              <img src="./Membros/Cesar.png" alt="Leonardo César" loading="lazy">
-            </div>
-            <h3>Leonardo César</h3>
-            <span class="cargo">Desenvolvedor</span>
-            <p>Desenvolvedor de software e integrante do grupo de desenvolvimento da Plataforma Livre Nação Yuxibu.</p>
-          </div> -->
 
           <!-- Card Pedro Tupinambá -->
           <div class="membro-card">
@@ -495,7 +506,7 @@
             </div>
             <h3>Pedro Tupinambá</h3>
             <span class="cargo">Bolsista de extensão</span>
-            <p>Pesquisador do grupo de desenvolvimento da Plataforma Livre Nação Yuxibu do Onda Digital.</p>
+            <p data-i18n="team.pedro.role">Pesquisador do grupo de desenvolvimento da Plataforma Livre Nação Yuxibu do Onda Digital.</p>
           </div>
 
           <!-- Card Solon -->
@@ -505,7 +516,7 @@
             </div>
             <h3>Solon</h3>
             <span class="cargo">Product Owner</span>
-            <p>Facilitador cultural e Product Owner da Plataforma Nação Yuxibu. Formado em Ecopsicologia pelo Instituto
+            <p data-i18n="team.solon.role">Facilitador cultural e Product Owner da Plataforma Nação Yuxibu. Formado em Ecopsicologia pelo Instituto
               Brasileiro de Ecopsicologia (IBE), atua como ponte entre comunidades Huni Kuī do Acre e a sociedade
               urbana, articulando saberes ancestrais, tecnologia livre e práticas de reconexão com a natureza.</p>
           </div>
@@ -517,7 +528,7 @@
             </div>
             <h3>Thiago Magalhães</h3>
             <span class="cargo">Advogado</span>
-            <p>
+            <p data-i18n="team.thiago.role">
               Bacharel em Direito e Licenciado em Filosofia pela Universidade Estadual de Santa Cruz - UESC/BA. Advogado
               OAB/BA 40748 e integrante do grupo de pesquisa da Plataforma Livre Nação Yuxibu.
             </p>
@@ -530,7 +541,7 @@
             </div>
             <h3>Túlio Augustos</h3>
             <span class="cargo">Bolsista de extensão</span>
-            <p>
+            <p data-i18n="team.tulio.role">
               Analista de sistema e pesquisador em Codesign, atua no grupo de Design e Desenvolvimento da Plataforma
               Livre Nação Yuxibu.
             </p>
@@ -543,7 +554,7 @@
             </div>
             <h3>Valeria Rosa</h3>
             <span class="cargo">Pesquisadora IHC</span>
-            <p>Professora Doutora da UESB e integrante do grupo de pesquisa da Plataforma Livre Nação Yuxibu.</p>
+            <p data-i18n="team.valeria.role">Professora Doutora da UESB e integrante do grupo de pesquisa da Plataforma Livre Nação Yuxibu.</p>
           </div>
         </div>
       </div>
@@ -555,7 +566,7 @@
         <img src="./Bordas/URUCUM2.png" alt="Borda pincelada" loading="lazy">
       </div>
       <div class="container-apoio">
-        <h2 class="titulo-apoio">Caminhe Conosco!</h2>
+        <h2 data-i18n="section6.title"class="titulo-apoio">Caminhe Conosco!</h2>
         <div class="opcoes-apoio">
           <a href="./apoie.html">
             <div class="caixa-apoio">
