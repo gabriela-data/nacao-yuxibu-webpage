@@ -1587,6 +1587,40 @@ a::before {
   font-size: 1.2rem;
 }
 
+/* Estilo dos botões de idioma dentro da lista */
+.idioma-lista button.lang-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: inherit;
+  padding: 8px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.idioma-lista button.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.idioma-lista button.lang-btn.active {
+  background: linear-gradient(90deg, rgba(211,84,0,0.12), rgba(175,20,4,0.06));
+  font-weight: 700;
+  color: var(--cor-urucum);
+}
+
+/* Responsividade e limite de altura para muitas línguas */
+.idioma-lista {
+  max-height: 220px;
+  overflow: auto;
+}
+
 /* Ajuste para o header (já tem fundo escuro) */
 .cabecalho .idioma-botao {
   color: var(--cor-texto-claro);

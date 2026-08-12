@@ -162,6 +162,8 @@
   const LANG_KEY = 'site_lang';
   const defaultLang = 'pt';
   const availableLangs = Object.keys(translations);
+  // Mapa de bandeiras para exibição no seletor
+  const flagMap = { pt: '🇧🇷', en: '🇬🇧', es: '🇪🇸' };
 
   // Helper: obter idioma salvo ou detectar do navegador
   function detectLanguage() {
@@ -218,6 +220,13 @@
     document.querySelectorAll('.lang-btn').forEach((btn) => {
       btn.classList.toggle('active', btn.dataset.lang === lang);
     });
+
+    // Atualiza o botão de idioma atual, se presente
+    const idiomaAtualBtn = document.getElementById('idiomaAtual');
+    if (idiomaAtualBtn) {
+      const flag = flagMap[lang] || '';
+      idiomaAtualBtn.innerHTML = `<span class="bandeira">${flag}</span> ${lang.toUpperCase()}`;
+    }
   }
 
   // Muda idioma e persiste escolha
@@ -231,13 +240,44 @@
   function init() {
     cacheOriginalText();
 
+    // Preenche a lista de idiomas no seletor (se existir no HTML)
+    const idiomaAtualBtn = document.getElementById('idiomaAtual');
+    const lista = document.getElementById('listaIdiomas');
+    if (lista) {
+      lista.innerHTML = '';
+      availableLangs.forEach((l) => {
+        const li = document.createElement('li');
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'lang-btn';
+        btn.dataset.lang = l;
+        btn.innerHTML = `<span class="bandeira">${flagMap[l] || ''}</span> ${l.toUpperCase()}`;
+        li.appendChild(btn);
+        lista.appendChild(li);
+      });
+    }
+
     // Ligando eventos aos botões (ou qualquer seletor de idioma que o site usar)
     document.querySelectorAll('.lang-btn').forEach((btn) => {
       btn.addEventListener('click', function () {
         const lang = btn.dataset.lang;
         setLanguage(lang);
+        if (lista) lista.style.display = 'none';
       });
     });
+
+    // Abre/fecha lista ao clicar no botão de idioma atual
+    if (idiomaAtualBtn && lista) {
+      idiomaAtualBtn.addEventListener('click', () => {
+        lista.style.display = lista.style.display === 'block' ? 'none' : 'block';
+      });
+      // Fecha ao clicar fora
+      document.addEventListener('click', (e) => {
+        if (!idiomaAtualBtn.contains(e.target) && !lista.contains(e.target)) {
+          lista.style.display = 'none';
+        }
+      });
+    }
 
     // Detecta idioma inicial e aplica
     const initial = detectLanguage();
