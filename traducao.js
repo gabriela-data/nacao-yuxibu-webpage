@@ -6,23 +6,21 @@
 */
 
 (function () {
-  // Dicionário de traduções. Preencha/edite conforme necessário.
+  // Dicionário de traduções.
   // As chaves devem corresponder aos valores de data-i18n no HTML.
   const translations = {
     pt: {
-      // Opcional: pode repetir o texto em português aqui. Como o HTML já contém PT,
-      // é aceitável deixar vazio ou repetir — manter para completude.
       "meta.title": "Plataforma Livre da Nação Yuxibu",
       "site.title": "Plataforma Livre da Nação Yuxibu",
-      "section1.title": "SEÇÃO 1 — INÍCIO",
+      "section1.title": "INÍCIO",
       "section1.heading": "<span class='linha-hero-1'>Plataforma Livre</span><span class='linha-hero-2'>Nação Yuxibu</span>",
       "section1.lead": "Verdade na unidade: do coração da floresta para o mundo!",
       "section1.cta": "Apoie o desenvolvimento da plataforma",
-      "section2.title": "SEÇÃO 2 — MANIFESTO",
+      "section2.title": "MANIFESTO",
       "section2.p1": "O ciberespaço também é território!",
       "section2.p2": "Defendemos que os povos indígenas ocupem e transformem o ambiente digital com base em seus próprios saberes, fortalecendo suas tradições, modos de vida e luta por direitos.",
       "section2.p3": "Ao ser desenvolvido como Software Livre, a Plataforma Livre da Nação Yuxibu afirma a liderança indígena e demonstra como tecnologias digitais podem ser usadas de forma inclusiva, com autonomia, identidade e saberes ancestrais no centro.",
-      "section3.title": "SEÇÃO 3 — O COLETIVO",
+      "section3.title": "O COLETIVO Nação Yuxibu",
       "section3.p1": "O Coletivo da Nação Yuxibu é um grupo de pessoas que apoiam a liderança indígena reunindo saberes ancestrais, cuidado ético e colaboração cultural, educativa e tecnológica.",
       "section3.p2": "Promove apoio respeitoso, experiências imersivas e iniciativas comprometidas com as tradições e valores do povo Huni Kuĩ.",
       "section3.p3": "O projeto de extensão da Plataforma Livre da Nação Yuxibu foi iniciado por meio do Coletivo da Nação Yuxibu.",
@@ -38,7 +36,7 @@
       "pillar.cultural.title": "COLABORAÇÃO CULTURAL",
       "pillar.cultural.p": "Promove a troca entre saberes tradicionais indígenas, instituições educativas e sociedade civil, incentivando produção artística e difusão de saberes indígenas por meio de redes, pesquisas e projetos.",
       "section3.follow": "Siga o Coletivo da Nação Yuxibu no Instagram:",
-      "section4.title": "SEÇÃO 4 — A PLATAFORMA",
+      "section4.title": "A PLATAFORMA",
       "section4.p1": "A Plataforma Livre da Nação Yuxibu é uma plataforma online desenvolvida como Software Livre. Por meio de tecnologias digitais, visa apoiar o povo indígena Huni Kuĩ a compartilhar a visão de mundo do seu povo sobre modos de vida humana e os direitos da natureza.",
       "section4.p2": "Em observância aos direitos constitucionais dos povos indígenas, garantidos pelo Art. 231 da Constituição de 1988, a plataforma foca em um grupo étnico para que possa expressar sua visão de mundo, organização social, costumes, línguas, crenças e tradições.",
       "section4.article231": "Art. 231. Os povos indígenas são reconhecidos como detentores de sua organização social, costumes, línguas, crenças e tradições, e dos direitos originários sobre as terras que tradicionalmente ocupam. À União cabe demarcar tais terras e proteger e garantir o respeito a todas as suas posessões.",
@@ -58,7 +56,7 @@
       "section4.research.title": "PESQUISA E PROJETO DE EXTENSÃO UNIVERSITÁRIA",
       "section4.research.p": "Estamos pesquisando um modelo de design semio-participativo para garantir que a plataforma atenda às necessidades específicas dos usuários, respeite práticas culturais e promova ambiente colaborativo — um processo de \"co-projetar\" com os povos tradicionais.",
       "section4.research.p2": "O projeto é apoiado pelas chamadas PAEx 2025 e Pibiex 2025 da UFBA, que financiam bolsas de extensão universitária.",
-      "section5.title": "SEÇÃO 5 — EQUIPE",
+      "section5.title": "EQUIPE",
       "section5.p": "O projeto está sendo desenvolvido por equipe de pesquisadores, estudantes e voluntários do Onda Digital — Grupo de Pesquisa e Extensão em Computação, Educação e Sociedade — no Instituto de Computação da UFBA.",
       "team.allan.name": "ALLAN THALES",
       "team.allan.role": "Analista de TI — Analista de infraestrutura, desenvolvedor de Software Livre e voluntário no projeto.",
@@ -66,7 +64,7 @@
       "team.aurelio.role": "Programador — Engenheiro de software, especialista front-end, desenvolvedor de Software Livre e voluntário.",
       "team.valeria.name": "VALÉRIA ROSA",
       "team.valeria.role": "Pesquisadora em IHC — Professora com doutorado e integrante do grupo de pesquisa.",
-      "section6.title": "SEÇÃO 6 — APOIE-NOS",
+      "section6.title": "APOIE-NOS",
       "section6.p1": "O projeto avançou em diversas áreas, mas precisamos ampliar parcerias para acelerar desenvolvimento, financiar a participação de indígenas e viabilizar visitas de campo.",
       "section6.getin.title": "ENTRE EM CONTATO",
       "form.name": "Nome completo — Seu nome",
@@ -80,18 +78,17 @@
     },
 
     en: {
-      // Traduções em inglês conforme você forneceu
       "meta.title": "Yuxibu Nation Free Platform",
       "site.title": "Yuxibu Nation Free Platform",
-      "section1.title": "SECTION 1 — HOME",
+      "section1.title": "HOME",
       "section1.heading": "<span class='linha-hero-1'>Yuxibu Nation</span><span class='linha-hero-2'>Free Platform</span>",
       "section1.lead": "Truth in unity: from the heart of the forest to the world!",
       "section1.cta": "Support the development of the platform",
-      "section2.title": "SECTION 2 — MANIFESTO",
+      "section2.title": "MANIFEST",
       "section2.p1": "Cyberspace is territory too!",
       "section2.p2": "We advocate for Indigenous peoples to occupy and transform the digital environment based on their own knowledge, strengthening their traditions, ways of life, and struggle for rights.",
       "section2.p3": "By being developed as Free Software, the Yuxibu Nation Free Platform affirms Indigenous leadership and demonstrates how digital technologies can be used inclusively, with autonomy, identity, and ancestral knowledge at their core.",
-      "section3.title": "SECTION 3 — THE COLLECTIVE",
+      "section3.title": "THE COLLECTIVE",
       "section3.p1": "The Yuxibu Nation Collective is a group of people who support Indigenous leadership by bringing together ancestral knowledge, ethical care, and cultural, educational, and technological collaboration.",
       "section3.p2": "It promotes respectful support, immersive experiences, and initiatives committed to the traditions and values of the Huni Kuĩ people.",
       "section3.p3": "The Yuxibu Nation Free Platform extension project was initiated through the Yuxibu Nation Collective.",
@@ -107,7 +104,7 @@
       "pillar.cultural.title": "CULTURAL COLLABORATION",
       "pillar.cultural.p": "Cultural collaboration promotes exchange among traditional Indigenous knowledge, educational institutions, and civil society. Its purpose is to encourage artistic production and the dissemination of Indigenous peoples’ knowledge by building networks and developing research and extension projects, presentations, exhibitions, classes, and immersive experiences that foster the exchange of studies and experiences.",
       "section3.follow": "Follow the Yuxibu Nation Collective on Instagram:",
-      "section4.title": "SECTION 4 — THE PLATFORM",
+      "section4.title": "THE PLATFORM",
       "section4.p1": "The Yuxibu Nation Free Platform is an online platform being developed as Free Software. Through digital technologies, it aims to support Indigenous people of the Huni Kuĩ ethnic group in sharing their people’s worldview concerning human ways of life and the rights of nature.",
       "section4.p2": "In observance of the constitutional rights of Indigenous peoples, guaranteed by Article 231 of Chapter VIII of Brazil’s 1988 Constitution, the platform focuses on one ethnic group so that it can express its people’s worldview, social organization, customs, languages, beliefs, and traditions.",
       "section4.article231": "Article 231. Indigenous peoples are recognized as having their own social organization, customs, languages, beliefs, and traditions, as well as original rights to the lands they traditionally occupy. The Federal Government is responsible for demarcating these lands and for protecting and ensuring respect for all their property.",
@@ -120,22 +117,75 @@
       "section4.educational.p": "A space for classes taught by Indigenous people themselves, as well as for training collaborators.",
       "section4.financial.title": "FINANCIAL",
       "section4.financial.p": "A free and secure space where Indigenous people can sell their art, handicrafts, and other items through a marketplace, as well as receive donations, in accordance with the principles of a creative and sustainable economy.",
+
+
       "section4.whyfree.title": "WHY FREE SOFTWARE?",
+
       "section4.whyfree.p1": "Access to education and information, as well as the dissemination of knowledge, are fundamentally connected to open-technology movements. Among these, the Free Software movement stands out. The adoption of Free Software in support of equitable and inclusive human development is considered an alternative for democratizing access to technology.",
+
       "section4.whyfree.p2": "Free Software offers Indigenous communities and other marginalized groups a powerful opportunity to customize technology according to their cultural and social realities. Its use can also strengthen collaborative networks, since its development is often based on sharing knowledge and cooperation among different peoples and cultures.",
+
       "section4.whyfree.p3": "In a social context dominated by the platformization of human life, the Yuxibu Nation Free Platform is being developed as Free Software with its own data server—a dedicated storage space on a UFBA server—and for specific purposes. It offers an important example of another way to use digital technologies, one in which autonomy is central.",
+
       "section4.research.title": "RESEARCH AND UNIVERSITY EXTENSION PROJECT",
+
       "section4.research.p": "We are conducting research into the adoption of a semio-participatory design model to ensure that the Yuxibu Nation Free Platform not only meets users’ specific needs, but also respects their cultural practices and promotes a collaborative environment. Building an interface based on the semio-participatory design methodology goes beyond the process of “designing for” and moves toward a process of “designing with.”",
+
       "section4.research.p2": "The project is supported by UFBA’s PAEx 2025 and Pibiex 2025 calls for proposals, which fund two university extension scholarships.",
-      "section5.title": "SECTION 5 — TEAM",
+
+
+      "section5.title": "TEAM",
       "section5.p": "This project is being developed by a team of researchers, students, and volunteers from Onda Digital—the Research and University Extension Group in Computing, Education, and Society—within the Department of Interdisciplinary Computing at UFBA’s Institute of Computing.",
+
       "team.allan.name": "ALLAN THALES",
+      "team.allan.function": "IT Analyst",
       "team.allan.role": "Infrastructure analyst, Free Software developer, and volunteer with the Yuxibu Nation Free Platform.",
+
       "team.aurelio.name": "AURÉLIO HECKERT",
+      "team.aurelio.function": "Programmer",
       "team.aurelio.role": "Software engineer, front-end specialist, Free Software developer, and volunteer with the Yuxibu Nation Free Platform.",
+
+      "team.caio.name": "CAIO ALMEIDA",
+      "team.caio.function": "Software Engineer",
+      "team.caio.role": "Holds bachelor’s and master’s degrees in Computer Science from the Federal University of Bahia. Software engineer and volunteer with the Yuxibu Nation Free Platform.",
+
+      "team.debora.name": "DÉBORA ABDALLA SANTOS",
+      "team.debora.function": "General Coordinator",
+      "team.debora.role": "Full Professor with a PhD in the Department of Interdisciplinary Computing at the Institute of Computing of the Federal University of Bahia, and a permanent faculty member of the Graduate Program in Knowledge Dissemination. Coordinator of the Yuxibu Nation Free Platform research and university extension project and leader of the Onda Digital research and extension group.",
+
+      "team.diego.name": "DIEGO ZABOT",
+      "team.diego.function": "HCI Researcher",
+      "team.diego.role": "Assistant Professor in UFBA’s Department of Interdisciplinary Computing and a researcher in Human–Computer Interaction, with an emphasis on participatory design and educational technologies.",
+
+      "team.gabriela.name": "GABRIELA ALMEIDA",
+      "team.gabriela.function": "University Extension Scholarship Recipient",
+      "team.gabriela.role": "Researcher in Onda Digital’s Yuxibu Nation Free Platform development group.",
+
+      "team.ise.name": "ISE PRAZERES",
+      "team.ise.function": "Graphic Designer",
+      "team.ise.role": "Designer and marketing professional with 15 years of creative experience. Throughout her career, she has developed graphic projects that combine strategy, sensitivity, and aesthetics.",
+
+      "team.pedro.name": "PEDRO TUPINAMBÁ",
+      "team.pedro.function": "University Extension Scholarship Recipient",
+      "team.pedro.role": "Researcher in Onda Digital’s Yuxibu Nation Free Platform development group.",
+
+      "team.solon.name": "SOLON",
+      "team.ise.function": "Product Owner",
+      "team.solon.role": "Cultural facilitator and Product Owner of the Yuxibu Nation Platform. Trained in Ecopsychology by the Brazilian Institute of Ecopsychology (IBE), he acts as a bridge between Huni Kuĩ communities in Acre and urban society, bringing together ancestral knowledge, Free Software, and practices for reconnecting with nature.",
+
+      "team.thiago.name": "THIAGO MAGALHÃES DA SILVA",
+      "team.thiago.function": "lawyer",
+      "team.thiago.role": "Holds a bachelor’s degree in Law and a teaching degree in Philosophy from the State University of Santa Cruz (UESC/BA). Attorney registered with the Bahia Chapter of the Brazilian Bar Association under OAB/BA No. 40748 and a member of the Yuxibu Nation Free Platform research group.",
+
+      "team.tulio.name": "TÚLIO AUGUSTOS",
+      "team.tulio.function": "University Extension Scholarship Recipient",
+      "team.tulio.role": "Systems analyst and co-design researcher who works with the Yuxibu Nation Free Platform’s Design and Development group.",
+
       "team.valeria.name": "VALÉRIA ROSA",
+      "team.valeria.function": "HCI Researcher",
       "team.valeria.role": "Professor with a PhD at UESB and a member of the Yuxibu Nation Free Platform research group.",
-      "section6.title": "SECTION 6 — SUPPORT US",
+
+      "section6.title": "SUPPORT US",
       "section6.p1": "The project has made progress in important areas, particularly in establishing a solid technical foundation. At this stage, we need to expand our partnerships.",
       "section6.getin.title": "GET IN TOUCH",
       "form.name": "Full name — Your name",
@@ -149,10 +199,10 @@
     },
 
     es: {
-      // Espaço para traduções em espanhol (preencha conforme necessário).
+      // Espaço para traduções em espanhol
       "meta.title": "Plataforma Libre de la Nación Yuxibu",
       "site.title": "Plataforma Libre de la Nación Yuxibu",
-      "section1.title": "SECCIÓN 1 — INICIO",
+      "section1.title": "INICIO",
       "section1.heading": "<span class='linha-hero-1'>Plataforma Libre</span><span class='linha-hero-2'>Nación Yuxibu</span>",
       "section1.lead": "Verdad en la unidad: ¡del corazón del bosque al mundo!",
       "section1.cta": "Apoya el desarrollo de la plataforma"
