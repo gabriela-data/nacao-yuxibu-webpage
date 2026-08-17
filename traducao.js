@@ -78,6 +78,16 @@
     },
 
     en: {
+      "header.home":"home",
+      "header.manifesto":"manifest",
+      "header.povo": "nation",
+      "header.movimento": "the collective",
+      "header.plataforma": "the plataform",
+      "header.sobre": "team",
+      "header.publicacoes": "publications",
+      "header.apoie": "support",
+
+      
       "meta.title": "Yuxibu Nation Free Platform",
       "site.title": "Yuxibu Nation Free Platform",
       "section1.title": "HOME",
@@ -88,7 +98,7 @@
       "section2.p1": "Cyberspace is territory too!",
       "section2.p2": "We advocate for Indigenous peoples to occupy and transform the digital environment based on their own knowledge, strengthening their traditions, ways of life, and struggle for rights.",
       "section2.p3": "By being developed as Free Software, the Yuxibu Nation Free Platform affirms Indigenous leadership and demonstrates how digital technologies can be used inclusively, with autonomy, identity, and ancestral knowledge at their core.",
-      "section3.title": "THE COLLECTIVE",
+      "section3.title": "THE YUXIBU NATION COLLECTIVE",
       "section3.p1": "The Yuxibu Nation Collective is a group of people who support Indigenous leadership by bringing together ancestral knowledge, ethical care, and cultural, educational, and technological collaboration.",
       "section3.p2": "It promotes respectful support, immersive experiences, and initiatives committed to the traditions and values of the Huni Kuĩ people.",
       "section3.p3": "The Yuxibu Nation Free Platform extension project was initiated through the Yuxibu Nation Collective.",
@@ -104,6 +114,8 @@
       "pillar.cultural.title": "CULTURAL COLLABORATION",
       "pillar.cultural.p": "Cultural collaboration promotes exchange among traditional Indigenous knowledge, educational institutions, and civil society. Its purpose is to encourage artistic production and the dissemination of Indigenous peoples’ knowledge by building networks and developing research and extension projects, presentations, exhibitions, classes, and immersive experiences that foster the exchange of studies and experiences.",
       "section3.follow": "Follow the Yuxibu Nation Collective on Instagram:",
+
+      "titulo.plataforma": "Platform under construction",
       "section4.title": "THE PLATFORM",
       "section4.p1": "The Yuxibu Nation Free Platform is an online platform being developed as Free Software. Through digital technologies, it aims to support Indigenous people of the Huni Kuĩ ethnic group in sharing their people’s worldview concerning human ways of life and the rights of nature.",
       "section4.p2": "In observance of the constitutional rights of Indigenous peoples, guaranteed by Article 231 of Chapter VIII of Brazil’s 1988 Constitution, the platform focuses on one ethnic group so that it can express its people’s worldview, social organization, customs, languages, beliefs, and traditions.",
@@ -188,6 +200,14 @@
       "section6.title": "SUPPORT US",
       "section6.p1": "The project has made progress in important areas, particularly in establishing a solid technical foundation. At this stage, we need to expand our partnerships.",
       "section6.getin.title": "GET IN TOUCH",
+
+      "section6.title": "Walk with us!",
+      "section.apoie.financie": "FINANCE",
+      "section.apoie.financie.p": "Support the hiring of programmers and trips to the village.",
+      "section.apoie.colabore": "CONTRIBUTE",
+      "section.apoie.colabore.p": "Promote the work of the Huni Kuī people.",
+
+
       "form.name": "Full name — Your name",
       "form.email": "Email — your@email.com",
       "form.phone": "Phone",
