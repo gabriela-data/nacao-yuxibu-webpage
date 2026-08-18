@@ -250,14 +250,22 @@
             </div>
             <button class="botao-menu" type="button" aria-label="Abrir menu">☰</button>
             <ul class="links-navegacao">
-                <li><a href="index.html#hero">Home</a></li>
-                <li><a href="index.html#manifesto">Manifesto</a></li>
-                <li><a href="index.html#povo">Povo Huni Kuī</a></li>
-                <li><a href="index.html#movimento">O Coletivo</a></li>
-                <li><a href="index.html#plataforma">A Plataforma</a></li>
-                <li><a href="index.html#sobre">Equipe</a></li>
-                <li><a href="publicacoes.html" class="ativo">Publicações</a></li>
-                <li><a href="apoie.html" class="link-apoio">APOIE</a></li>
+                <li><a data-i18n="header.home" href="index.html#hero">Home</a></li>
+                <li><a data-i18n="header.manifesto" href="index.html#manifesto">Manifesto</a></li>
+                <li><a data-i18n="header.povo" href="index.html#povo">Povo Huni Kuī</a></li>
+                <li><a data-i18n="header.movimento" href="index.html#movimento">O Coletivo</a></li>
+                <li><a data-i18n="header.plataforma" href="index.html#plataforma">A Plataforma</a></li>
+                <li><a data-i18n="header.sobre" href="index.html#sobre">Equipe</a></li>
+                <li><a data-i18n="header.publicacoes" href="publicacoes.html" class="ativo">Publicações</a></li>
+                <li><a data-i18n="header.apoie" href="apoie.html" class="link-apoio">APOIE</a></li>
+                <li class="item-idioma">
+                    <div class="idioma-selector">
+                        <button class="idioma-botao" id="idiomaAtual" aria-label="Selecionar idioma">
+                            <span class="bandeira">🇧🇷</span> PT
+                        </button>
+                        <ul class="idioma-lista" id="listaIdiomas"></ul>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -266,8 +274,8 @@
         <section class="secao-publicacoes">
             <div class="container">
                 <div class="cabecalho-pagina">
-                    <h1 class="titulo-pagina">Publicações</h1>
-                    <p class="subtitulo-pagina">
+                    <h1 class="titulo-pagina" data-i18n="publicacoes.title">Publicações</h1>
+                    <p class="subtitulo-pagina" data-i18n="publicacoes.subtitle">
                         Produção acadêmica vinculada ao projeto Plataforma Livre Nação Yuxibu, apresentada em
                         congressos, simpósios e eventos científicos.
                     </p>
@@ -277,13 +285,13 @@
 
                     <!-- Publicação 1 -->
                     <article class="publicacao-item">
-                        <span class="evento-nome">VI CONGRESSO
+                        <span class="evento-nome" data-i18n="publicacoes.evento1">VI CONGRESSO
                             INTERNACIONAL MUNDOS
                             INDÍGENAS, AMÉRICA: Histórias, Territorialidades e Saberes Indígenas (VI COIMI - ABYA
                             YALA)</span>
-                        <h3 class="publicacao-titulo">PLATAFORMA LIVRE NAÇÃO YUXIBU</h3>
-                        <p class="publicacao-autores">Débora Abdalla Santos</p>
-                        <p class="publicacao-resumo">
+                        <h3 class="publicacao-titulo" data-i18n="publicacoes.titulo1">PLATAFORMA LIVRE NAÇÃO YUXIBU</h3>
+                        <p class="publicacao-autores" data-i18n="publicacoes.autor1">Débora Abdalla Santos</p>
+                        <p class="publicacao-resumo" data-i18n="publicacoes.resumo1">
                             Os povos indígenas têm demonstrado uma incrível capacidade de apropriação criativa das
                             tecnologias digitais,
                             transformando ferramentas modernas em aliadas na luta por reconhecimento e visibilidade.
@@ -319,18 +327,18 @@
                             em mostrar como é possível uma outra forma de uso das tecnologias digitais, onde a autonomia
                             se faz presente.
                         </p>
-                        <a href="https://coimi.net/Caderno-de-Programa%C3%A7%C3%A3o-e-Resumos_VI-COIMI-2026.pdf" class="publicacao-link">Anais do evento →</a>
+                        <a href="https://coimi.net/Caderno-de-Programa%C3%A7%C3%A3o-e-Resumos_VI-COIMI-2026.pdf" class="publicacao-link" data-i18n="publicacoes.anais1">Anais do evento →</a>
                     </article>
 
                     <!--Publicação 2  -->
                     <article class="publicacao-item">
-                        <span class="evento-nome">XII Conferência Latino-Americana de Interação Humano-Computador (CLICH)</span>
-                        <h3 class="publicacao-titulo">Codesign da Plataforma Livre Nação Yuxibu com o Povo indigena Huni Kuĩ: desafios e reflexões iniciais</h3>
-                        <p class="publicacao-autores">Túlio Augustus, Diego Zabot, Valéria Rosa, José Nilson Sabóia Kaxinawá (Tuwe), Solon Dutra e Débora Abdalla</p>
-                        <p class="publicacao-resumo">
+                        <span class="evento-nome" data-i18n="publicacoes.evento2">XII Conferência Latino-Americana de Interação Humano-Computador (CLICH)</span>
+                        <h3 class="publicacao-titulo" data-i18n="publicacoes.titulo2">Codesign da Plataforma Livre Nação Yuxibu com o Povo indigena Huni Kuĩ: desafios e reflexões iniciais</h3>
+                        <p class="publicacao-autores" data-i18n="publicacoes.autor2">Túlio Augustus, Diego Zabot, Valéria Rosa, José Nilson Sabóia Kaxinawá (Tuwe), Solon Dutra e Débora Abdalla</p>
+                        <p class="publicacao-resumo" data-i18n="publicacoes.resumo2">
                             Tecnologias digitais têm sido apropriadas por povos indígenas para fortalecer redes de apoio e compartilhar saberes e culturas. Este artigo discute a concepção inicial da Plataforma Livre Nação Yuxibu, voltada ao povo Huni Kuĩ para compartilhar sua cosmovisão nas dimensões cultural, socioambiental, educacional e financeira. A pesquisa adotou o design semioparticipativo para construir a interação em colaboração com a comunidade, apresentando reflexões iniciais sobre decisões técnicas e metodológicas do processo de codesign. Argumenta-se que a articulação entre software livre e cocriação pode favorecer modelos de desenvolvimento tecnológico mais alinhados ao protagonismo indígena e à autonomia de seus saberes no ambiente digital.
                         </p>
-                        <a href="https://www.researchgate.net/publication/404878143_Codesign_da_Plataforma_Livre_Nacao_Yuxibu_com_o_Povo_Indigena_Huni_Kui_desafios_e_reflexoes_iniciais" class="publicacao-link">Anais do evento (em breve) →</a>
+                        <a href="https://www.researchgate.net/publication/404878143_Codesign_da_Plataforma_Livre_Nacao_Yuxibu_com_o_Povo_Indigena_Huni_Kui_desafios_e_reflexoes_iniciais" class="publicacao-link" data-i18n="publicacoes.anais2">Anais do evento (em breve) →</a>
                     </article>
 
 
@@ -381,6 +389,7 @@
         </div>
     </footer>
 
+    <script src="traducao.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Menu hambúrguer (mesmo comportamento do script.js original)

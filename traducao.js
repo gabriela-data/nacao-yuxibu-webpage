@@ -10,6 +10,14 @@
   // As chaves devem corresponder aos valores de data-i18n no HTML.
   const translations = {
     pt: {
+      "header.home":"Home",
+      "header.manifesto":"Manifesto",
+      "header.povo": "Povo Huni Kuī",
+      "header.movimento": "O Coletivo",
+      "header.plataforma": "A Plataforma",
+      "header.sobre": "Equipe",
+      "header.publicacoes": "Publicações",
+      "header.apoie": "Apoie",
       "meta.title": "Plataforma Livre da Nação Yuxibu",
       "site.title": "Plataforma Livre da Nação Yuxibu",
       "section1.title": "INÍCIO",
@@ -74,7 +82,43 @@
       "form.message": "Mensagem — Conte como gostaria de ajudar…",
       "form.submit": "Enviar",
       "section6.email": "Prefere falar diretamente? Envie email para nacaoyuxibu@ufba.br",
-      "footer.copyright": "© 2025 Plataforma Livre da Nação Yuxibu"
+      "footer.copyright": "© 2025 Plataforma Livre da Nação Yuxibu",
+      "support.title": "Apoie a Plataforma Livre Nação Yuxibu",
+      "support.p1": "O projeto avançou em áreas importantes, especialmente no que diz respeito à definição de uma base técnica sólida.",
+      "support.p2": "No atual momento, precisamos expandir parcerias a fim de:",
+      "support.li1": "alavancar o desenvolvimento do software por meio de uma equipe de programadores que possam trabalhar em conjunto com os bolsistas de extensão da UFBA.",
+      "support.li2": "realizar viagem de imersão em pelo menos uma aldeia Huni Kuin para continuidade da pesquisa em design semioparticipativo.",
+      "support.li3": "Já temos o convite para realizar esse trabalho na aldeia São Vicente, que está localizada às margens do Rio Humaitá, na Terra Indígena (TI) do Rio Humaitá, no município de Tarauacá, no estado do Acre.",
+      "support.form.title": "Quero Apoiar",
+      "support.form.subtitle": "Preencha o formulário abaixo e entraremos em contato.",
+      "support.form.name": "Nome completo *",
+      "support.form.name.placeholder": "Seu nome",
+      "support.form.email": "E-mail *",
+      "support.form.email.placeholder": "seu@email.com",
+      "support.form.phone": "Telefone",
+      "support.form.phone.placeholder": "(XX) 99999-9999",
+      "support.form.city": "Cidade/Estado",
+      "support.form.city.placeholder": "Ex.: Salvador – BA",
+      "support.form.message": "Mensagem",
+      "support.form.message.placeholder": "Conte-nos como gostaria de apoiar...",
+      "support.form.submit": "Enviar",
+      "support.success.title": "Mensagem enviada com sucesso!",
+      "support.success.p1": "Agradecemos o interesse em apoiar a <strong>Plataforma Livre Nação Yuxibu</strong>.",
+      "support.success.note": "Fique atento(a) à sua <strong>caixa de entrada</strong> e à pasta de <strong>spam/lixo eletrônico</strong>.<br>Em breve, nossa equipe responderá através do e-mail informado.",
+      "support.success.instagram": "Enquanto isso, conheça mais sobre o Coletivo Nação Yuxibu através do Instagram:",
+      "support.success.back": "↩ Voltar ao início",
+      "publicacoes.title": "Publicações",
+      "publicacoes.subtitle": "Produção acadêmica vinculada ao projeto Plataforma Livre Nação Yuxibu, apresentada em congressos, simpósios e eventos científicos.",
+      "publicacoes.evento1": "VI CONGRESSO INTERNACIONAL MUNDOS INDÍGENAS, AMÉRICA: Histórias, Territorialidades e Saberes Indígenas (VI COIMI - ABYA YALA)",
+      "publicacoes.titulo1": "PLATAFORMA LIVRE NAÇÃO YUXIBU",
+      "publicacoes.autor1": "Débora Abdalla Santos",
+      "publicacoes.resumo1": "Os povos indígenas têm demonstrado uma incrível capacidade de apropriação criativa das tecnologias digitais, transformando ferramentas modernas em aliadas na luta por reconhecimento e visibilidade. Essas tecnologias têm sido usadas para fortalecer redes de apoio, divulgar suas histórias e culturas para além de suas comunidades e documentar suas práticas e saberes ancestrais. Contudo, o uso dessas ferramentas também traz desafios, como o acesso desigual à infraestrutura digital e a necessidade de proteger suas informações e conhecimentos tradicionais da exploração indevida. A soberania digital é um passo essencial para que os povos indígenas mantenham o controle sobre suas informações e narrativas, reduzindo a dependência de sistemas que podem explorar ou invisibilizar suas vozes. O projeto Plataforma Livre Nação Yuxibu consiste no desenvolvimento de uma plataforma online, na modalidade software livre, cujo propósito é apoiar, por meio de tecnologias digitais, indígenas das etnias da Floresta Amazônica, em especial os Huni Kuin, no movimento de compartilhamento da cosmovisão de seu povo em relação à forma de viver humana e dos direitos da natureza. O projeto avançou em áreas importantes, especialmente no que diz respeito à definição de uma base técnica sólida. Adotamos uma metodologia de design semioparticipativo para construção de uma solução de design de interfaces e interação onde a responsabilidade de codificar e dispor os signos dessa interface é compartilhada entre os usuários dessa plataforma sob a perspectiva da semioparticipação. Em um contexto social dominado pela plataformização do viver humano, a Plataforma Livre Nação Yuxibu, ao ser desenvolvida como software livre, com servidor de dados próprio, para fins específicos, traz um importante resultado em mostrar como é possível uma outra forma de uso das tecnologias digitais, onde a autonomia se faz presente.",
+      "publicacoes.anais1": "Anais do evento →",
+      "publicacoes.evento2": "XII Conferência Latino-Americana de Interação Humano-Computador (CLICH)",
+      "publicacoes.titulo2": "Codesign da Plataforma Livre Nação Yuxibu com o Povo indígena Huni Kuĩ: desafios e reflexões iniciais",
+      "publicacoes.autor2": "Túlio Augustus, Diego Zabot, Valéria Rosa, José Nilson Sabóia Kaxinawá (Tuwe), Solon Dutra e Débora Abdalla",
+      "publicacoes.resumo2": "Tecnologias digitais têm sido apropriadas por povos indígenas para fortalecer redes de apoio e compartilhar saberes e culturas. Este artigo discute a concepção inicial da Plataforma Livre Nação Yuxibu, voltada ao povo Huni Kuĩ para compartilhar sua cosmovisão nas dimensões cultural, socioambiental, educacional e financeira. A pesquisa adotou o design semioparticipativo para construir a interação em colaboração com a comunidade, apresentando reflexões iniciais sobre decisões técnicas e metodológicas do processo de codesign. Argumenta-se que a articulação entre software livre e cocriação pode favorecer modelos de desenvolvimento tecnológico mais alinhados ao protagonismo indígena e à autonomia de seus saberes no ambiente digital.",
+      "publicacoes.anais2": "Anais do evento (em breve) →"
     },
 
     en: {
@@ -82,12 +126,46 @@
       "header.manifesto":"manifest",
       "header.povo": "nation",
       "header.movimento": "the collective",
-      "header.plataforma": "the plataform",
+      "header.plataforma": "the platform",
       "header.sobre": "team",
       "header.publicacoes": "publications",
       "header.apoie": "support",
-
-      
+      "support.title": "Support the Yuxibu Nation Free Platform",
+      "support.p1": "The project has made progress in important areas, especially in establishing a solid technical foundation.",
+      "support.p2": "At this stage, we need to expand our partnerships in order to:",
+      "support.li1": "accelerate software development through a team of programmers working alongside UFBA extension scholarship holders.",
+      "support.li2": "carry out an immersion trip to at least one Huni Kuin village to continue the semi-participatory design research.",
+      "support.li3": "We already have an invitation to carry out this work in the São Vicente village, located on the banks of the Humaitá River, in the Humaitá Indigenous Land (TI), in Tarauacá, Acre.",
+      "support.form.title": "I Want to Support",
+      "support.form.subtitle": "Fill out the form below and we will get in touch.",
+      "support.form.name": "Full name *",
+      "support.form.name.placeholder": "Your name",
+      "support.form.email": "E-mail *",
+      "support.form.email.placeholder": "your@email.com",
+      "support.form.phone": "Phone",
+      "support.form.phone.placeholder": "(XX) 99999-9999",
+      "support.form.city": "City/State",
+      "support.form.city.placeholder": "Ex.: Salvador – BA",
+      "support.form.message": "Message",
+      "support.form.message.placeholder": "Tell us how you would like to support us...",
+      "support.form.submit": "Send",
+      "support.success.title": "Message sent successfully!",
+      "support.success.p1": "Thank you for your interest in supporting the <strong>Yuxibu Nation Free Platform</strong>.",
+      "support.success.note": "Please keep an eye on your <strong>inbox</strong> and <strong>spam/junk folder</strong>.<br>Our team will respond soon through the email provided.",
+      "support.success.instagram": "In the meantime, get to know the Yuxibu Nation Collective through Instagram:",
+      "support.success.back": "↩ Back to home",
+      "publicacoes.title": "Publications",
+      "publicacoes.subtitle": "Academic production linked to the Yuxibu Nation Free Platform project, presented at congresses, symposia, and scientific events.",
+      "publicacoes.evento1": "VI INTERNATIONAL CONGRESS OF INDIGENOUS WORLDS, AMERICA: Histories, Territorialities and Indigenous Knowledge (VI COIMI - ABYA YALA)",
+      "publicacoes.titulo1": "YUXIBU NATION FREE PLATFORM",
+      "publicacoes.autor1": "Débora Abdalla Santos",
+      "publicacoes.resumo1": "Indigenous peoples have shown an incredible capacity for creative appropriation of digital technologies, transforming modern tools into allies in the struggle for recognition and visibility. These technologies have been used to strengthen support networks, share their histories and cultures beyond their communities, and document their practices and ancestral knowledge. However, the use of these tools also brings challenges, such as unequal access to digital infrastructure and the need to protect their information and traditional knowledge from misuse. Digital sovereignty is an essential step so that Indigenous peoples retain control over their information and narratives, reducing dependence on systems that may exploit or render their voices invisible. The Yuxibu Nation Free Platform project consists of developing an online platform, in free software mode, whose purpose is to support, through digital technologies, Indigenous peoples of the Amazon Forest, especially the Huni Kuin, in the movement to share their people’s worldview in relation to the human way of life and the rights of nature. The project advanced in important areas, especially with respect to the definition of a solid technical base. We adopted a semi-participatory design methodology to build an interface and interaction design solution where the responsibility for encoding and arranging the signs of that interface is shared among the platform users from the perspective of semi-participation. In a social context dominated by the platformization of human life, the Yuxibu Nation Free Platform, when developed as free software with its own data server for specific purposes, brings an important result by showing how another form of digital technology use is possible, where autonomy is present.",
+      "publicacoes.anais1": "Event proceedings →",
+      "publicacoes.evento2": "XII Latin American Conference on Human-Computer Interaction (CLICH)",
+      "publicacoes.titulo2": "Codesign of the Yuxibu Nation Free Platform with the Huni Kuĩ Indigenous People: initial challenges and reflections",
+      "publicacoes.autor2": "Túlio Augustus, Diego Zabot, Valéria Rosa, José Nilson Sabóia Kaxinawá (Tuwe), Solon Dutra, and Débora Abdalla",
+      "publicacoes.resumo2": "Digital technologies have been appropriated by Indigenous peoples to strengthen support networks and share knowledge and culture. This article discusses the initial conception of the Yuxibu Nation Free Platform, aimed at the Huni Kuĩ people to share their worldview in the cultural, socio-environmental, educational, and financial dimensions. The research adopted semi-participatory design to build interaction in collaboration with the community, presenting initial reflections on technical and methodological decisions in the codesign process. It is argued that the articulation between free software and co-creation can foster technology development models that are better aligned with Indigenous protagonism and the autonomy of their knowledge in the digital environment.",
+      "publicacoes.anais2": "Event proceedings (coming soon) →",
       "meta.title": "Yuxibu Nation Free Platform",
       "site.title": "Yuxibu Nation Free Platform",
       "section1.title": "HOME",
@@ -272,6 +350,14 @@
       } else {
         // Fallback para texto original presente no HTML (ou para chave vazia)
         el.innerHTML = el.dataset.originalText || '';
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      const translatedPlaceholder = dict[key];
+      if (translatedPlaceholder !== undefined && translatedPlaceholder !== null) {
+        el.setAttribute('placeholder', translatedPlaceholder);
       }
     });
 

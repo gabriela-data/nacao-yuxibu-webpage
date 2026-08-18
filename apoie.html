@@ -702,14 +702,22 @@
             </div>
             <button class="botao-menu" type="button" aria-label="Abrir menu">☰</button>
             <ul class="links-navegacao">
-                <li><a href="index.html#hero">Home</a></li>
-                <li><a href="index.html#manifesto">Manifesto</a></li>
-                <li><a href="index.html#povo">Povo Huni Kuī</a></li>
-                <li><a href="index.html#movimento">O Coletivo</a></li>
-                <li><a href="index.html#plataforma">A Plataforma</a></li>
-                <li><a href="index.html#sobre">Equipe</a></li>
-                <li><a href="publicacoes.html">Publicações</a></li>
-                <li><a href="apoie.html" class="link-apoio">APOIE</a></li>
+                <li><a data-i18n="header.home" href="index.html#hero">Home</a></li>
+                <li><a data-i18n="header.manifesto" href="index.html#manifesto">Manifesto</a></li>
+                <li><a data-i18n="header.povo" href="index.html#povo">Povo Huni Kuī</a></li>
+                <li><a data-i18n="header.movimento" href="index.html#movimento">O Coletivo</a></li>
+                <li><a data-i18n="header.plataforma" href="index.html#plataforma">A Plataforma</a></li>
+                <li><a data-i18n="header.sobre" href="index.html#sobre">Equipe</a></li>
+                <li><a data-i18n="header.publicacoes" href="publicacoes.html">Publicações</a></li>
+                <li><a data-i18n="header.apoie" href="apoie.html" class="link-apoio">APOIE</a></li>
+                <li class="item-idioma">
+                    <div class="idioma-selector">
+                        <button class="idioma-botao" id="idiomaAtual" aria-label="Selecionar idioma">
+                            <span class="bandeira">🇧🇷</span> PT
+                        </button>
+                        <ul class="idioma-lista" id="listaIdiomas"></ul>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -720,32 +728,32 @@
                 <div class="cabecalho-pagina">
                     <!-- Lado esquerdo: apenas o h1 dentro do box branco -->
                     <div class="box-titulo">
-                        <h1>Apoie a Plataforma Livre Nação Yuxibu</h1>
+                        <h1 data-i18n="support.title">Apoie a Plataforma Livre Nação Yuxibu</h1>
                     </div>
                     <!-- Lado direito: box verde escuro  -->
                     <div class="box-texto-verde">
-                        <p>
+                        <p data-i18n="support.p1">
                             O projeto avançou em áreas importantes, especialmente, no que diz respeito à definição de
                             uma
                             base técnica sólida.
                         </p>
-                        <p>
+                        <p data-i18n="support.p2">
                             No atual momento, precisamos expandir parcerias a fim de:
                         </p>
                         <ul>
-                            <li>
+                            <li data-i18n="support.li1">
                                 alavancar o desenvolvimento do software por meio de uma equipe de programadores que
                                 possam
                                 trabalhar em conjunto com os bolsistas de extensão da UFBA.
                             </li>
                             <li>
-                                <p>
+                                <p data-i18n="support.li2">
                                     realizar viagem de imersão em pelo menos uma aldeia Huni Kuin para continuidade da
                                     pesquisa em
                                     design semioparticipativo.
                                 </p>
                                 <div>
-                                    <p>
+                                    <p data-i18n="support.li3">
                                         Já temos o convite para realizar esse trabalho na aldeia São Vicente,
                                         que está localizada às margens do Rio Humaitá, na Terra Indígena (TI) do Rio
                                         Humaitá, no
@@ -762,28 +770,28 @@
         <!-- SEÇÃO DO FORMULÁRIO -->
         <section class="secao-formulario">
             <div class="container-formulario" id="containerFormulario">
-                <h2>Quero Apoiar</h2>
-                <p class="subtitulo-form">Preencha o formulário abaixo e entraremos em contato.</p>
+                <h2 data-i18n="support.form.title">Quero Apoiar</h2>
+                <p class="subtitulo-form" data-i18n="support.form.subtitle">Preencha o formulário abaixo e entraremos em contato.</p>
 
                 <form class="form-apoio" action="https://formspree.io/f/xaqkadod" method="POST" id="formApoio">
                     <div class="campo-form">
-                        <label for="nome">Nome completo *</label>
-                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                        <label for="nome" data-i18n="support.form.name">Nome completo *</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome" data-i18n-placeholder="support.form.name.placeholder" required>
                     </div>
 
                     <div class="campo-form">
-                        <label for="email">E-mail *</label>
-                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                        <label for="email" data-i18n="support.form.email">E-mail *</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" data-i18n-placeholder="support.form.email.placeholder" required>
                     </div>
 
                     <div class="campo-form">
-                        <label for="telefone">Telefone</label>
-                        <input type="telefone" id="telefone" name="telefone" placeholder="(XX) 99999-9999">
+                        <label for="telefone" data-i18n="support.form.phone">Telefone</label>
+                        <input type="telefone" id="telefone" name="telefone" placeholder="(XX) 99999-9999" data-i18n-placeholder="support.form.phone.placeholder">
                     </div>
 
                     <div class="campo-form">
-                        <label for="cidade">Cidade/Estado</label>
-                        <input type="text" id="cidade" name="cidade" placeholder="Ex.: Salvador – BA">
+                        <label for="cidade" data-i18n="support.form.city">Cidade/Estado</label>
+                        <input type="text" id="cidade" name="cidade" placeholder="Ex.: Salvador – BA" data-i18n-placeholder="support.form.city.placeholder">
                     </div>
 
                     <!-- <div class="campo-form">
@@ -799,12 +807,12 @@
                     </div> -->
 
                     <div class="campo-form">
-                        <label for="mensagem">Mensagem</label>
+                        <label for="mensagem" data-i18n="support.form.message">Mensagem</label>
                         <textarea id="mensagem" name="mensagem"
-                            placeholder="Conte-nos como gostaria de apoiar..."></textarea>
+                            placeholder="Conte-nos como gostaria de apoiar..." data-i18n-placeholder="support.form.message.placeholder"></textarea>
                     </div>
 
-                    <button type="submit" class="botao-enviar" id="botaoEnviar">Enviar</button>
+                    <button type="submit" class="botao-enviar" id="botaoEnviar" data-i18n="support.form.submit">Enviar</button>
                 </form>
             </div>
 
@@ -823,20 +831,20 @@
             <!-- Overlay de agradecimento (aparece sobre toda a página após envio bem-sucedido) -->
             <div class="overlay-agradecimento" id="overlayAgradecimento">
                 <div class="box-agradecimento">
-                    <h1>Mensagem enviada com sucesso!</h1>
-                    <p>
+                    <h1 data-i18n="support.success.title">Mensagem enviada com sucesso!</h1>
+                    <p data-i18n="support.success.p1">
                         Agradecemos o interesse em apoiar a <strong>Plataforma Livre Nação Yuxibu</strong>.
                     </p>
-                    <div class="destaque-email">
+                    <div class="destaque-email" data-i18n="support.success.note">
                         Fique atento(a) à sua <strong>caixa de entrada</strong> e à pasta de <strong>spam/lixo
                             eletrônico</strong>.<br>
                         Em breve, nossa equipe responderá através do e-mail informado.
                     </div>
-                    <p style="font-size: 0.90rem; color: #555;">
+                    <p style="font-size: 0.90rem; color: #555;" data-i18n="support.success.instagram">
                         Enquanto isso, conheça mais sobre o Coletivo Nação Yuxibu através do Instagram:
                     </p>
                     <div class="botoes-pos-envio">
-                        <a href="index.html" class="botao-voltar-inicio">↩ Voltar ao início</a>
+                        <a href="index.html" class="botao-voltar-inicio" data-i18n="support.success.back">↩ Voltar ao início</a>
                         <a href="https://www.instagram.com/nacaoyuxibu" target="_blank" rel="noopener noreferrer"
                             class="botao-instagram">@nacaoyuxibu</a>
                     </div>
@@ -878,6 +886,7 @@
         </div>
     </footer>
 
+    <script src="traducao.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
              // ============ FUNÇÃO PARA DIMINUIR CABEÇALHO AO SCROLL 
@@ -906,7 +915,7 @@
             const botaoEnviar = document.getElementById('botaoEnviar');
             const containerFormulario = document.getElementById('containerFormulario');
             const overlayAgradecimento = document.getElementById('overlayAgradecimento');
-            const boxAgradecimento = document.getElementById('boxAgradecimento');
+            const boxAgradecimento = document.querySelector('.box-agradecimento');
             const statusErro = document.getElementById('status-erro');
             const listaErros = document.getElementById('lista-erros');
             const botaoVoltar = document.getElementById('botao-voltar');
@@ -938,69 +947,79 @@
             }
 
             /* ============ ENVIO DO FORMULÁRIO (fetch) ============ */
-            form.addEventListener('submit', async (event) => {
-                event.preventDefault(); // impede o redirecionamento do Formspree
+            if (form && botaoEnviar) {
+                form.addEventListener('submit', async (event) => {
+                    event.preventDefault(); // impede o redirecionamento do Formspree
 
-                botaoEnviar.textContent = 'Enviando...';
-                botaoEnviar.disabled = true;
+                    botaoEnviar.textContent = 'Enviando...';
+                    botaoEnviar.disabled = true;
 
-                try {
-                    const response = await fetch(form.action, {
-                        method: 'POST',
-                        body: new FormData(form),
-                        headers: { 'Accept': 'application/json' }
-                    });
-
-                    const data = await response.json();
-
-                    if (response.ok) {
-                        // Sucesso: esconde o formulário e mostra a caixa de agradecimento
-                        containerFormulario.style.display = 'none';
-                        overlayAgradecimento.classList.add('visivel');
-                        statusErro.style.display = 'none';
-                        form.reset();
-                    } else {
-                        // Erro de validação retornado pelo Formspree
-                        const erros = data.errors || [{ message: 'Erro desconhecido. Tente novamente mais tarde.' }];
-                        listaErros.innerHTML = '';
-                        erros.forEach(erro => {
-                            const li = document.createElement('li');
-                            let texto = erro.message;
-                            if (erro.field) {
-                                texto = erro.field + ': ' + erro.message;
-                            }
-                            li.textContent = texto;
-                            listaErros.appendChild(li);
+                    try {
+                        const response = await fetch(form.action, {
+                            method: 'POST',
+                            body: new FormData(form),
+                            headers: { 'Accept': 'application/json' }
                         });
-                        containerFormulario.style.display = '';
-                        boxAgradecimento.style.display = 'none';
-                        statusErro.style.display = 'block';
+
+                        const data = await response.json();
+
+                        if (response.ok) {
+                            // Sucesso: esconde o formulário e mostra a caixa de agradecimento
+                            if (containerFormulario) containerFormulario.style.display = 'none';
+                            if (overlayAgradecimento) overlayAgradecimento.classList.add('visivel');
+                            if (statusErro) statusErro.style.display = 'none';
+                            form.reset();
+                        } else {
+                            // Erro de validação retornado pelo Formspree
+                            const erros = data.errors || [{ message: 'Erro desconhecido. Tente novamente mais tarde.' }];
+                            if (listaErros) {
+                                listaErros.innerHTML = '';
+                                erros.forEach(erro => {
+                                    const li = document.createElement('li');
+                                    let texto = erro.message;
+                                    if (erro.field) {
+                                        texto = erro.field + ': ' + erro.message;
+                                    }
+                                    li.textContent = texto;
+                                    listaErros.appendChild(li);
+                                });
+                            }
+                            if (containerFormulario) containerFormulario.style.display = '';
+                            if (boxAgradecimento) boxAgradecimento.style.display = 'none';
+                            if (statusErro) statusErro.style.display = 'block';
+                        }
+                    } catch (error) {
+                        // Falha de rede
+                        if (listaErros) {
+                            listaErros.innerHTML = '<li>Falha na comunicação. Verifique sua conexão e tente novamente.</li>';
+                        }
+                        if (containerFormulario) containerFormulario.style.display = '';
+                        if (boxAgradecimento) boxAgradecimento.style.display = 'none';
+                        if (statusErro) statusErro.style.display = 'block';
+                    } finally {
+                        botaoEnviar.textContent = 'Enviar';
+                        botaoEnviar.disabled = false;
                     }
-                } catch (error) {
-                    // Falha de rede
-                    listaErros.innerHTML = '<li>Falha na comunicação. Verifique sua conexão e tente novamente.</li>';
-                    containerFormulario.style.display = '';
-                    boxAgradecimento.style.display = 'none';
-                    statusErro.style.display = 'block';
-                } finally {
-                    botaoEnviar.textContent = 'Enviar';
-                    botaoEnviar.disabled = false;
-                }
-            });
+                });
+            }
 
             /* ============ BOTÃO "VOLTAR E CORRIGIR" ============ */
-            botaoVoltar.addEventListener('click', () => {
-                containerFormulario.style.display = '';
-                boxAgradecimento.style.display = 'none';
-                statusErro.style.display = 'none';
-                listaErros.innerHTML = '';
-            });
+            if (botaoVoltar) {
+                botaoVoltar.addEventListener('click', () => {
+                    if (containerFormulario) containerFormulario.style.display = '';
+                    if (boxAgradecimento) boxAgradecimento.style.display = 'none';
+                    if (statusErro) statusErro.style.display = 'none';
+                    if (listaErros) listaErros.innerHTML = '';
+                });
+            }
             // Fechar overlay clicando fora da caixa (opcional)
-            overlayAgradecimento.addEventListener('click', (e) => {
-                if (e.target === overlayAgradecimento) {
-                    overlayAgradecimento.classList.remove('visivel');
-                }
-            });
+            if (overlayAgradecimento) {
+                overlayAgradecimento.addEventListener('click', (e) => {
+                    if (e.target === overlayAgradecimento) {
+                        overlayAgradecimento.classList.remove('visivel');
+                    }
+                });
+            }
         });
     </script>
 </body>
