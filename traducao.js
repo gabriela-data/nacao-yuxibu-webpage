@@ -22,50 +22,80 @@
       "site.title": "Plataforma Livre da Nação Yuxibu",
       "section1.title": "INÍCIO",
       "section1.heading": "<span class='linha-hero-1'>Plataforma Livre</span><span class='linha-hero-2'>Nação Yuxibu</span>",
-      "section1.lead": "Verdade na unidade: do coração da floresta para o mundo!",
-      "section1.cta": "Apoie o desenvolvimento da plataforma",
+      "section1.lead": "Verdade em unidade: do coração da floresta para o mundo!",
+      "section1.cta": "Apoie a construção da plataforma",
       "section2.title": "MANIFESTO",
       "section2.p1": "O ciberespaço também é território!",
-      "section2.p2": "Defendemos que os povos indígenas ocupem e transformem o ambiente digital com base em seus próprios saberes, fortalecendo suas tradições, modos de vida e luta por direitos.",
-      "section2.p3": "Ao ser desenvolvido como Software Livre, a Plataforma Livre da Nação Yuxibu afirma a liderança indígena e demonstra como tecnologias digitais podem ser usadas de forma inclusiva, com autonomia, identidade e saberes ancestrais no centro.",
+      "section2.p2": "Os povos originários devem ocupar e transformar o ambiente virtual a partir de seus próprios conhecimentos, fortalecendo suas tradições, modos de vida e luta por direitos.",
+      "section2.p3": "A Plataforma Livre Nação Yuxibu, ao ser desenvolvida como Software Livre, afirma o protagonismo indígena e mostra como é possível o uso inclusivo das tecnologias digitais, nas quais a autonomia, a identidade e o saber ancestral se fazem presentes.",
+
       "section3.title": "O COLETIVO Nação Yuxibu",
-      "section3.p1": "O Coletivo da Nação Yuxibu é um grupo de pessoas que apoiam a liderança indígena reunindo saberes ancestrais, cuidado ético e colaboração cultural, educativa e tecnológica.",
-      "section3.p2": "Promove apoio respeitoso, experiências imersivas e iniciativas comprometidas com as tradições e valores do povo Huni Kuĩ.",
-      "section3.p3": "O projeto de extensão da Plataforma Livre da Nação Yuxibu foi iniciado por meio do Coletivo da Nação Yuxibu.",
-      "section3.p4": "O trabalho do Coletivo se baseia em cinco pilares, ilustrados na imagem abaixo.",
-      "pillar.support.title": "APOIO INDÍGENA E HOSPITALIDADE",
-      "pillar.support.p": "Garantem condições apropriadas, seguras e respeitosas para a participação dos povos indígenas em trocas interculturais, preservando sua autonomia e modos tradicionais de conduzir atividades.",
+
+      "section3.p1": "O coletivo Nação Yuxibu é um grupo de pessoas que apoiam o protagonismo indígena, integrando saberes ancestrais, cuidado ético e articulação cultural, educacional e tecnológica. Promove acolhimento digno, vivências e ações comprometidas com as tradições e os valores do povo Huni Kuī.",
+
+      "section3.p2": "Foi pelo Coletivo Nação Yuxibu que iniciamos o projeto de pesquisa e extensão Plataforma Livre Nação Yuxibu.",
+
+      "section3.p3": "O Coletivo Nação Yuxibu atua embasado em 5 pilares ilustrados na imagem a seguir:",
+
+      "pillar.support.title": "ACOLHIMENTO INDÍGENA",
+      "pillar.support.p": "O acolhimento indígena garante condições adequadas, seguras e respeitosas para a presença dos povos originários na troca intercultural, preservando a autonomia e os modos tradicionais de condução nas suas atividades. Todo o processo é orientado com responsabilidade e ética.",
+
       "pillar.ceremonies.title": "CERIMONIAS TRADICIONAIS",
-      "pillar.ceremonies.p": "As cerimônias lideradas pelo povo Huni Kuĩ são rituais ancestrais para aprendizagem e reconexão com saberes indígenas e o sagrado.",
-      "pillar.integrative.title": "EXPERIÊNCIA INTEGRATIVA YUXIBU NATION",
-      "pillar.integrative.p": "Experiências integrativas são atividades guiadas que preparam o espaço físico, emocional e relacional dos participantes antes das cerimônias, facilitando a integração profunda da experiência.",
+      "pillar.ceremonies.p": "As cerimônias conduzidas pelo povo Huni Kui são rituais ancestrais de aprendizado e reconexão com os saberes originários e o sagrado. Cada cerimônia acontece a partir da tradição viva e da responsabilidade e compromisso com o cuidado coletivo.",
+
+      "pillar.integrative.title": "VIVÊNCIA INTEGRATIVA",
+      "pillar.integrative.p": "As vivências integrativas são experiências cuidadosamente conduzidas que preparam e organizam o campo físico, emocional e relacional dos participantes, anterior às cerimônias. Por meio de práticas corporais, sensoriais e de consciência, facilitam o enraizamento, a abertura perceptiva e a integração profunda da experiência que será vivida na cerimônia tradicional Huni Kui.",
+      
       "pillar.care.title": "CUIDADO E ÉTICA",
-      "pillar.care.p": "O cuidado é guiado por princípios éticos e práticas de prevenção de riscos, com respeito ao bem-estar físico e emocional, incluindo avaliações de histórico de saúde e entrevistas conduzidas por profissionais.",
-      "pillar.cultural.title": "COLABORAÇÃO CULTURAL",
-      "pillar.cultural.p": "Promove a troca entre saberes tradicionais indígenas, instituições educativas e sociedade civil, incentivando produção artística e difusão de saberes indígenas por meio de redes, pesquisas e projetos.",
-      "section3.follow": "Siga o Coletivo da Nação Yuxibu no Instagram:",
+      "pillar.care.p": "O cuidado com os participantes é orientado por princípios éticos e prevenção de riscos, respeitando o bem-estar físico e emocional. Antes das cerimônias, são realizadas anamneses e entrevistas com escuta atenta e responsável, conduzidas por profissionais qualificados, garantindo sigilo das informações, compreensão dos limites e suporte adequado ao longo de todo o processo.",
+
+      "pillar.cultural.title": "ARTICULAÇÃO CULTURAL",
+      "pillar.cultural.p": "A articulação cultural promove o intercâmbio entre os saberes tradicionais indígenas, as instituições educacionais e a sociedade civil, a fim de promover a produção artística e difusão dos conhecimentos dos povos originários através da construção de redes, projetos de pesquisa e extensão, apresentações, exposições, aulas e vivências que visem proporcionar uma troca de estudos e experiências.",
+
+      "section3.follow": "Siga o Coletivo Nação Yuxibu no Instagram:",
+
       "section4.title": "A PLATAFORMA",
-      "section4.p1": "A Plataforma Livre da Nação Yuxibu é uma plataforma online desenvolvida como Software Livre. Por meio de tecnologias digitais, visa apoiar o povo indígena Huni Kuĩ a compartilhar a visão de mundo do seu povo sobre modos de vida humana e os direitos da natureza.",
-      "section4.p2": "Em observância aos direitos constitucionais dos povos indígenas, garantidos pelo Art. 231 da Constituição de 1988, a plataforma foca em um grupo étnico para que possa expressar sua visão de mundo, organização social, costumes, línguas, crenças e tradições.",
-      "section4.article231": "Art. 231. Os povos indígenas são reconhecidos como detentores de sua organização social, costumes, línguas, crenças e tradições, e dos direitos originários sobre as terras que tradicionalmente ocupam. À União cabe demarcar tais terras e proteger e garantir o respeito a todas as suas posessões.",
-      "section4.p3": "As funcionalidades da Plataforma Livre da Nação Yuxibu estão organizadas em quatro áreas essenciais: cultural, socioambiental, educativa e financeira.",
+      "section4.p1": "A Plataforma Livre Nação Yuxibu consiste no desenvolvimento de uma plataforma online, na modalidade software livre, cujo propósito é apoiar, por meio de tecnologias digitais, indígenas da etnia Huni Kuĩ, no movimento de compartilhamento da cosmovisão de seu povo em relação a forma de viver humana e dos direitos da natureza.",
+
+      "section4.p2": "Em respeito aos direitos constitucionais dos povos indígenas, garantidos no Capítulo VIII Art. 231 da  constituição de 1988, a plataforma se concentra em uma Etnia para que possa expressar a cosmovisão de cada povo, sua organização social, costumes, línguas, crenças e tradições.",
+      
+      "section4.article231": "Art. 231. São reconhecidos aos índios sua organização social, costumes, línguas, crenças e tradições, e os direitos originários sobre as terras que tradicionalmente ocupam, competindo à União demarcá-las, proteger e fazer respeitar todos os seus bens.",
+
+      "section4.p3": "As funcionalidades da Plataforma Livre Nação Yuxibu são categorizadas em quatro áreas essenciais: cultural, socioambiental, educacional e financeira.",
+
       "section4.cultural.title": "CULTURAL",
-      "section4.cultural.p": "Publicação da programação de atividades culturais planejadas e criação de um arquivo que documente práticas e atividades realizadas.",
+      "section4.cultural.p": "Divulgação do cronograma de atividades culturais planejadas e a construção de um acervo para documentar práticas e atividades realizadas.",
+
       "section4.socio.title": "SOCIOAMBIENTAL",
-      "section4.socio.p": "Interação entre membros para troca de serviços e experiências, fortalecendo relações interculturais e o relacionamento com a natureza.",
+      "section4.socio.p": "Interação entre os membros para trocas de serviços e experiências, fortalecendo relações interculturais que criem novas formas de relações sociais e com a natureza.",
+
       "section4.educational.title": "EDUCACIONAL",
-      "section4.educational.p": "Espaço para aulas ministradas por indígenas, bem como formação de colaboradores.",
+      "section4.educational.p": "Espaço para a realização de aulas ministradas pelos próprios indígenas, bem como para fornecer treinamentos aos colaboradores.",
+
       "section4.financial.title": "FINANCEIRO",
-      "section4.financial.p": "Espaço livre e seguro para que indígenas vendam sua arte e artesanato através de um marketplace, e recebam doações, em conformidade com princípios de economia criativa e sustentável.",
+      "section4.financial.p": "Espaço livre e seguro para os indígenas venderem sua arte, artesanato e objetos diversos (marketplace), além de viabilizar doações, em consonância aos princípios de economia criativa e sustentável.",
+
       "section4.whyfree.title": "POR QUE SOFTWARE LIVRE?",
-      "section4.whyfree.p1": "O acesso à educação e informação, e a difusão de conhecimento, estão relacionados a movimentos de tecnologia aberta. O Software Livre se destaca por permitir uso, estudo, cópia e distribuição, podendo ser modificado para atender realidades culturais específicas.",
-      "section4.whyfree.p2": "O Software Livre oferece às comunidades indígenas a oportunidade de customizar tecnologia conforme suas realidades, fortalecendo redes colaborativas e oferecendo alternativa ao colonialismo digital.",
-      "section4.whyfree.p3": "A Plataforma Livre está sendo desenvolvida como Software Livre com servidor próprio — um espaço de armazenamento dedicado em servidor da UFBA — para fins específicos, exemplificando outra forma de uso das tecnologias digitais, com autonomia no centro.",
-      "section4.research.title": "PESQUISA E PROJETO DE EXTENSÃO UNIVERSITÁRIA",
-      "section4.research.p": "Estamos pesquisando um modelo de design semio-participativo para garantir que a plataforma atenda às necessidades específicas dos usuários, respeite práticas culturais e promova ambiente colaborativo — um processo de \"co-projetar\" com os povos tradicionais.",
-      "section4.research.p2": "O projeto é apoiado pelas chamadas PAEx 2025 e Pibiex 2025 da UFBA, que financiam bolsas de extensão universitária.",
+      "section4.whyfree.p1": "O acesso à educação, à informação e à disseminação do conhecimento estão fundamentalmente relacionados aos movimentos de tecnologias abertas. Dentre esses movimentos, o movimento de Software Livre é o que mais se destaca. Considera-se que a adoção de softwares livres em prol do desenvolvimento humano com igualdade e equidade, é uma alternativa ao acesso democrático às tecnologias, dado que o software livre é aquele disponível com a permissão para qualquer um usá-lo, estudá-lo, copiá-lo, e distribuí-lo, seja na sua forma original ou com modificações, seja gratuitamente ou com custo (STALLMAN, 2002).",
+
+      "section4.whyfree.p2": "O software livre oferece uma oportunidade poderosa para que as comunidades indígenas e outros grupos subalternizados personalizem a tecnologia de acordo com suas realidades culturais e sociais. Além disso, o uso do software livre pode fortalecer redes colaborativas, já que seu desenvolvimento frequentemente se baseia no compartilhamento de conhecimento e na cooperação entre diferentes povos e culturas. Dessa forma, ele se apresenta como uma alternativa viável para enfrentar as desigualdades impostas pelo chamado colonialismo digital, abrindo caminhos para uma tecnologia verdadeiramente inclusiva e participativa.",
+
+      "section4.whyfree.p3": "Em um contexto social dominado pela plataformização do viver humano, a Plataforma Livre Nação Yuxibu, ao ser desenvolvida como software livre, com servidor de dados próprio (um espaço de disco no servidor da UFBA), para fins específicos, traz um importante resultado em mostrar como é possível uma outra forma de uso das tecnologias digitais, onde a autonomia se faz presente.",
+
+
+      "section4.research.title": "PROJETO DE PESQUISA E EXTENSÃO",
+      "section4.research.p": "Desenvolvemos pesquisa no processo de adoção de um modelo de design semioparticipativo para garantir que a Plataforma Livre Nação Yuxibu não só atenda às necessidades específicas dos usuários, mas também respeite suas práticas culturais e promova um ambiente colaborativo.",
+      "section4.research.p2": "A construção de uma interface que segue a metodologia de design semioparticipativo vai para além do processo de “fazer para”, em direção ao processo de “fazer com”.",
+      "section4.research.p3": "A plataforma está sendo concebida de forma a servir de base para que outros povos tradicionais possam utilizar do modelo desenvolvido com o mesmo propósito de difusão de suas cosmovisões.",
+      "section4.research.p4": "Também, serão desenvolvidas capacitações no uso da tecnologia digital, fortalecendo o caráter extensionista do projeto.",
+      "section4.research.p5": "Outro diferencial desta plataforma é ser um local seguro para acesso ao conhecimento, saberes e produtos dos povos Huni Kuĩ, por ser uma rede formada e gerida por indígenas e colaboradores que darão credibilidade ao que estará sendo publicado e difundido no ambiente digital.",
+      "section4.research.p6": "O projeto conta com apoio dos Editais da UFBA PAEx 2025 e Pibiex 2025, com financiamento de 2 bolsas de extensão universitária. ",
+
+
+      // TRADUÇÃO SESSÃO EQUIPE (PORTUGUES)
       "section5.title": "EQUIPE",
-      "section5.p": "O projeto está sendo desenvolvido por equipe de pesquisadores, estudantes e voluntários do Onda Digital — Grupo de Pesquisa e Extensão em Computação, Educação e Sociedade — no Instituto de Computação da UFBA.",
+      "section5.p": "Esse projeto está sendo desenvolvido por uma equipe de pesquisadores, estudantes e voluntários integrantes do Grupo de Pesquisa e Extensão em Informática, Educação e Sociedade – Onda Digital, do Departamento de Computação Interdisciplinar do Instituto de Computação da UFBA, como atividade de pesquisa e extensão do Núcleo de Desenvolvimento de Software Livre (NuSoL) em cooperação com o SPIDeLab - Semio-Participatory Interaction Design Research Laboratory da UFBA.",
+
       "team.allan.name": "ALLAN THALES",
       "team.allan.role": "Analista de TI — Analista de infraestrutura, desenvolvedor de Software Livre e voluntário no projeto.",
       "team.aurelio.name": "AURÉLIO HECKERT",
@@ -130,30 +160,6 @@
       "header.sobre": "team",
       "header.publicacoes": "publications",
       "header.apoie": "support",
-      "support.title": "Support the Yuxibu Nation Free Platform",
-      "support.p1": "The project has made progress in important areas, especially in establishing a solid technical foundation.",
-      "support.p2": "At this stage, we need to expand our partnerships in order to:",
-      "support.li1": "accelerate software development through a team of programmers working alongside UFBA extension scholarship holders.",
-      "support.li2": "carry out an immersion trip to at least one Huni Kuin village to continue the semi-participatory design research.",
-      "support.li3": "We already have an invitation to carry out this work in the São Vicente village, located on the banks of the Humaitá River, in the Humaitá Indigenous Land (TI), in Tarauacá, Acre.",
-      "support.form.title": "I Want to Support",
-      "support.form.subtitle": "Fill out the form below and we will get in touch.",
-      "support.form.name": "Full name *",
-      "support.form.name.placeholder": "Your name",
-      "support.form.email": "E-mail *",
-      "support.form.email.placeholder": "your@email.com",
-      "support.form.phone": "Phone",
-      "support.form.phone.placeholder": "(XX) 99999-9999",
-      "support.form.city": "City/State",
-      "support.form.city.placeholder": "Ex.: Salvador – BA",
-      "support.form.message": "Message",
-      "support.form.message.placeholder": "Tell us how you would like to support us...",
-      "support.form.submit": "Send",
-      "support.success.title": "Message sent successfully!",
-      "support.success.p1": "Thank you for your interest in supporting the <strong>Yuxibu Nation Free Platform</strong>.",
-      "support.success.note": "Please keep an eye on your <strong>inbox</strong> and <strong>spam/junk folder</strong>.<br>Our team will respond soon through the email provided.",
-      "support.success.instagram": "In the meantime, get to know the Yuxibu Nation Collective through Instagram:",
-      "support.success.back": "↩ Back to home",
       "publicacoes.title": "Publications",
       "publicacoes.subtitle": "Academic production linked to the Yuxibu Nation Free Platform project, presented at congresses, symposia, and scientific events.",
       "publicacoes.evento1": "VI INTERNATIONAL CONGRESS OF INDIGENOUS WORLDS, AMERICA: Histories, Territorialities and Indigenous Knowledge (VI COIMI - ABYA YALA)",
@@ -286,6 +292,7 @@
       "section.apoie.colabore.p": "Promote the work of the Huni Kuī people.",
 
 
+
       "form.name": "Full name — Your name",
       "form.email": "Email — your@email.com",
       "form.phone": "Phone",
@@ -293,7 +300,35 @@
       "form.message": "Message — Tell us how you would like to help…",
       "form.submit": "Submit",
       "section6.email": "Would you rather speak with us directly? Email us at nacaoyuxibu@ufba.br",
-      "footer.copyright": "© 2025 Yuxibu Nation Free Platform"
+      "footer.copyright": "© 2025 Yuxibu Nation Free Platform",
+       
+      
+      // TRADUÇÃO PÁGINA DE SUPORTE INGLÊS
+      "support.title": "Support the Yuxibu Nation Free Platform",
+      "support.p1": "The project has made progress in important areas, especially in establishing a solid technical foundation.",
+      "support.p2": "At this stage, we need to expand our partnerships in order to:",
+      "support.li1": "accelerate software development through a team of programmers working alongside UFBA extension scholarship holders.",
+      "support.li2": "carry out an immersion trip to at least one Huni Kuin village to continue the semi-participatory design research.",
+      "support.li3": "We already have an invitation to carry out this work in the São Vicente village, located on the banks of the Humaitá River, in the Humaitá Indigenous Land (TI), in Tarauacá, Acre.",
+      "support.form.title": "I Want to Support",
+      "support.form.subtitle": "Fill out the form below and we will get in touch.",
+      "support.form.name": "Full name *",
+      "support.form.name.placeholder": "Your name",
+      "support.form.email": "E-mail *",
+      "support.form.email.placeholder": "your@email.com",
+      "support.form.phone": "Phone",
+      "support.form.phone.placeholder": "(XX) 99999-9999",
+      "support.form.city": "City/State",
+      "support.form.city.placeholder": "Ex.: Salvador – BA",
+      "support.form.message": "Message",
+      "support.form.message.placeholder": "Tell us how you would like to support us...",
+      "support.form.submit": "Send",
+      "support.success.title": "Message sent successfully!",
+      "support.success.p1": "Thank you for your interest in supporting the <strong>Yuxibu Nation Free Platform</strong>.",
+      "support.success.note": "Please keep an eye on your <strong>inbox</strong> and <strong>spam/junk folder</strong>.<br>Our team will respond soon through the email provided.",
+      "support.success.instagram": "In the meantime, get to know the Yuxibu Nation Collective through Instagram:",
+      "support.success.back": "↩ Back to home",
+
     },
 
     es: {
@@ -311,7 +346,7 @@
   const defaultLang = 'pt';
   const availableLangs = Object.keys(translations);
   // Mapa de bandeiras para exibição no seletor
-  const flagMap = { pt: '🇧🇷', en: '🇬🇧', es: '🇪🇸' };
+  const flagMap = { pt: '🇧🇷', en: '🇬🇧' };
 
   // Helper: obter idioma salvo ou detectar do navegador
   function detectLanguage() {
