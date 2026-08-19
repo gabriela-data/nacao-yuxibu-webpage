@@ -90,6 +90,7 @@
       "section4.research.p4": "Também, serão desenvolvidas capacitações no uso da tecnologia digital, fortalecendo o caráter extensionista do projeto.",
       "section4.research.p5": "Outro diferencial desta plataforma é ser um local seguro para acesso ao conhecimento, saberes e produtos dos povos Huni Kuĩ, por ser uma rede formada e gerida por indígenas e colaboradores que darão credibilidade ao que estará sendo publicado e difundido no ambiente digital.",
       "section4.research.p6": "O projeto conta com apoio dos Editais da UFBA PAEx 2025 e Pibiex 2025, com financiamento de 2 bolsas de extensão universitária. ",
+      "section4.research.p7": "Esse projeto está sendo desenvolvido por uma equipe de pesquisadores, estudantes e voluntários integrantes do Grupo de Pesquisa e Extensão em Informática, Educação e Sociedade – Onda Digital, do Departamento de Computação Interdisciplinar do Instituto de Computação da UFBA, como atividade de pesquisa e extensão do Núcleo de Desenvolvimento de Software Livre (NuSoL) em cooperação com o SPIDeLab - Semio-Participatory Interaction Design Research Laboratory da UFBA.  ",
 
 
       // TRADUÇÃO SESSÃO EQUIPE (PORTUGUES)
@@ -259,7 +260,9 @@
 
       "section4.research.p6": "The project is supported by UFBA’s PAEx 2025 and Pibiex 2025 calls for proposals, which fund two university extension scholarships.",
 
+      "section4.research.p7": "This project is being developed by a team of researchers, students, and volunteers from Onda Digital—the Research and University Extension Group in Computing, Education, and Society—within the Department of Interdisciplinary Computing at UFBA’s Institute of Computing. It is a research and university extension initiative of the Free Software Development Center (NuSoL), developed in cooperation with SPIDeLab—the Semio-Participatory Interaction Design Research Laboratory at UFBA.",
 
+      // TRADUÇÃO SESSÃO TIME INGLÊS
       "section5.title": "TEAM",
       "section5.p": "This project is being developed by a team of researchers, students, and volunteers from Onda Digital—the Research and University Extension Group in Computing, Education, and Society—within the Department of Interdisciplinary Computing at UFBA’s Institute of Computing. It is a research and university extension initiative of the Free Software Development Center (NuSoL), developed in cooperation with SPIDeLab—the Semio-Participatory Interaction Design Research Laboratory at UFBA.",
 
@@ -337,6 +340,10 @@
        
       
       // TRADUÇÃO PÁGINA DE SUPORTE INGLÊS
+      "realizacao": "Realization",
+
+      "apoio": "support",
+
       "support.title": "Support the Yuxibu Nation Free Platform",
       "support.p1": "The project has made progress in important areas, particularly in establishing a solid technical foundation.",
       "support.p2": "At this stage, we need to expand our partnerships in order to:",
