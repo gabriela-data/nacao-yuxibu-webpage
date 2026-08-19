@@ -344,6 +344,8 @@
 
       "apoio": "support",
 
+      "falar.diretamente": "Would you rather speak with us directly? Email us at",
+
       "support.title": "Support the Yuxibu Nation Free Platform",
       "support.p1": "The project has made progress in important areas, particularly in establishing a solid technical foundation.",
       "support.p2": "At this stage, we need to expand our partnerships in order to:",
