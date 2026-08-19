@@ -365,13 +365,15 @@
       "support.form.city": "City/State",
       "support.form.city.placeholder": "Example: Salvador – BA",
       "support.form.message": "Message",
-      "support.form.message.placeholder": "Tell us how you would like to help...",
+      "support.form.message.placeholder": "Tell us how you would like to help.",
       "support.form.submit": "Submit",
       "support.success.title": "Message sent successfully!",
       "support.success.p1": "Thank you for your interest in supporting the <strong>Yuxibu Nation Free Platform</strong>.",
       "support.success.note": "Please keep an eye on your <strong>inbox</strong> and <strong>spam/junk folder</strong>.<br>Our team will respond soon through the email provided.",
       "support.success.instagram": "In the meantime, get to know the Yuxibu Nation Collective through Instagram:",
       "support.success.back": "↩ Back to home",
+
+      "saiba.mais": "Read more",
 
     },
 
@@ -461,6 +463,23 @@
     if (idiomaAtualBtn) {
       const flag = flagMap[lang] || '';
       idiomaAtualBtn.innerHTML = `<span class="bandeira">${flag}</span> ${lang.toUpperCase()}`;
+    }
+
+    // Troca a imagem dos pilares quando o idioma for inglês, restaura caso contrário.
+    try {
+      const pilaresImg = document.querySelector('.pilares-nacao-yuxibu img');
+      if (pilaresImg) {
+        // salva src original uma vez
+        if (!pilaresImg.dataset.originalSrc) pilaresImg.dataset.originalSrc = pilaresImg.getAttribute('src') || '';
+        if (lang === 'en') {
+          pilaresImg.src = './Fotos/PILARES_NAÇÃO-YUXIBU-INGLES.png';
+        } else {
+          pilaresImg.src = pilaresImg.dataset.originalSrc;
+        }
+      }
+    } catch (e) {
+      // silencioso — não quebra a tradução se elemento não existir
+      console.warn('Erro ao trocar imagem dos pilares:', e);
     }
   }
 
