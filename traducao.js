@@ -149,7 +149,8 @@
       "publicacoes.titulo2": "Codesign da Plataforma Livre Nação Yuxibu com o Povo indígena Huni Kuĩ: desafios e reflexões iniciais",
       "publicacoes.autor2": "Túlio Augustus, Diego Zabot, Valéria Rosa, José Nilson Sabóia Kaxinawá (Tuwe), Solon Dutra e Débora Abdalla",
       "publicacoes.resumo2": "Tecnologias digitais têm sido apropriadas por povos indígenas para fortalecer redes de apoio e compartilhar saberes e culturas. Este artigo discute a concepção inicial da Plataforma Livre Nação Yuxibu, voltada ao povo Huni Kuĩ para compartilhar sua cosmovisão nas dimensões cultural, socioambiental, educacional e financeira. A pesquisa adotou o design semioparticipativo para construir a interação em colaboração com a comunidade, apresentando reflexões iniciais sobre decisões técnicas e metodológicas do processo de codesign. Argumenta-se que a articulação entre software livre e cocriação pode favorecer modelos de desenvolvimento tecnológico mais alinhados ao protagonismo indígena e à autonomia de seus saberes no ambiente digital.",
-      "publicacoes.anais2": "Anais do evento (em breve) →"
+      "publicacoes.anais2": "Anais do evento (em breve) →",
+      "mostrar.menos": "Mostrar menos"
     },
 
     en: {
@@ -185,8 +186,8 @@
       "section1.cta": "Support the development of the platform",
       "section2.title": "MANIFEST",
       "section2.p1": "Cyberspace is territory too!",
-      "section2.p2": "We advocate for Indigenous peoples to occupy and transform the digital environment based on their own knowledge, strengthening their traditions, ways of life, and struggle for rights.",
-      "section2.p3": "By being developed as Free Software, the Yuxibu Nation Free Platform affirms Indigenous leadership and demonstrates how digital technologies can be used inclusively, with autonomy, identity, and ancestral knowledge at their core.",
+      "section2.p2": "Indigenous peoples must occupy and transform the virtual environment based on their own knowledge, strengthening their traditions, ways of life, and struggle for rights.",
+      "section2.p3": "Developed as Free Software, the Nação Yuxibu Free Platform affirms Indigenous agency and demonstrates the possibility of an inclusive use of digital technologies—one where autonomy, identity, and ancestral knowledge are present.",
 
 
       "section3.title": "THE YUXIBU NATION COLLECTIVE",
@@ -376,25 +377,25 @@
       "support.success.back": "↩ Back to home",
 
       "saiba.mais": "Read more",
-
+      "mostrar.menos": "Show less"
     },
 
-    es: {
-      // Espaço para traduções em espanhol
-      "meta.title": "Plataforma Libre de la Nación Yuxibu",
-      "site.title": "Plataforma Libre de la Nación Yuxibu",
-      "section1.title": "INICIO",
-      "section1.heading": "<span class='linha-hero-1'>Plataforma Libre</span><span class='linha-hero-2'>Nación Yuxibu</span>",
-      "section1.lead": "Verdad en la unidad: ¡del corazón del bosque al mundo!",
-      "section1.cta": "Apoya el desarrollo de la plataforma"
-    }
+    // es: {
+    //   // Espaço para futuras traduções em espanhol
+    //   "meta.title": "Plataforma Libre de la Nación Yuxibu",
+    //   "site.title": "Plataforma Libre de la Nación Yuxibu",
+    //   "section1.title": "INICIO",
+    //   "section1.heading": "<span class='linha-hero-1'>Plataforma Libre</span><span class='linha-hero-2'>Nación Yuxibu</span>",
+    //   "section1.lead": "Verdad en la unidad: ¡del corazón del bosque al mundo!",
+    //   "section1.cta": "Apoya el desarrollo de la plataforma"
+    // }
   };
 
   const LANG_KEY = 'site_lang';
   const defaultLang = 'pt';
-  const availableLangs = Object.keys(translations);
+  const availableLangs = Object.keys(translations).filter((lang) => lang !== 'es');
   // Mapa de bandeiras para exibição no seletor
-  const flagMap = { pt: '🇧🇷', en: '🇬🇧' };
+  const flagMap = { pt: '🇧🇷', en: '🇬🇧' /*, es: '🇪🇸'*/ };
 
   // Helper: obter idioma salvo ou detectar do navegador
   function detectLanguage() {
@@ -404,7 +405,7 @@
     const nav = navigator.language || navigator.userLanguage || '';
     const code = nav.toLowerCase();
     if (code.startsWith('pt')) return 'pt';
-    if (code.startsWith('es')) return 'es';
+    // if (code.startsWith('es')) return 'es';
     if (code.startsWith('en')) return 'en';
     return defaultLang;
   }
@@ -447,8 +448,8 @@
     // Ajusta atributo lang do documento para acessibilidade/SEO
     if (lang === 'pt') {
       document.documentElement.lang = 'pt-BR';
-    } else if (lang === 'es') {
-      document.documentElement.lang = 'es';
+    // } else if (lang === 'es') {
+    //   document.documentElement.lang = 'es';
     } else if (lang === 'en') {
       document.documentElement.lang = 'en';
     } else {
@@ -491,6 +492,20 @@
     localStorage.setItem(LANG_KEY, lang);
     applyTranslations(lang);
   }
+
+  // Expor helper de tradução para uso em outros scripts
+  function getTranslation(key) {
+    const lang = localStorage.getItem(LANG_KEY) || defaultLang;
+    const dict = translations[lang] || {};
+    if (dict[key] !== undefined && dict[key] !== null) return dict[key];
+    // fallback: procurar elemento com data-i18n e usar original
+    const el = document.querySelector('[data-i18n="' + key + '"]');
+    if (el && el.dataset && el.dataset.originalText) return el.dataset.originalText;
+    return '';
+  }
+
+  // disponibiliza no escopo global
+  window.getTranslation = getTranslation;
 
   // Inicialização
   function init() {

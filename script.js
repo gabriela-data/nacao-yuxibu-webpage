@@ -44,7 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const botao = pilar.querySelector('.botao-alternar-pilar');
       if (!botao) return;
       pilar.classList.toggle('virado', deveVirar);
-      botao.textContent = deveVirar ? 'Mostrar menos' : 'Saiba mais';
+      const key = deveVirar ? 'mostrar.menos' : 'saiba.mais';
+      botao.setAttribute('data-i18n', key);
+      if (window.getTranslation) {
+        botao.innerHTML = window.getTranslation(key);
+      } else {
+        botao.textContent = deveVirar ? 'Mostrar menos' : 'Saiba mais';
+      }
       botao.setAttribute('aria-expanded', String(deveVirar));
     };
 
